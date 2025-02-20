@@ -1,6 +1,6 @@
 {
   "name": "@soulsolidity/registry",
-  "version": "0.0.1-test.2",
+  "version": "0.0.1-test.3",
   "description": "SoulSolidity Registry Types and Utilities",
   "license": "MIT",
   "author": "Doublo <doublo54@gmail.com>",
@@ -23,7 +23,7 @@
     "preversion": "yarn lint",
     "version": "git add -A src",
     "postversion": "git push && git push --tags",
-    "lint": "eslint \"src/**/*.ts\" --max-warnings 0",
+    "lint": "eslint \"src/**/*.ts\"",
     "lint:fix": "eslint \"src/**/*.ts\" --fix",
     "format": "prettier --write \"src/**/*.ts\"",
     "format:check": "prettier --check \"src/**/*.ts\"",

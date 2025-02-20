@@ -30,6 +30,8 @@ export enum Wrappers {
     Steer = 2,
 }
 
+export const ProtocolsWithWrapper: Protocols[] = [Protocols.UniV3, Protocols.UniV4, Protocols.Algebra, Protocols.AlgebraIntegral]
+
 export enum LiquidityDex {
     //MultiChain
     ApeSwapV2 = 'ApeSwapV2',
