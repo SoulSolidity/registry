@@ -1,6 +1,5 @@
 # Build output
 lib/
-data/
 
 # Dependencies
 node_modules/
