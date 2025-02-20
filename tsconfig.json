@@ -51,7 +51,7 @@
     // "maxNodeModuleJsDepth": 1,                        /* Specify the maximum folder depth used for checking JavaScript files from 'node_modules'. Only applicable with 'allowJs'. */
 
     /* Emit */
-    "declaration": false,                                /* Don't generate .d.ts files */
+    "declaration": true,                                /* Generate .d.ts files */
     "sourceMap": false,                                  /* Don't create source map files */
     "outDir": "./lib",                                  /* Specify an output folder for all emitted files. */
     // "removeComments": true,                           /* Disable emitting comments. */
