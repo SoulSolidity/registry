@@ -1,7 +1,3 @@
-// ----------------------------------------------------------------------------
-// ZapInfo Types (TypeScript equivalent of Zod schemas)
-// ----------------------------------------------------------------------------
-
 import { IchiSupportedDex, ZapLPType, ZapProtocols } from "./enums";
 
 export type ZapInfo = {

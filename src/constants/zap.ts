@@ -1,13 +1,11 @@
 import { ChainId, ZapLPType, ZapProtocols } from '../types/enums'
 import { ZapInfo } from '../types/types'
 
-const tokens: Record<ChainId, ZapInfo[]> = {
-  [ChainId.ETH]: [
-  ],
-  [ChainId.POLYGON]: [
-  ],
-  [ChainId.BNB]: [
-    {
+const zapData: Record<ChainId, Record<`0x${string}`, ZapInfo>> = {
+  [ChainId.ETH]: {},
+  [ChainId.POLYGON]: {},
+  [ChainId.BNB]: {
+    "0x20cd480d58351d19b3d769f7779bdf98c7b12056": {
       name: 'ApeBond ABOND bond',
       lpData: {
         lpType: ZapLPType.Single,
@@ -18,26 +16,18 @@ const tokens: Record<ChainId, ZapInfo[]> = {
         bond: '0x20cd480d58351d19b3d769f7779bdf98c7b12056'
       }
     }
-  ],
-  [ChainId.BASE]: [
-  ],
-  [ChainId.ARBITRUM]: [
-  ],
-  [ChainId.LINEA]: [
-  ],
-  [ChainId.AVAX]: [
-  ],
-  [ChainId.BLAST]: [
-  ],
-  [ChainId.LIGHTLINK]: [
-  ],
-  [ChainId.IOTA]: [
-  ],
-  [ChainId.BNB_TESTNET]: [
-  ],
+  },
+  [ChainId.BASE]: {},
+  [ChainId.ARBITRUM]: {},
+  [ChainId.LINEA]: {},
+  [ChainId.AVAX]: {},
+  [ChainId.BLAST]: {},
+  [ChainId.LIGHTLINK]: {},
+  [ChainId.IOTA]: {},
+  [ChainId.BNB_TESTNET]: {},
 }
 
-export default tokens;
+export default zapData;
 
 // {
 //   iotaRust_MagicSea: {
