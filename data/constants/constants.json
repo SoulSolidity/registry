@@ -5,36 +5,56 @@
       "image": "bnb.svg"
     },
     {
-      "name": "thereum",
+      "name": "Ethereum",
       "image": "ethereum.svg"
     },
     {
-      "name": "polygon",
+      "name": "Polygon",
       "image": "polygon.svg"
     },
     {
-      "name": "linea",
+      "name": "Linea",
       "image": "linea.svg"
     },
     {
-      "name": "base",
+      "name": "Base",
       "image": "base.svg"
     },
     {
-      "name": "avalanche",
+      "name": "Avalanche",
       "image": "avalanche.svg"
     },
     {
-      "name": "blast",
-      "image": "blast.svg"
+      "name": "Arbitrum",
+      "image": "arbitrum.svg"
     },
     {
-      "name": "lightlink",
-      "image": "lightlink.svg"
+      "name": "BeraChain",
+      "image": "bera.svg"
     },
     {
-      "name": "iota",
-      "image": "iota.svg"
+      "name": "BeraChain",
+      "image": "bera.svg"
+    }
+  ],
+  "priceGetterPlaygroundTokens": [
+    {
+      "name": "Coinbase Wrapped BTC",
+      "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+      "chainId": 8453,
+      "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/bitcoin/info/logo.png"
+    },
+    {
+      "name": "Wrapped Ethereum",
+      "address": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
+      "chainId": 8453,
+      "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/ethereum/info/logo.png"
+    },
+    {
+      "name": "USD Coin",
+      "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "chainId": 8453,
+      "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
     }
   ]
 }
