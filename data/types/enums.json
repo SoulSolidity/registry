@@ -47,6 +47,12 @@
     "Ichi": 1,
     "Steer": 2
   },
+  "ProtocolsWithWrapper": [
+    1,
+    2,
+    3,
+    4
+  ],
   "LiquidityDex": {
     "ApeSwapV2": "ApeSwapV2",
     "ApeSwapV3": "ApeSwapV3",

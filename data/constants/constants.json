@@ -1,0 +1,40 @@
+{
+  "priceGetterSupportedChainsImages": [
+    {
+      "name": "BNB",
+      "image": "bnb.svg"
+    },
+    {
+      "name": "thereum",
+      "image": "ethereum.svg"
+    },
+    {
+      "name": "polygon",
+      "image": "polygon.svg"
+    },
+    {
+      "name": "linea",
+      "image": "linea.svg"
+    },
+    {
+      "name": "base",
+      "image": "base.svg"
+    },
+    {
+      "name": "avalanche",
+      "image": "avalanche.svg"
+    },
+    {
+      "name": "blast",
+      "image": "blast.svg"
+    },
+    {
+      "name": "lightlink",
+      "image": "lightlink.svg"
+    },
+    {
+      "name": "iota",
+      "image": "iota.svg"
+    }
+  ]
+}

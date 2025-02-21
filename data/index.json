@@ -47,6 +47,12 @@
     "Ichi": 1,
     "Steer": 2
   },
+  "ProtocolsWithWrapper": [
+    1,
+    2,
+    3,
+    4
+  ],
   "LiquidityDex": {
     "ApeSwapV2": "ApeSwapV2",
     "ApeSwapV3": "ApeSwapV3",
@@ -490,5 +496,43 @@
         "protocol": 1
       }
     ]
-  }
+  },
+  "priceGetterSupportedChainsImages": [
+    {
+      "name": "BNB",
+      "image": "bnb.svg"
+    },
+    {
+      "name": "thereum",
+      "image": "ethereum.svg"
+    },
+    {
+      "name": "polygon",
+      "image": "polygon.svg"
+    },
+    {
+      "name": "linea",
+      "image": "linea.svg"
+    },
+    {
+      "name": "base",
+      "image": "base.svg"
+    },
+    {
+      "name": "avalanche",
+      "image": "avalanche.svg"
+    },
+    {
+      "name": "blast",
+      "image": "blast.svg"
+    },
+    {
+      "name": "lightlink",
+      "image": "lightlink.svg"
+    },
+    {
+      "name": "iota",
+      "image": "iota.svg"
+    }
+  ]
 }
