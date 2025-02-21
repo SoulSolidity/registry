@@ -34,29 +34,29 @@ export const ProtocolsWithWrapper: Protocols[] = [Protocols.UniV3, Protocols.Uni
 
 export enum LiquidityDex {
     //MultiChain
-    ApeSwapV2 = 'ApeSwapV2',
-    ApeSwapV3 = 'ApeSwapV3',
-    PancakeSwapV2 = 'PancakeSwapV2',
-    PancakeSwapV3 = 'PancakeSwapV3',
-    SushiSwapV3 = 'SushiSwapV3',
-    UniswapV2 = 'UniswapV2',
-    UniswapV3 = 'UniswapV3',
+    ApeSwapV2 = 'ApeSwap V2',
+    ApeSwapV3 = 'ApeSwap V3',
+    PancakeSwapV2 = 'PancakeSwap V2',
+    PancakeSwapV3 = 'PancakeSwap V3',
+    SushiSwapV3 = 'SushiSwap V3',
+    UniswapV2 = 'Uniswap V2',
+    UniswapV3 = 'Uniswap V3',
     Curve = 'Curve',
 
     //BNB
-    ThenaV1 = 'ThenaV1',
-    ThenaAlgebra = 'ThenaAlgebra',
+    Thena = 'Thena',
+    ThenaAlgebra = 'Thena Algebra',
 
     //Polygon
-    QuickswapV2 = 'QuickswapV2',
-    QuickswapAlgebra = 'QuickswapAlgebra',
+    QuickswapV2 = 'Quickswap V2',
+    QuickswapAlgebra = 'Quickswap Algebra',
 
     //Linea
     Spartadex = 'Spartadex',
     Nile = 'Nile',
     XFAI = 'XFAI',
     Lynex = 'Lynex',
-    LynexAlgebra = 'LynexAlgebra',
+    LynexAlgebra = 'Lynex Algebra',
     Metavault = 'Metavault',
 
     //LightLink
@@ -64,19 +64,19 @@ export enum LiquidityDex {
 
     //Base
     Synthswap = 'Synthswap',
-    SynthswapAlgebra = 'SynthswapAlgebra',
+    SynthswapAlgebra = 'Synthswap Algebra',
     Aerodrome = 'Aerodrome',
     SmarDex = 'SmarDex',
-    TrebleSwapV2 = 'TrebleSwapV2',
-    TrebleAlgebraIntegral = 'TrebleAlgebraIntegral',
+    TrebleSwapV2 = 'TrebleSwap V2',
+    TrebleAlgebraIntegral = 'Treble Algebra Integral',
 
     //IOTA
     MagicSea = 'MagicSea',
     Wagmi = 'Wagmi',
 
     //ARBITRUM
-    CamelotV2 = 'Camelotv2',
-    ZyberswapAlgebra = 'ZyberswapAlgebra',
+    CamelotV2 = 'Camelot V2',
+    ZyberswapAlgebra = 'Zyberswap Algebra',
 
     //AVALANCHE
     LFJ = 'LFJ',
@@ -84,9 +84,9 @@ export enum LiquidityDex {
     Pangolin = 'Pangolin',
 
     //BLAST
-    ThrusterV2_03 = 'ThrusterV2_03', //0.3% fee
-    ThrusterV2_1 = 'ThrusterV2_1', //1% fee
-    ThrusterV3 = 'ThrusterV3',
+    ThrusterV2_03 = 'Thruster V2 0.3% fee', //0.3% fee
+    ThrusterV2_1 = 'Thruster V2 1% fee', //1% fee
+    ThrusterV3 = 'Thruster V3',
 }
 
 // ========== Zap ========== 

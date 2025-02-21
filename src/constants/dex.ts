@@ -63,7 +63,7 @@ export const dexFactories: Partial<
             protocol: Protocols.Algebra,
         },
         {
-            name: LiquidityDex.ThenaV1,
+            name: LiquidityDex.Thena,
             factory: '0xAFD89d21BdB66d00817d4153E055830B1c2B3970',
             protocol: Protocols.Solidly,
             router: '0xd4ae6eCA985340Dd434D38F470aCCce4DC78D109',

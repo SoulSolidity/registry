@@ -8,7 +8,6 @@ export const priceGetterSupportedChainsImages = [
     { name: 'Avalanche', image: 'avalanche.svg' },
     { name: 'Arbitrum', image: 'arbitrum.svg' },
     { name: 'BeraChain', image: 'bera.svg' },
-    { name: 'BeraChain', image: 'bera.svg' },
 ]
 
 //This is used on SoulSolidity.com pricing page to show the playground tokens
