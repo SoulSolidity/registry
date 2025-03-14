@@ -84,7 +84,7 @@ export enum LiquidityDex {
     Pangolin = 'Pangolin',
 
     //BLAST
-    ThrusterV2_03 = 'Thruster V2 0.3% fee', //0.3% fee
+    ThrusterV2_03 = 'Thruster V2', //0.3% fee
     ThrusterV2_1 = 'Thruster V2 1% fee', //1% fee
     ThrusterV3 = 'Thruster V3',
 }

@@ -1,7 +1,7 @@
 import { ChainId, LiquidityDex, Protocols } from '../types/enums'
 
 export const dexFactories: Partial<
-    Record<ChainId, { name: LiquidityDex, factory: string; router?: string; protocol: Protocols }[]>
+    Record<ChainId, { name: LiquidityDex, factory: string; router?: string; protocol: Protocols, hideImage?: boolean }[]>
 > = {
     [ChainId.ETH]: [
         {
@@ -276,6 +276,7 @@ export const dexFactories: Partial<
             name: LiquidityDex.ThrusterV2_1,
             factory: '0x37836821a2c03c171fB1a595767f4a16e2b93Fc4',
             protocol: Protocols.UniV2,
+            hideImage: true,
         },
         {
             name: LiquidityDex.ThrusterV3,
