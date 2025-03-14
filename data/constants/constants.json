@@ -49,6 +49,12 @@
       "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/bitcoin/info/logo.png"
     },
     {
+      "name": "Coinbase Wrapped BTC",
+      "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+      "chainId": 8453,
+      "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/bitcoin/info/logo.png"
+    },
+    {
       "name": "Aerodrome",
       "address": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
       "chainId": 8453,
