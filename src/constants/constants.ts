@@ -13,6 +13,17 @@ export const priceGetterSupportedChainsImages = [
 //This is used on SoulSolidity.com pricing page to show the playground tokens
 //Images from https://github.com/trustwallet/assets/tree/master/blockchains
 export const priceGetterPlaygroundTokens: { name: string, address: string, chainId: number, icon: string, lpIcons?: string[] }[] = [
+    //BNB
+    {
+        name: "Coinbase Wrapped BTC",
+        address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+        chainId: 8453,
+        icon: "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/bitcoin/info/logo.png"
+    },
+    //Ethereum
+    //Polygon
+    //Linea
+    //Base
     {
         name: "Coinbase Wrapped BTC",
         address: "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
@@ -41,4 +52,7 @@ export const priceGetterPlaygroundTokens: { name: string, address: string, chain
         ],
         icon: "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ichi.png"
     }
+    //Avalanche
+    //Arbitrum
+    //BeraChain
 ]
