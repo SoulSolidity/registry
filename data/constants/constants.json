@@ -34,19 +34,56 @@
       "name": "Arbitrum",
       "image": "arbitrum.svg",
       "chainId": 42161
-    },
-    {
-      "name": "BeraChain",
-      "image": "bera.svg",
-      "chainId": 8822
     }
   ],
   "priceGetterPlaygroundTokens": [
     {
-      "name": "Coinbase Wrapped BTC",
-      "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
-      "chainId": 8453,
-      "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/bitcoin/info/logo.png"
+      "name": "BNB",
+      "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+      "chainId": 56,
+      "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/binance/info/logo.png"
+    },
+    {
+      "name": "ABOND",
+      "address": "0x34294AfABCbaFfc616ac6614F6d2e17260b78BEd",
+      "chainId": 56,
+      "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/smartchain/assets/0x34294AfABCbaFfc616ac6614F6d2e17260b78BEd/logo.png"
+    },
+    {
+      "name": "ETH",
+      "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "chainId": 1,
+      "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/ethereum/info/logo.png"
+    },
+    {
+      "name": "stETH",
+      "address": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
+      "chainId": 1,
+      "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/ethereum/assets/0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84/logo.png"
+    },
+    {
+      "name": "Chainlink",
+      "address": "0x514910771AF9Ca656af840dff83E8264EcF986CA",
+      "chainId": 1,
+      "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/logo.png"
+    },
+    {
+      "name": "POL",
+      "address": "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
+      "chainId": 137,
+      "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/polygon/assets/0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270/logo.png"
+    },
+    {
+      "name": "ETH",
+      "address": "0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f",
+      "chainId": 59144,
+      "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/linea/assets/0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f/logo.png"
+    },
+    {
+      "name": "Lynex",
+      "address": "0x1a51b19CE03dbE0Cb44C1528E34a7EDD7771E9Af",
+      "chainId": 59144,
+      "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/linea/assets/0x1a51b19CE03dbE0Cb44C1528E34a7EDD7771E9Af/logo.png"
     },
     {
       "name": "Coinbase Wrapped BTC",
@@ -75,6 +112,30 @@
         "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/ethereum/info/logo.png"
       ],
       "icon": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ichi.png"
+    },
+    {
+      "name": "AVAX",
+      "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+      "chainId": 43114,
+      "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/avalanchec/assets/0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7/logo.png"
+    },
+    {
+      "name": "JOE",
+      "address": "0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd",
+      "chainId": 43114,
+      "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/avalanchec/assets/0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd/logo.png"
+    },
+    {
+      "name": "ETH",
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "chainId": 42161,
+      "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/arbitrum/assets/0x82aF49447D8a07e3bd95BD0d56f35241523fBab1/logo.png"
+    },
+    {
+      "name": "USDC",
+      "address": "0x9623063377AD1B27544C965cCd7342f7EA7e88C7",
+      "chainId": 42161,
+      "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/arbitrum/assets/0x9623063377AD1B27544C965cCd7342f7EA7e88C7/logo.png"
     }
   ]
 }
