@@ -5,7 +5,7 @@ export const priceGetterSupportedChainsImages = [
     { name: 'Polygon', image: 'polygon.svg', chainId: 137 },
     { name: 'Linea', image: 'linea.svg', chainId: 59144 },
     { name: 'Base', image: 'base.svg', chainId: 8453 },
-    { name: 'Avalanche', image: 'avalanche.svg', chainId: 43114 },
+    // { name: 'Avalanche', image: 'avalanche.svg', chainId: 43114 },
     { name: 'Arbitrum', image: 'arbitrum.svg', chainId: 42161 },
     // { name: 'BeraChain', image: 'bera.svg', chainId: 8822 },
 ]
@@ -26,6 +26,16 @@ export const priceGetterPlaygroundTokens: { name: string, address: string, chain
         chainId: 56,
         icon: "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/smartchain/assets/0x34294AfABCbaFfc616ac6614F6d2e17260b78BEd/logo.png"
     },
+    {
+        name: "Pancake LPs (CAKE-BNB)",
+        address: "0x0eD7e52944161450477ee417DE9Cd3a859b14fD0",
+        chainId: 56,
+        lpIcons: [
+            "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/smartchain/assets/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/logo.png",
+            "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/smartchain/info/logo.png"
+        ],
+        icon: "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/PancakeSwap%20V2.jpg"
+    },
     //Ethereum
     {
         name: "ETH",
@@ -44,6 +54,16 @@ export const priceGetterPlaygroundTokens: { name: string, address: string, chain
         address: "0x514910771AF9Ca656af840dff83E8264EcF986CA",
         chainId: 1,
         icon: "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/logo.png"
+    },
+    {
+        name: "Uniswap V2 (ETH-USDC)",
+        address: "0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc",
+        chainId: 1,
+        lpIcons: [
+            "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/ethereum/info/logo.png",
+            "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
+        ],
+        icon: "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/PancakeSwap%20V2.jpg"
     },
     //Polygon
     {
@@ -92,21 +112,21 @@ export const priceGetterPlaygroundTokens: { name: string, address: string, chain
             "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
             "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/ethereum/info/logo.png"
         ],
-        icon: "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ichi.png"
+        icon: "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/Ichi.png"
     },
     //Avalanche
-    {
-        name: "AVAX",
-        address: "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
-        chainId: 43114,
-        icon: "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/avalanchec/assets/0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7/logo.png"
-    },
-    {
-        name: "JOE",
-        address: "0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd",
-        chainId: 43114,
-        icon: "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/avalanchec/assets/0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd/logo.png"
-    },
+    // {
+    //     name: "AVAX",
+    //     address: "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7",
+    //     chainId: 43114,
+    //     icon: "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/avalanchec/assets/0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7/logo.png"
+    // },
+    // {
+    //     name: "JOE",
+    //     address: "0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd",
+    //     chainId: 43114,
+    //     icon: "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/avalanchec/assets/0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd/logo.png"
+    // },
     //Arbitrum
     {
         name: "ETH",
