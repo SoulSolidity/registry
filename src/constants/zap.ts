@@ -6,7 +6,7 @@ const zapData: Record<ChainId, Record<`0x${string}`, ZapInfo>> = {
   [ChainId.POLYGON]: {},
   [ChainId.BNB]: {
     "0x20cd480d58351d19b3d769f7779bdf98c7b12056": {
-      name: 'ApeBond ABOND bond',
+      name: 'ApeBond bond (ABOND)',
       lpData: {
         lpType: ZapLPType.Single,
         toToken: '0x55d398326f99059fF775485246999027B3197955'
@@ -19,7 +19,24 @@ const zapData: Record<ChainId, Record<`0x${string}`, ZapInfo>> = {
   },
   [ChainId.BASE]: {},
   [ChainId.ARBITRUM]: {},
-  [ChainId.LINEA]: {},
+  [ChainId.LINEA]: {
+    "0x0b15a5e3ca0d4b492c3b476d0f807535f9b72079": {
+      name: 'Lynex Gamma (USDC-WETH)',
+      lpData: {
+        lpType: ZapLPType.Gamma,
+        hypervisor: '0x0b15a5e3ca0d4b492c3b476d0f807535f9b72079',
+        uniProxy: '0xFc13Ebe7FEB9595D70195E9168aA7F3acE153621'
+      },
+    },
+    "0x8a9570ec97534277ade6e46d100939fbce4968f0": {
+      name: 'Lynex Gamma (WBTC-WETH)',
+      lpData: {
+        lpType: ZapLPType.Gamma,
+        hypervisor: '0x8a9570ec97534277ade6e46d100939fbce4968f0',
+        uniProxy: '0xFc13Ebe7FEB9595D70195E9168aA7F3acE153621'
+      }
+    }
+  },
   [ChainId.AVAX]: {},
   [ChainId.BLAST]: {},
   [ChainId.LIGHTLINK]: {},

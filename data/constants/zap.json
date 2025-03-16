@@ -2,7 +2,7 @@
   "1": {},
   "56": {
     "0x20cd480d58351d19b3d769f7779bdf98c7b12056": {
-      "name": "ApeBond ABOND bond",
+      "name": "ApeBond bond (ABOND)",
       "lpData": {
         "lpType": "single",
         "toToken": "0x55d398326f99059fF775485246999027B3197955"
@@ -20,6 +20,23 @@
   "8822": {},
   "42161": {},
   "43114": {},
-  "59144": {},
+  "59144": {
+    "0x0b15a5e3ca0d4b492c3b476d0f807535f9b72079": {
+      "name": "Lynex Gamma (USDC-WETH)",
+      "lpData": {
+        "lpType": "gamma",
+        "hypervisor": "0x0b15a5e3ca0d4b492c3b476d0f807535f9b72079",
+        "uniProxy": "0xFc13Ebe7FEB9595D70195E9168aA7F3acE153621"
+      }
+    },
+    "0x8a9570ec97534277ade6e46d100939fbce4968f0": {
+      "name": "Lynex Gamma (WBTC-WETH)",
+      "lpData": {
+        "lpType": "gamma",
+        "hypervisor": "0x8a9570ec97534277ade6e46d100939fbce4968f0",
+        "uniProxy": "0xFc13Ebe7FEB9595D70195E9168aA7F3acE153621"
+      }
+    }
+  },
   "81457": {}
 }
