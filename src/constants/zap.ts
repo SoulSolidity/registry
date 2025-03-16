@@ -35,6 +35,14 @@ const zapData: Record<ChainId, Record<`0x${string}`, ZapInfo>> = {
         hypervisor: '0x8a9570ec97534277ade6e46d100939fbce4968f0',
         uniProxy: '0xFc13Ebe7FEB9595D70195E9168aA7F3acE153621'
       }
+    },
+    "0x32e27ff479454e32868ff67ee9f06bafdc1e908f": {
+      name: 'Lynex Gamma (BUSD-USDT)',
+      lpData: {
+        lpType: ZapLPType.Gamma,
+        hypervisor: '0x32e27ff479454e32868ff67ee9f06bafdc1e908f',
+        uniProxy: '0xFc13Ebe7FEB9595D70195E9168aA7F3acE153621'
+      }
     }
   },
   [ChainId.AVAX]: {},
