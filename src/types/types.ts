@@ -2,6 +2,7 @@ import { IchiSupportedDex, ZapLPType, ZapProtocols } from "./enums";
 
 export type ZapInfo = {
     name: string;
+    logoURI?: string;
     lpData: SingleTokenInfo | UniV2LPInfo | GammaLPInfo | IchiLPInfo | SolidlyLPInfo | CurveLPInfo | SteerLPInfo;
     protocolData?: ApeBondInfo;
 };

@@ -7,6 +7,7 @@ const zapData: Record<ChainId, Record<`0x${string}`, ZapInfo>> = {
   [ChainId.BNB]: {
     "0x20cd480d58351d19b3d769f7779bdf98c7b12056": {
       name: 'ApeBond bond (ABOND)',
+      logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/ApeBond.jpg',
       lpData: {
         lpType: ZapLPType.Single,
         toToken: '0x55d398326f99059fF775485246999027B3197955'
@@ -22,6 +23,7 @@ const zapData: Record<ChainId, Record<`0x${string}`, ZapInfo>> = {
   [ChainId.LINEA]: {
     "0x0b15a5e3ca0d4b492c3b476d0f807535f9b72079": {
       name: 'Lynex Gamma (USDC-WETH)',
+      logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg',
       lpData: {
         lpType: ZapLPType.Gamma,
         hypervisor: '0x0b15a5e3ca0d4b492c3b476d0f807535f9b72079',
@@ -30,6 +32,7 @@ const zapData: Record<ChainId, Record<`0x${string}`, ZapInfo>> = {
     },
     "0x8a9570ec97534277ade6e46d100939fbce4968f0": {
       name: 'Lynex Gamma (WBTC-WETH)',
+      logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg',
       lpData: {
         lpType: ZapLPType.Gamma,
         hypervisor: '0x8a9570ec97534277ade6e46d100939fbce4968f0',
@@ -38,6 +41,7 @@ const zapData: Record<ChainId, Record<`0x${string}`, ZapInfo>> = {
     },
     "0x32e27ff479454e32868ff67ee9f06bafdc1e908f": {
       name: 'Lynex Gamma (BUSD-USDT)',
+      logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg',
       lpData: {
         lpType: ZapLPType.Gamma,
         hypervisor: '0x32e27ff479454e32868ff67ee9f06bafdc1e908f',
