@@ -10,7 +10,7 @@ export const priceSources: Partial<Record<ChainId, Record<string, PriceSourceCon
         },
         '0x09854c1349cd1412439461ca72609f97850d2218': {
             source: PriceSource.Mexc,
-            id: '0x09854c1349cd1412439461ca72609f97850d2218',
+            id: 'FNFSUSDT',
             tokenAddress: '0x09854c1349cd1412439461ca72609f97850d2218',
         }
     }
