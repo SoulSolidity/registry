@@ -15,6 +15,7 @@ export enum ChainId {
 //========== Price Getter ========== 
 
 export enum PriceSource {
+    OnChain = 'onchain',
     Coingecko = 'coingecko',
     Dexscreener = 'dexscreener',
     Mexc = 'mexc',
