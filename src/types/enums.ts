@@ -14,6 +14,12 @@ export enum ChainId {
 
 //========== Price Getter ========== 
 
+export enum PriceSource {
+    Coingecko = 'coingecko',
+    Dexscreener = 'dexscreener',
+    Mexc = 'mexc',
+}
+
 export enum Protocols {
     UniV2 = 0,
     UniV3 = 1,

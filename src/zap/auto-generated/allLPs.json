@@ -1,0 +1,170 @@
+{
+  "1": {},
+  "56": {},
+  "97": {},
+  "137": {},
+  "195": {},
+  "8453": {},
+  "8822": {},
+  "42161": {},
+  "43114": {},
+  "59144": {
+    "0x3Cb104f044dB23d6513F2A6100a1997Fa5e3F587": {
+      "name": "Lynex Gamma (USDC-WETH)",
+      "icon": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
+      "toToken0": {
+        "address": "0x176211869cA2b568f2A7D4EE941E073a821EE1ff",
+        "name": "USDC",
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "toToken1": {
+        "address": "0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f",
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      "lpData": {
+        "lpType": "gamma",
+        "hypervisor": "0x3Cb104f044dB23d6513F2A6100a1997Fa5e3F587",
+        "uniProxy": "0xFc13Ebe7FEB9595D70195E9168aA7F3acE153621"
+      }
+    },
+    "0x704C442BFEf3b6b31559085fC67083CA64E30B5C": {
+      "name": "Lynex Gamma (BUSD-USDT)",
+      "icon": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
+      "toToken0": {
+        "address": "0x7d43AABC515C356145049227CeE54B608342c0ad",
+        "name": "Binance USD",
+        "symbol": "BUSD",
+        "decimals": 18
+      },
+      "toToken1": {
+        "address": "0xA219439258ca9da29E9Cc4cE5596924745e12B93",
+        "name": "Tether USD",
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "lpData": {
+        "lpType": "gamma",
+        "hypervisor": "0x704C442BFEf3b6b31559085fC67083CA64E30B5C",
+        "uniProxy": "0xFc13Ebe7FEB9595D70195E9168aA7F3acE153621"
+      }
+    },
+    "0xC4dEB765F13f47C6Bb1279a7326696b67786C15a": {
+      "name": "Lynex Gamma (BUSD-WETH)",
+      "icon": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
+      "toToken0": {
+        "address": "0x7d43AABC515C356145049227CeE54B608342c0ad",
+        "name": "Binance USD",
+        "symbol": "BUSD",
+        "decimals": 18
+      },
+      "toToken1": {
+        "address": "0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f",
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      "lpData": {
+        "lpType": "gamma",
+        "hypervisor": "0xC4dEB765F13f47C6Bb1279a7326696b67786C15a",
+        "uniProxy": "0xFc13Ebe7FEB9595D70195E9168aA7F3acE153621"
+      }
+    },
+    "0x1203688929F72C459007508B1da79a5eB20a6165": {
+      "name": "Lynex Gamma (MATIC-WETH)",
+      "icon": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
+      "toToken0": {
+        "address": "0x265B25e22bcd7f10a5bD6E6410F10537Cc7567e8",
+        "name": "Matic Token",
+        "symbol": "MATIC",
+        "decimals": 18
+      },
+      "toToken1": {
+        "address": "0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f",
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      "lpData": {
+        "lpType": "gamma",
+        "hypervisor": "0x1203688929F72C459007508B1da79a5eB20a6165",
+        "uniProxy": "0xFc13Ebe7FEB9595D70195E9168aA7F3acE153621"
+      }
+    },
+    "0x8E80016b025C89A6a270b399F5eBFb734bE58ada": {
+      "name": "Lynex Gamma (WBTC-WETH)",
+      "icon": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
+      "toToken0": {
+        "address": "0x3aAB2285ddcDdaD8edf438C1bAB47e1a9D05a9b4",
+        "name": "Wrapped BTC",
+        "symbol": "WBTC",
+        "decimals": 8
+      },
+      "toToken1": {
+        "address": "0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f",
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      "lpData": {
+        "lpType": "gamma",
+        "hypervisor": "0x8E80016b025C89A6a270b399F5eBFb734bE58ada",
+        "uniProxy": "0xFc13Ebe7FEB9595D70195E9168aA7F3acE153621"
+      }
+    },
+    "0xd4D4D99B26E7C96c70F32b417870Aad2d51374A5": {
+      "name": "Lynex Gamma (USDC-BUSD)",
+      "icon": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
+      "toToken0": {
+        "address": "0x176211869cA2b568f2A7D4EE941E073a821EE1ff",
+        "name": "USDC",
+        "symbol": "USDC",
+        "decimals": 6
+      },
+      "toToken1": {
+        "address": "0x7d43AABC515C356145049227CeE54B608342c0ad",
+        "name": "Binance USD",
+        "symbol": "BUSD",
+        "decimals": 18
+      },
+      "lpData": {
+        "lpType": "gamma",
+        "hypervisor": "0xd4D4D99B26E7C96c70F32b417870Aad2d51374A5",
+        "uniProxy": "0xFc13Ebe7FEB9595D70195E9168aA7F3acE153621"
+      }
+    },
+    "0x8611456f845293edD3F5788277F00F7C05CCC291": {
+      "name": "Lynex Gamma (USDT-WETH)",
+      "icon": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
+      "toToken0": {
+        "address": "0xA219439258ca9da29E9Cc4cE5596924745e12B93",
+        "name": "Tether USD",
+        "symbol": "USDT",
+        "decimals": 6
+      },
+      "toToken1": {
+        "address": "0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f",
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      "lpData": {
+        "lpType": "gamma",
+        "hypervisor": "0x8611456f845293edD3F5788277F00F7C05CCC291",
+        "uniProxy": "0xFc13Ebe7FEB9595D70195E9168aA7F3acE153621"
+      }
+    },
+    "0x9e480e37a036b6703818D701544763a36bfed35b": {
+      "name": "Lynex Ichi (ZERO-WETH)",
+      "icon": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
+      "lpData": {
+        "lpType": "ichi",
+        "vault": "0x9e480e37a036b6703818D701544763a36bfed35b",
+        "underlyingDex": "Lynex"
+      }
+    }
+  },
+  "81457": {}
+}

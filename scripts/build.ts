@@ -43,7 +43,8 @@ function findTypeScriptFiles(dir: string): string[] {
         const fullPath = path.join(dir, entry.name);
         if (entry.isDirectory()) {
             files.push(...findTypeScriptFiles(fullPath));
-        } else if (entry.name.endsWith('.ts') && !entry.name.endsWith('.d.ts')) {
+        } else if (entry.name.endsWith('.ts') && !entry.name.endsWith('.d.ts') && 
+                  !entry.name.endsWith('consolidate.ts')) { // Skip our consolidation script
             files.push(fullPath);
         }
     }
@@ -56,6 +57,11 @@ async function main() {
     try {
         const files = findTypeScriptFiles('src');
         await Promise.all(files.map(processFile));
+        
+        // Run the consolidation script to create the all LPs file
+        console.log('Creating consolidated LP data file...');
+        await import('./consolidate');
+        
         console.log('Build completed successfully!');
     } catch (error) {
         console.error('Build failed:', error);

@@ -1,0 +1,13 @@
+{
+  "priceSources": {
+    "56": {
+      "0x8613d52D74a48883A51bAdF8b25ab066714087Da": [
+        {
+          "source": "coingecko",
+          "id": "lovebit",
+          "tokenAddress": "0x8613d52D74a48883A51bAdF8b25ab066714087Da"
+        }
+      ]
+    }
+  }
+}
