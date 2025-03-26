@@ -13,10 +13,5 @@ export const priceSources: Partial<Record<ChainId, Record<string, PriceSourceCon
             id: 'FNFSUSDT',
             tokenAddress: '0x09854c1349cd1412439461ca72609f97850d2218',
         },
-        '0x44aA475eD44ddA30F4fB81a0eEC7C44aed01c7c0': {
-            source: PriceSource.Dexscreener,
-            type: 'pair',
-            tokenAddress: '0x44aA475eD44ddA30F4fB81a0eEC7C44aed01c7c0',
-        }
     }
 }
