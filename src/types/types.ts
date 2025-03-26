@@ -27,17 +27,3 @@ export type MexcPriceSourceConfig = {
 }
 
 export type PriceSourceConfigs = CoinGeckoPriceSourceConfig | DexScreenerPriceSourceConfig | MexcPriceSourceConfig
-
-export const DexScreenerChainIds: Record<ChainId, string> = {
-    [ChainId.ETH]: "ethereum",
-    [ChainId.POLYGON]: "polygon",
-    [ChainId.BNB]: "bsc",
-    [ChainId.ARBITRUM]: "arbitrum",
-    [ChainId.LINEA]: "linea",
-    [ChainId.BASE]: "base",
-    [ChainId.AVAX]: "avalanche",
-    [ChainId.BLAST]: "blast",
-    [ChainId.LIGHTLINK]: "lightlink",
-    [ChainId.IOTA]: "iota",
-    [ChainId.BNB_TESTNET]: "bnb-testnet",
-}

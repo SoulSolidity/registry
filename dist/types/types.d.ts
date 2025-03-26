@@ -1,4 +1,4 @@
-import { ChainId, LiquidityDex, PriceSource, Protocols } from "./enums";
+import { LiquidityDex, PriceSource, Protocols } from "./enums";
 export type DexConfig = {
     name: LiquidityDex;
     factory: `0x${string}`;
@@ -22,4 +22,3 @@ export type MexcPriceSourceConfig = {
     tokenAddress: `0x${string}`;
 };
 export type PriceSourceConfigs = CoinGeckoPriceSourceConfig | DexScreenerPriceSourceConfig | MexcPriceSourceConfig;
-export declare const DexScreenerChainIds: Record<ChainId, string>;
