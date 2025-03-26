@@ -18,7 +18,7 @@ var ChainId;
 //========== Price Getter ========== 
 var PriceSource;
 (function (PriceSource) {
-    PriceSource["OnChain"] = "onchain";
+    PriceSource["Dex"] = "dex";
     PriceSource["Coingecko"] = "coingecko";
     PriceSource["Dexscreener"] = "dexscreener";
     PriceSource["Mexc"] = "mexc";

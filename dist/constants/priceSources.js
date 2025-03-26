@@ -13,6 +13,16 @@ exports.priceSources = {
             source: enums_1.PriceSource.Mexc,
             id: 'FNFSUSDT',
             tokenAddress: '0x09854c1349cd1412439461ca72609f97850d2218',
+        },
+        '0x34294AfABCbaFfc616ac6614F6d2e17260b78BEd': {
+            source: enums_1.PriceSource.Dexscreener,
+            type: 'token',
+            tokenAddress: '0x34294AfABCbaFfc616ac6614F6d2e17260b78BEd',
+        },
+        '0xce62C48ecf7a08d285575Dc5be404ffb36BcAE2E': {
+            source: enums_1.PriceSource.Dexscreener,
+            type: 'pair',
+            tokenAddress: '0xce62C48ecf7a08d285575Dc5be404ffb36BcAE2E',
         }
     }
 };

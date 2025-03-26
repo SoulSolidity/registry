@@ -1,4 +1,4 @@
-import { LiquidityDex, PriceSource, Protocols } from "./enums";
+import { ChainId, LiquidityDex, PriceSource, Protocols } from "./enums";
 
 export type DexConfig = {
     name: LiquidityDex,
@@ -16,7 +16,7 @@ export type CoinGeckoPriceSourceConfig = {
 
 export type DexScreenerPriceSourceConfig = {
     source: PriceSource.Dexscreener,
-    id: string,
+    type: 'token' | 'pair',
     tokenAddress: `0x${string}`
 }
 
@@ -27,3 +27,17 @@ export type MexcPriceSourceConfig = {
 }
 
 export type PriceSourceConfigs = CoinGeckoPriceSourceConfig | DexScreenerPriceSourceConfig | MexcPriceSourceConfig
+
+export const DexScreenerChainIds: Record<ChainId, string> = {
+    [ChainId.ETH]: "ethereum",
+    [ChainId.POLYGON]: "polygon",
+    [ChainId.BNB]: "bsc",
+    [ChainId.ARBITRUM]: "arbitrum",
+    [ChainId.LINEA]: "linea",
+    [ChainId.BASE]: "base",
+    [ChainId.AVAX]: "avalanche",
+    [ChainId.BLAST]: "blast",
+    [ChainId.LIGHTLINK]: "lightlink",
+    [ChainId.IOTA]: "iota",
+    [ChainId.BNB_TESTNET]: "bnb-testnet",
+}

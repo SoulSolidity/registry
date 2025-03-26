@@ -12,7 +12,7 @@ export declare enum ChainId {
     BNB_TESTNET = 97
 }
 export declare enum PriceSource {
-    OnChain = "onchain",
+    Dex = "dex",
     Coingecko = "coingecko",
     Dexscreener = "dexscreener",
     Mexc = "mexc"

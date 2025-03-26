@@ -12,6 +12,16 @@ export const priceSources: Partial<Record<ChainId, Record<string, PriceSourceCon
             source: PriceSource.Mexc,
             id: 'FNFSUSDT',
             tokenAddress: '0x09854c1349cd1412439461ca72609f97850d2218',
+        },
+        '0x34294AfABCbaFfc616ac6614F6d2e17260b78BEd': {
+            source: PriceSource.Dexscreener,
+            type: 'token',
+            tokenAddress: '0x34294AfABCbaFfc616ac6614F6d2e17260b78BEd',
+        },
+        '0xce62C48ecf7a08d285575Dc5be404ffb36BcAE2E': {
+            source: PriceSource.Dexscreener,
+            type: 'pair',
+            tokenAddress: '0xce62C48ecf7a08d285575Dc5be404ffb36BcAE2E',
         }
     }
 }
