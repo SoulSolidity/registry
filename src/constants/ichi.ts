@@ -1,6 +1,6 @@
 import { IchiSupportedChainId, IchiSupportedDex } from "../types/enums";
 
-export const addressConfig: Partial<Record<IchiSupportedChainId, Partial<Record<IchiSupportedDex, {
+const ichiAddressConfig: Partial<Record<IchiSupportedChainId, Partial<Record<IchiSupportedDex, {
     factoryAddress: string,
     depositGuard: {
         address: string,
@@ -746,6 +746,8 @@ export const addressConfig: Partial<Record<IchiSupportedChainId, Partial<Record<
         },
     }
 }
+
+export default ichiAddressConfig;
 
 // exports.MULTICALLDDRESSES: {
 //     _16[IchiSupportedChainId.mainnet] = '0x1F98415757620B543A52E61c46B32eB19261F984',

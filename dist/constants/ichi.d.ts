@@ -1,5 +1,5 @@
 import { IchiSupportedChainId, IchiSupportedDex } from "../types/enums";
-export declare const addressConfig: Partial<Record<IchiSupportedChainId, Partial<Record<IchiSupportedDex, {
+declare const ichiAddressConfig: Partial<Record<IchiSupportedChainId, Partial<Record<IchiSupportedDex, {
     factoryAddress: string;
     depositGuard: {
         address: string;
@@ -10,3 +10,4 @@ export declare const addressConfig: Partial<Record<IchiSupportedChainId, Partial
     ammVersion?: string;
     is2Thick?: boolean;
 }>>>>;
+export default ichiAddressConfig;

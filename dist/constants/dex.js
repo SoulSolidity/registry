@@ -1,8 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.dexFactories = void 0;
 const enums_1 = require("../types/enums");
-exports.dexFactories = {
+const dexFactories = {
     [enums_1.ChainId.ETH]: [
         {
             name: enums_1.LiquidityDex.ApeSwapV2,
@@ -292,3 +291,4 @@ exports.dexFactories = {
         },
     ]
 };
+exports.default = dexFactories;

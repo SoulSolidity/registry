@@ -1,8 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.addressConfig = void 0;
 const enums_1 = require("../types/enums");
-exports.addressConfig = {
+const ichiAddressConfig = {
     [enums_1.IchiSupportedChainId.arbitrum]: {
         [enums_1.IchiSupportedDex.UniswapV3]: {
             factoryAddress: '0xfBf38920cCbCFF7268Ad714ae5F9Fad6dF607065',
@@ -738,6 +737,7 @@ exports.addressConfig = {
         },
     }
 };
+exports.default = ichiAddressConfig;
 // exports.MULTICALLDDRESSES: {
 //     _16[IchiSupportedChainId.mainnet] = '0x1F98415757620B543A52E61c46B32eB19261F984',
 //     _16[IchiSupportedChainId.flare] = '0x921aCCA39e8D3519A503EE4A11b56d6eEACbb2Aa',

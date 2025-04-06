@@ -1,7 +1,7 @@
 import { ChainId, LiquidityDex, Protocols } from '../types/enums'
 import { DexConfig } from '../types/types'
 
-export const dexFactories: Partial<Record<ChainId, DexConfig[]>> = {
+const dexFactories: Partial<Record<ChainId, DexConfig[]>> = {
     [ChainId.ETH]: [
         {
             name: LiquidityDex.ApeSwapV2,
@@ -291,3 +291,5 @@ export const dexFactories: Partial<Record<ChainId, DexConfig[]>> = {
         },
     ]
 }
+
+export default dexFactories;
