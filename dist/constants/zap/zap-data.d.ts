@@ -10,5 +10,5 @@
  * 2. If needed, create a new template in src/zap-data/templates/
  * 3. Update src/zap-data/index.ts to import and process the new entries
  */
-import zapData from '../zap-data';
+import zapData from '../../zap-data';
 export default zapData;

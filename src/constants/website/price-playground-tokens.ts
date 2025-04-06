@@ -1,20 +1,6 @@
-import { ChainId } from "../types/enums"
-
-//This is used on SoulSolidity.com pricing page to show the supported chain images
-export const priceGetterSupportedChainsImages = [
-    { name: 'BNB', image: 'bnb.svg', chainId: 56 },
-    { name: 'Ethereum', image: 'ethereum.svg', chainId: 1 },
-    { name: 'Polygon', image: 'polygon.svg', chainId: 137 },
-    { name: 'Linea', image: 'linea.svg', chainId: 59144 },
-    { name: 'Base', image: 'base.svg', chainId: 8453 },
-    // { name: 'Avalanche', image: 'avalanche.svg', chainId: 43114 },
-    { name: 'Arbitrum', image: 'arbitrum.svg', chainId: 42161 },
-    // { name: 'BeraChain', image: 'bera.svg', chainId: 8822 },
-]
-
 //This is used on SoulSolidity.com pricing page to show the playground tokens
 //Images from https://github.com/trustwallet/assets/tree/master/blockchains
-export const priceGetterPlaygroundTokens: { name: string, address: string, chainId: number, icon: string, lpIcons?: string[] }[] = [
+const priceGetterPlaygroundTokens: { name: string, address: string, chainId: number, icon: string, lpIcons?: string[] }[] = [
     //BNB
     {
         name: "BNB",
@@ -143,3 +129,5 @@ export const priceGetterPlaygroundTokens: { name: string, address: string, chain
         icon: "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/arbitrum/assets/0x9623063377AD1B27544C965cCd7342f7EA7e88C7/logo.png"
     },
 ]
+
+export default priceGetterPlaygroundTokens;

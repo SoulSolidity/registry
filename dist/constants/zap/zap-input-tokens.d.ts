@@ -1,4 +1,4 @@
-import { ChainId } from '../types/enums';
+import { ChainId } from '../../types/enums';
 declare const defaultZapInputTokens: Record<ChainId, {
     address: string;
     symbol: string;
