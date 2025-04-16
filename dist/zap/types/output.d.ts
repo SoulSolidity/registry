@@ -1,86 +1,58 @@
-/**
- * Output types for the zap system
- */
-import { LPType } from './common';
-/**
- * Final zap info structure for production
- */
+import { LPType, ERC20TokenInfo } from './common';
+import { IchiConfig } from './config';
 export interface ZapInfo {
     name: string;
-    icon?: string;
+    icon: string;
     lpData: LPData;
     protocolData?: ProtocolData;
 }
-/**
- * Union type for all LP data types
- */
-export type LPData = SingleTokenInfo | UniV2LPInfo | GammaLPInfo | IchiLPInfo | SolidlyLPInfo | CurveLPInfo | SteerLPInfo;
-/**
- * Single token LP info
- */
 export interface SingleTokenInfo {
     lpType: LPType.SINGLE;
-    toToken: string;
+    toToken: ERC20TokenInfo;
 }
-/**
- * UniV2-style LP info
- */
 export interface UniV2LPInfo {
     lpType: LPType.UNIV2;
+    toToken0: ERC20TokenInfo;
+    toToken1: ERC20TokenInfo;
     lpAddress: string;
+    factory: string;
     router: string;
 }
-/**
- * Gamma LP info
- */
+export interface SolidlyLPInfo {
+    lpType: LPType.SOLIDLY;
+    toToken0: ERC20TokenInfo;
+    toToken1: ERC20TokenInfo;
+    stable: boolean;
+    lpAddress: string;
+    factory: string;
+    router: string;
+}
 export interface GammaLPInfo {
     lpType: LPType.GAMMA;
+    toToken0: ERC20TokenInfo;
+    toToken1: ERC20TokenInfo;
     hypervisor: string;
     uniProxy: string;
 }
-/**
- * Ichi LP info
- */
 export interface IchiLPInfo {
     lpType: LPType.ICHI;
+    toToken0: ERC20TokenInfo;
+    toToken1: ERC20TokenInfo;
+    allowToken0: boolean;
+    allowToken1: boolean;
     vault: string;
-    underlyingDex: string;
+    ichiConfig: IchiConfig;
 }
-/**
- * Solidly LP info
- */
-export interface SolidlyLPInfo {
-    lpType: LPType.SOLIDLY;
-    lpAddress: string;
-    router: string;
-}
-/**
- * Curve LP info
- */
 export interface CurveLPInfo {
     lpType: LPType.CURVE;
     lpAddress: string;
 }
-/**
- * Steer LP info
- */
 export interface SteerLPInfo {
     lpType: LPType.STEER;
+    toToken0: ERC20TokenInfo;
+    toToken1: ERC20TokenInfo;
     lpAddress: string;
     periphery: string;
 }
-/**
- * Protocol-specific data
- */
-export interface ProtocolData {
-    protocol: string;
-    [key: string]: string;
-}
-/**
- * Final output format organized by chain IDs and addresses
- */
-export interface ZapOutput {
-    [chainId: string]: {
-        [address: string]: ZapInfo;
-    };
-}
+export type LPData = SingleTokenInfo | UniV2LPInfo | GammaLPInfo | IchiLPInfo | SolidlyLPInfo | CurveLPInfo | SteerLPInfo;
+export type ProtocolData = {};

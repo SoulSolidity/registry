@@ -18,7 +18,6 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./common"), exports);
-__exportStar(require("./metadata"), exports);
 __exportStar(require("./output"), exports);
 // Configuration specific types
 __exportStar(require("./config"), exports);

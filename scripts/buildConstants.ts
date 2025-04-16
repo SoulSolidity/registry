@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import priceSources from '../src/constants/price-api/price-sources';
-import dex from '../src/constants/dex';
+import dex from '../src/constants/price-api/dexes';
 import defaultZapInputTokens from '../src/constants/zap/zap-input-tokens';
 import priceChainsImages from '../src/constants/website/price-chains-images';
 import pricePlaygroundTokens from '../src/constants/website/price-playground-tokens';
@@ -29,10 +29,10 @@ const writeJsonFile = (filename: string, data: any) => {
 
 // Convert and write each constant file
 writeJsonFile('price-api/price-sources.json', priceSources);
-writeJsonFile('dex.json', dex);
+writeJsonFile('price-api/dexes.json', dex);
 writeJsonFile('zap/zap-input-tokens.json', defaultZapInputTokens);
 writeJsonFile('website/price-chains-images.json', priceChainsImages);
 writeJsonFile('website/price-playground-tokens.json', pricePlaygroundTokens);
-writeJsonFile('ichi.json', ichi);
+// writeJsonFile('ichi.json', ichi);
 
 console.log('All constants have been converted to JSON successfully!'); 

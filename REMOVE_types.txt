@@ -1,0 +1,61 @@
+API INPUT
+  chain: NetworkNamesSchema,
+  user: z.string(),
+  recipient: z.string(),
+  toToken: z.string(),
+  protocolData: ProtocolDataSchema.optional(),
+
+  slippage: z.number().max(50).default(1)
+  rpc: z.string().optional(),
+
+
+SingleTokenDataSchema
+  lpType: z.literal(LPType.Single),
+
+UniV2LPDataSchema
+  lpType: z.literal(LPType.UniV2),
+  toToken0: z.string(),
+  toToken1: z.string(),
+  lpAddress: z.string(),
+  router: z.string(),
+
+GammaLPDataSchema
+  lpType: z.literal(LPType.Gamma),
+  toToken0: z.string(),
+  toToken1: z.string(),
+  uniProxy: z.string(),
+  hypervisor: z.string(),
+
+IchiLPDataSchema
+  lpType: z.literal(LPType.Ichi),
+  vault: z.string(),
+  underlyingDex: z.nativeEnum(IchiSupportedDex).optional(), // dex is required OR depositGuard and vaultDeployer are required
+  depositGuard: z.string().optional(), // Ichi vault guard
+  router: z.string().optional(), // OUTDATED. replaced by depositGuard and only for backward compatibility
+  vaultDeployer: z.string().optional(),
+}).refine(data => {
+  // Ensure backward compatibility by setting depositGuard to router if router is present
+  if (data.router && !data.depositGuard) {
+    data.depositGuard = data.router;
+  }
+  return (!data.underlyingDex && data.depositGuard && data.vaultDeployer) || (data.underlyingDex && !data.depositGuard && !data.vaultDeployer);
+}, {
+  message: "'underlyingDex' is required. Alternatively, you can override 'depositGuard' and 'vaultDeployer', but 'underlyingDex' must not be present in that case",
+  path: ["underlyingDex"]
+});
+
+SolidlyLPDataSchema
+  lpType: z.literal(LPType.Solidly),
+  toToken0: z.string(),
+  toToken1: z.string(),
+  lpAddress: z.string(),
+  router: z.string(),
+
+CurveLPDataSchema
+  lpType: z.literal(LPType.Curve),
+  lpAddress: z.string(),
+
+SteerLPDataSchema
+  lpType: z.literal(LPType.Steer),
+  lpAddress: z.string(),
+  periphery: z.string(),

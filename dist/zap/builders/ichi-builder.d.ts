@@ -1,37 +1,12 @@
-/**
- * Builder for ICHI LPs
- */
 import { ChainId, IchiEntry, Project, ZapInfo } from '../types';
+import { ListrTaskWrapper } from 'listr2';
 /**
- * Builder for ICHI LPs
+ * Fetches on-chain data for Gamma LPs and combines it with manual entries.
+ *
+ * @param manualEntries Array of manual Gamma entries.
+ * @param chainId The chain ID.
+ * @param project The project identifier.
+ * @param parentTask The parent Listr task wrapper for reporting progress.
+ * @returns Promise resolving to an array of GammaLPInfo.
  */
-export declare class IchiBuilder {
-    private chainId;
-    private projectName;
-    private entries;
-    private underlyingDex;
-    private dataRetriever;
-    /**
-     * Create a new ICHI builder
-     * @param chainId Chain ID
-     * @param projectName Project name
-     * @param entries ICHI entries
-     * @param underlyingDex Underlying DEX name
-     */
-    constructor(chainId: ChainId, projectName: Project, entries: IchiEntry[], underlyingDex: string);
-    /**
-     * Generate ZapInfo for an ICHI entry
-     * @param entry ICHI entry
-     * @returns ZapInfo object
-     */
-    private buildZapInfo;
-    /**
-     * Generate metadata for all entries in a format that matches the final consolidated structure
-     */
-    generateMetadata(): Promise<void>;
-    /**
-     * Build ZapInfo for all entries
-     * @returns Map of address to ZapInfo
-     */
-    build(): Promise<Record<string, ZapInfo>>;
-}
+export declare const buildIchi: (manualEntries: IchiEntry[], chainId: ChainId, project: Project, parentTask: ListrTaskWrapper<any, any, any>) => Promise<ZapInfo[]>;

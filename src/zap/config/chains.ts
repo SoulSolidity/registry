@@ -6,7 +6,7 @@ import { ChainConfig, ChainId } from '../types';
 /**
  * Chain configurations with RPC URLs and other settings
  */
-export const chainConfigs: { [key in ChainId]?: ChainConfig } = {
+export const chainConfigs: Record<ChainId, ChainConfig> = {
   [ChainId.ETHEREUM]: {
     name: 'Ethereum',
     rpcUrl: 'https://eth.llamarpc.com',

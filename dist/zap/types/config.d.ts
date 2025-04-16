@@ -1,10 +1,4 @@
-/**
- * Configuration types for the zap system
- */
-import { ChainId, DexType, Project } from './common';
-/**
- * Chain configuration interface
- */
+import { Project } from "./common";
 export interface ChainConfig {
     name: string;
     rpcUrl: string;
@@ -16,40 +10,31 @@ export interface ChainConfig {
         decimals: number;
     };
 }
-/**
- * DEX Factory configuration interface
- */
-export interface DexFactoryConfig {
-    address: `0x${string}`;
-    type: 'UniswapV2' | 'Solidly' | 'Other';
-    initCodeHash?: string;
-    name: string;
-}
-/**
- * Gamma configuration interface
- */
 export interface GammaConfig {
     uniProxyAddress: `0x${string}`;
 }
-/**
- * Project configuration (e.g., PancakeSwap, Uniswap, etc.)
- */
-export interface ProjectConfig {
-    name: string;
-    icon: string;
-    dexType: DexType;
-    factories?: DexFactoryConfig[];
-    gamma?: GammaConfig;
-    tokens?: {
-        [symbol: string]: `0x${string}`;
+export interface IchiConfig {
+    factoryAddress: string;
+    depositGuard: {
+        address: string;
+        version: number;
     };
+    vaultDeployerAddress: string;
+    isAlgebra: boolean;
 }
-/**
- * Full configuration type
- */
-export interface Config {
-    chains: {
-        [key in ChainId]?: ChainConfig;
-    };
-    projects: Partial<Record<ChainId, Partial<Record<Project, ProjectConfig>>>>;
+export interface UniV2Config {
+    factoryAddress: string;
+    routerAddress: string;
+}
+export interface SolidlyConfig {
+    factoryAddress: string;
+    routerAddress: string;
+}
+export interface ProjectConfig {
+    project: Project;
+    icon: string;
+    uniV2Config?: UniV2Config;
+    solidlyConfig?: SolidlyConfig;
+    gammaConfig?: GammaConfig;
+    ichiConfig?: IchiConfig;
 }

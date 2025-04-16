@@ -11,11 +11,7 @@ export declare enum ChainId {
     ARBITRUM = 42161,
     LINEA = 59144,
     BASE = 8453,
-    AVALANCHE = 43114,
-    BLAST = 81457,
-    LIGHTLINK = 195,
-    IOTA = 8822,
-    BNB_TESTNET = 97
+    AVALANCHE = 43114
 }
 /**
  * Chain names mapping
@@ -53,68 +49,23 @@ export declare enum LPType {
     SINGLE = "single",
     CURVE = "curve"
 }
-/**
- * Supported DEX types
- */
-export declare enum DexType {
-    UNISWAP = "uniswap",
-    PANCAKESWAP = "pancakeswap",
-    QUICKSWAP = "quickswap",
-    SUSHISWAP = "sushiswap",
-    LYNEX = "lynex",
-    THENA = "thena",
-    SPARTADEX = "spartadex",
-    APESWAP = "apeswap",
-    CURVE = "curve",
-    METAVAULT = "metavault",
-    TREBLESWAP = "trebleswap",
-    AERODROME = "aerodrome"
-}
-/**
- * Basic interface for manually added LP entries
- */
 export interface BaseEntry {
     address: `0x${string}`;
     name: string;
 }
-/**
- * Extended interface for UniV2 entries
- */
-export interface UniV2Entry extends BaseEntry {
-    router?: `0x${string}`;
-}
-/**
- * Extended interface for Solidly entries
- */
-export interface SolidlyEntry extends BaseEntry {
-    router?: `0x${string}`;
-    isStable?: boolean;
-}
-/**
- * Interface for Gamma entries
- */
 export interface GammaEntry extends BaseEntry {
 }
-/**
- * Interface for Ichi entries
- */
 export interface IchiEntry extends BaseEntry {
     underlyingDex?: string;
 }
-/**
- * Interface for Steer entries (to be implemented later)
- */
 export interface SteerEntry extends BaseEntry {
     periphery?: `0x${string}`;
 }
-/**
- * Interface for Single Token entries
- */
-export interface SingleTokenEntry extends BaseEntry {
-    toToken: `0x${string}`;
-}
-/**
- * Interface for Curve entries
- */
 export interface CurveEntry extends BaseEntry {
+}
+export interface ERC20TokenInfo {
+    address: `0x${string}`;
+    name: string;
+    symbol: string;
+    decimals: number;
 }

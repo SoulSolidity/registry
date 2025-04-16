@@ -1,108 +1,194 @@
 "use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || (function () {
+    var ownKeys = function(o) {
+        ownKeys = Object.getOwnPropertyNames || function (o) {
+            var ar = [];
+            for (var k in o) if (Object.prototype.hasOwnProperty.call(o, k)) ar[ar.length] = k;
+            return ar;
+        };
+        return ownKeys(o);
+    };
+    return function (mod) {
+        if (mod && mod.__esModule) return mod;
+        var result = {};
+        if (mod != null) for (var k = ownKeys(mod), i = 0; i < k.length; i++) if (k[i] !== "default") __createBinding(result, mod, k[i]);
+        __setModuleDefault(result, mod);
+        return result;
+    };
+})();
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.IchiBuilder = void 0;
-/**
- * Builder for ICHI LPs
- */
+exports.buildIchi = void 0;
+const actions_1 = require("viem/actions");
 const types_1 = require("../types");
-const data_retrievers_1 = require("../data-retrievers");
-const fs_1 = __importDefault(require("fs"));
-const path_1 = __importDefault(require("path"));
-const config_1 = require("../config");
+const ICHIVault_ABI_json_1 = __importDefault(require("../abi/ICHIVault_ABI.json"));
+const ERC20_ABI_json_1 = __importDefault(require("../abi/ERC20_ABI.json"));
+const projectConfigs = __importStar(require("../config/projects"));
+const client_1 = require("../utils/client");
 /**
- * Builder for ICHI LPs
+ * Fetches on-chain data for Gamma LPs and combines it with manual entries.
+ *
+ * @param manualEntries Array of manual Gamma entries.
+ * @param chainId The chain ID.
+ * @param project The project identifier.
+ * @param parentTask The parent Listr task wrapper for reporting progress.
+ * @returns Promise resolving to an array of GammaLPInfo.
  */
-class IchiBuilder {
-    /**
-     * Create a new ICHI builder
-     * @param chainId Chain ID
-     * @param projectName Project name
-     * @param entries ICHI entries
-     * @param underlyingDex Underlying DEX name
-     */
-    constructor(chainId, projectName, entries, underlyingDex) {
-        this.chainId = chainId;
-        this.projectName = projectName;
-        this.entries = entries;
-        this.underlyingDex = underlyingDex;
-        this.dataRetriever = new data_retrievers_1.IchiDataRetriever(chainId, underlyingDex);
+const buildIchi = async (manualEntries, chainId, project, parentTask) => {
+    if (manualEntries.length === 0) {
+        parentTask.skip('No manual entries provided.');
+        return [];
     }
-    /**
-     * Generate ZapInfo for an ICHI entry
-     * @param entry ICHI entry
-     * @returns ZapInfo object
-     */
-    async buildZapInfo(entry) {
-        const projectConfig = (0, config_1.getProjectConfig)(this.chainId, this.projectName);
-        if (!projectConfig) {
-            throw new Error(`No project configuration found for ${this.projectName} on chain ${this.chainId}`);
+    // Find the project configuration for the given project and chainId
+    const projectConfigMap = Object.values(projectConfigs).find((config) => config[chainId]?.project === project);
+    const projectConfig = projectConfigMap?.[chainId];
+    if (!projectConfig) {
+        parentTask.skip('Skipping Ichi build due to missing project configuration.');
+        return [];
+    }
+    const ichiConfig = projectConfig.ichiConfig;
+    if (!ichiConfig) {
+        parentTask.skip('Skipping Ichi build due to missing Ichi configuration.');
+        return [];
+    }
+    const icon = projectConfig.icon;
+    const client = (0, client_1.getClient)(chainId);
+    let lpResults = [];
+    let tokenResults = [];
+    let uniqueTokenAddresses = [];
+    try {
+        // Fetch LP details (token0, token1)
+        const lpCalls = manualEntries.map((entry) => [
+            {
+                address: entry.address,
+                abi: ICHIVault_ABI_json_1.default,
+                functionName: 'allowToken0',
+            },
+            {
+                address: entry.address,
+                abi: ICHIVault_ABI_json_1.default,
+                functionName: 'allowToken1',
+            },
+            {
+                address: entry.address,
+                abi: ICHIVault_ABI_json_1.default,
+                functionName: 'token0',
+            },
+            {
+                address: entry.address,
+                abi: ICHIVault_ABI_json_1.default,
+                functionName: 'token1',
+            },
+        ]).flat();
+        // Execute multicalls
+        lpResults = await (0, actions_1.multicall)(client, { contracts: lpCalls, allowFailure: false });
+        // Collect unique token addresses
+        const tokenAddresses = new Set();
+        for (let i = 0; i < manualEntries.length; i++) {
+            tokenAddresses.add(lpResults[i * 4 + 2]); // token0 address
+            tokenAddresses.add(lpResults[i * 4 + 3]); // token1 address
         }
+        uniqueTokenAddresses = Array.from(tokenAddresses);
+        // Fetch token details (name, symbol, decimals)
+        if (uniqueTokenAddresses.length === 0) {
+            // No need to skip here, just proceed; the next call will handle the empty array
+        }
+        else {
+            const tokenCalls = uniqueTokenAddresses.map((tokenAddress) => [
+                {
+                    address: tokenAddress,
+                    abi: ERC20_ABI_json_1.default,
+                    functionName: 'name',
+                },
+                {
+                    address: tokenAddress,
+                    abi: ERC20_ABI_json_1.default,
+                    functionName: 'symbol',
+                },
+                {
+                    address: tokenAddress,
+                    abi: ERC20_ABI_json_1.default,
+                    functionName: 'decimals',
+                },
+            ]).flat();
+            tokenResults = await (0, actions_1.multicall)(client, { contracts: tokenCalls, allowFailure: true });
+        }
+    }
+    catch (error) {
+        // Rethrow the error to be caught by the main build process
+        throw new Error(`Failed during data fetching in buildGamma: ${error instanceof Error ? error.message : String(error)}`);
+    }
+    // 4. Map token details for easy lookup
+    const tokenDetailsMap = new Map();
+    for (let i = 0; i < uniqueTokenAddresses.length; i++) {
+        const address = uniqueTokenAddresses[i];
+        const nameResult = tokenResults[i * 3];
+        const symbolResult = tokenResults[i * 3 + 1];
+        const decimalsResult = tokenResults[i * 3 + 2];
+        // Handle potential failures or unexpected types gracefully
+        const name = nameResult.status === 'success' && typeof nameResult.result === 'string'
+            ? nameResult.result
+            : 'Unknown Name';
+        const symbol = symbolResult.status === 'success' && typeof symbolResult.result === 'string'
+            ? symbolResult.result
+            : '???';
+        const decimals = decimalsResult.status === 'success' && (typeof decimalsResult.result === 'number' || typeof decimalsResult.result === 'bigint')
+            ? Number(decimalsResult.result)
+            : 18; // Default to 18 if decimals call fails
+        tokenDetailsMap.set(address, { address, name, symbol, decimals });
+    }
+    // Helper to safely get token info
+    const getERC20TokenInfo = (address) => {
+        const details = tokenDetailsMap.get(address);
+        return {
+            address: address,
+            name: details?.name ?? 'Unknown Name',
+            symbol: details?.symbol ?? '???',
+            decimals: details?.decimals ?? 18,
+        };
+    };
+    // 5. Combine manual data with fetched on-chain data
+    const processedData = manualEntries.map((entry, index) => {
+        // Adjust indexing based on the lpCalls structure: [allowToken0, allowToken1, token0, token1] per entry
+        const allowToken0Result = lpResults[index * 4];
+        const allowToken1Result = lpResults[index * 4 + 1];
+        const token0Address = lpResults[index * 4 + 2];
+        const token1Address = lpResults[index * 4 + 3];
+        // Type assertion for boolean results from multicall
+        const allowToken0 = allowToken0Result;
+        const allowToken1 = allowToken1Result;
         return {
             name: entry.name,
-            icon: projectConfig.icon,
+            icon: icon,
             lpData: {
                 lpType: types_1.LPType.ICHI,
+                toToken0: getERC20TokenInfo(token0Address),
+                toToken1: getERC20TokenInfo(token1Address),
+                allowToken0: allowToken0, // Use fetched value
+                allowToken1: allowToken1, // Use fetched value
                 vault: entry.address,
-                underlyingDex: entry.underlyingDex || this.underlyingDex,
+                ichiConfig: ichiConfig,
             },
         };
-    }
-    /**
-     * Generate metadata for all entries in a format that matches the final consolidated structure
-     */
-    async generateMetadata() {
-        console.log(`Generating metadata for ${this.entries.length} ICHI LPs on chain ${this.chainId} for ${this.projectName}...`);
-        // Fetch metadata for all entries
-        const metadataArray = await this.dataRetriever.fetchAllMetadata(this.entries);
-        // Get project configuration
-        const projectConfig = (0, config_1.getProjectConfig)(this.chainId, this.projectName);
-        if (!projectConfig) {
-            throw new Error(`No project configuration found for ${this.projectName} on chain ${this.chainId}`);
-        }
-        // Create the metadata directly in the final format needed for consolidation
-        // Instead of having an array of entries, we'll have a map of address -> lpInfo object
-        const finalMetadata = {};
-        for (const metadata of metadataArray) {
-            const pairName = `${metadata.token0.symbol}-${metadata.token1.symbol}`;
-            const displayName = `${this.projectName} Ichi (${pairName})`;
-            // Format matches exactly what we need in the final allLPs.json
-            finalMetadata[metadata.vaultAddress] = {
-                name: displayName,
-                icon: projectConfig.icon,
-                lpData: {
-                    lpType: types_1.LPType.ICHI.toLowerCase(),
-                    vault: metadata.vaultAddress,
-                    underlyingDex: this.underlyingDex
-                }
-            };
-        }
-        // Ensure the directory exists
-        const dirPath = path_1.default.join(process.cwd(), 'src', 'zap', 'auto-generated', types_1.ChainId[this.chainId].toLowerCase(), this.projectName);
-        fs_1.default.mkdirSync(dirPath, { recursive: true });
-        // Write the metadata file - this is now in the exact format needed for consolidation
-        fs_1.default.writeFileSync(path_1.default.join(dirPath, 'ichi-metadata.json'), JSON.stringify(finalMetadata, null, 2));
-        console.log(`Generated metadata for ${Object.keys(finalMetadata).length} ICHI LPs, ready for consolidation`);
-    }
-    /**
-     * Build ZapInfo for all entries
-     * @returns Map of address to ZapInfo
-     */
-    async build() {
-        console.log(`Building ZapInfo for ${this.entries.length} ICHI LPs on chain ${this.chainId} for ${this.projectName}...`);
-        const result = {};
-        for (const entry of this.entries) {
-            try {
-                const zapInfo = await this.buildZapInfo(entry);
-                result[entry.address] = zapInfo;
-            }
-            catch (error) {
-                console.error(`Error building ZapInfo for ${entry.address}:`, error);
-            }
-        }
-        return result;
-    }
-}
-exports.IchiBuilder = IchiBuilder;
+    });
+    return processedData;
+};
+exports.buildIchi = buildIchi;

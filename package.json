@@ -8,9 +8,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc && yarn build:constants",
+    "build": "tsc && yarn build:constants && yarn build:zap && yarn build:zap:consolidated",
     "build:nocheck": "tsc --skipLibCheck --noEmitOnError false",
-    "generate": "ts-node src/zap/build.ts",
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
     "start": "npm run build && npm run generate",
@@ -19,6 +18,8 @@
     "consolidate": "ts-node scripts/consolidate.ts",
     "consolidate:zap": "ts-node src/zap/consolidate.ts",
     "build:consolidated": "npm run build && npm run generate && npm run consolidate",
+    "build:zap": "ts-node src/zap/build.ts",
+    "build:zap:consolidated": "ts-node scripts/buildZap.ts",
     "build:constants": "ts-node scripts/buildConstants.ts"
   },
   "keywords": [
@@ -32,6 +33,7 @@
     "axios": "^1.6.7",
     "ethers": "^5.7.2",
     "koa": "^2.15.0",
+    "listr2": "^8.3.2",
     "mkdirp": "^3.0.1",
     "nodemon": "^3.1.0",
     "viem": "^2.23.13"

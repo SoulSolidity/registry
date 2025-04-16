@@ -3,7 +3,7 @@
  * Common types for the zap system
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DexType = exports.LPType = exports.Project = exports.ChainNames = exports.ChainId = void 0;
+exports.LPType = exports.Project = exports.ChainNames = exports.ChainId = void 0;
 /**
  * Supported chains in the system
  */
@@ -16,10 +16,6 @@ var ChainId;
     ChainId[ChainId["LINEA"] = 59144] = "LINEA";
     ChainId[ChainId["BASE"] = 8453] = "BASE";
     ChainId[ChainId["AVALANCHE"] = 43114] = "AVALANCHE";
-    ChainId[ChainId["BLAST"] = 81457] = "BLAST";
-    ChainId[ChainId["LIGHTLINK"] = 195] = "LIGHTLINK";
-    ChainId[ChainId["IOTA"] = 8822] = "IOTA";
-    ChainId[ChainId["BNB_TESTNET"] = 97] = "BNB_TESTNET";
 })(ChainId || (exports.ChainId = ChainId = {}));
 /**
  * Chain names mapping
@@ -32,10 +28,6 @@ exports.ChainNames = {
     [ChainId.LINEA]: 'linea',
     [ChainId.BASE]: 'base',
     [ChainId.AVALANCHE]: 'avalanche',
-    [ChainId.BLAST]: 'blast',
-    [ChainId.LIGHTLINK]: 'lightlink',
-    [ChainId.IOTA]: 'iota',
-    [ChainId.BNB_TESTNET]: 'bnb-testnet',
 };
 /**
  * Supported projects
@@ -71,22 +63,3 @@ var LPType;
     LPType["SINGLE"] = "single";
     LPType["CURVE"] = "curve";
 })(LPType || (exports.LPType = LPType = {}));
-/**
- * Supported DEX types
- */
-var DexType;
-(function (DexType) {
-    DexType["UNISWAP"] = "uniswap";
-    DexType["PANCAKESWAP"] = "pancakeswap";
-    DexType["QUICKSWAP"] = "quickswap";
-    DexType["SUSHISWAP"] = "sushiswap";
-    DexType["LYNEX"] = "lynex";
-    DexType["THENA"] = "thena";
-    DexType["SPARTADEX"] = "spartadex";
-    DexType["APESWAP"] = "apeswap";
-    DexType["CURVE"] = "curve";
-    DexType["METAVAULT"] = "metavault";
-    DexType["TREBLESWAP"] = "trebleswap";
-    DexType["AERODROME"] = "aerodrome";
-    // Add more DEXes as needed
-})(DexType || (exports.DexType = DexType = {}));

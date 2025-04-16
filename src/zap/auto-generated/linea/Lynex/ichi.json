@@ -1,0 +1,33 @@
+{
+  "0x9e480e37a036b6703818D701544763a36bfed35b": {
+    "name": "Lynex Ichi (ZERO-WETH)",
+    "icon": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
+    "lpData": {
+      "lpType": "ichi",
+      "toToken0": {
+        "address": "0x78354f8DcCB269a615A7e0a24f9B0718FDC3C7A7",
+        "name": "ZeroLend",
+        "symbol": "ZERO",
+        "decimals": 18
+      },
+      "toToken1": {
+        "address": "0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f",
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18
+      },
+      "allowToken0": false,
+      "allowToken1": true,
+      "vault": "0x9e480e37a036b6703818D701544763a36bfed35b",
+      "ichiConfig": {
+        "factoryAddress": "0x0248b992ac2a75294b05286E9DD3A2bD3C9CFE4B",
+        "depositGuard": {
+          "address": "0x57C9d919AEA56171506cfb62B60ce76be0A079DF",
+          "version": 2
+        },
+        "vaultDeployerAddress": "0x75178e0a2829B73E3AE4C21eE64F4B684085392a",
+        "isAlgebra": true
+      }
+    }
+  }
+}
