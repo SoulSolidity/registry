@@ -1,5 +1,6 @@
-import { ChainId, GammaEntry, Project, ZapInfo } from '../types';
+import { GammaEntry, Project, ZapInfo } from '../types';
 import { ListrTaskWrapper } from 'listr2';
+import { ChainId } from '../../types/enums';
 /**
  * Fetches on-chain data for Gamma LPs and combines it with manual entries.
  *

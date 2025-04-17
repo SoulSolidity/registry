@@ -1,10 +1,11 @@
 /**
  * Project configurations
  */
-import { ChainId, Project, ProjectConfig } from '../types';
+import { Project, ProjectConfig } from '../types';
+import { ChainId } from '../../types/enums';
 
 export const SUSHISWAP_CONFIG: Partial<Record<ChainId, ProjectConfig>> = {
-  [ChainId.ETHEREUM]: {
+  [ChainId.ETH]: {
     project: Project.SushiSwap,
     logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/SushiSwap.jpg?raw=true',
     uniV2Config: {

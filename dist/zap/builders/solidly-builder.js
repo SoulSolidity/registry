@@ -71,6 +71,10 @@ const buildSolidly = async (chainId, project, existingLpAddresses, task) => {
     const projectConfigMap = Object.values(projectConfigs).find((config) => config[chainId]?.project === project);
     const projectConfig = projectConfigMap?.[chainId];
     const chainConfig = chains_1.chainConfigs[chainId];
+    if (!chainConfig) {
+        task.skip('Skipping Solidly build due to missing chain configuration.');
+        return [];
+    }
     if (!projectConfig?.solidlyConfig) {
         task.skip('Skipping Solidly build: No solidlyFactory configured for this project/chain.');
         return [];

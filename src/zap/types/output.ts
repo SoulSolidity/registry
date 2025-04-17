@@ -1,4 +1,4 @@
-import { LPType, ERC20TokenInfo } from './common';
+import { LPType, ERC20TokenInfo, ProjectProtocol } from './common';
 import { IchiConfig } from './config';
 
 export interface ZapInfo {
@@ -74,5 +74,10 @@ export type LPData =
   | SteerLPInfo;
 
 
-//TODO: Add protocol data types
-export type ProtocolData = {};
+//Protocol data
+export type ApeBondProtocolData = {
+  protocol: ProjectProtocol.ApeBond;
+  bond: string;
+};
+
+export type ProtocolData = ApeBondProtocolData;

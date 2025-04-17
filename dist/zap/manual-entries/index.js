@@ -38,7 +38,7 @@ var __importStar = (this && this.__importStar) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.polygon = exports.linea = exports.bnb = exports.base = exports.avalanche = exports.arbitrum = void 0;
 exports.getEntriesForChain = getEntriesForChain;
-const common_1 = require("../types/common");
+const enums_1 = require("../../types/enums");
 const arbitrum = __importStar(require("./arbitrum"));
 exports.arbitrum = arbitrum;
 const avalanche = __importStar(require("./avalanche"));
@@ -58,17 +58,17 @@ exports.polygon = polygon;
  */
 function getEntriesForChain(chainId) {
     switch (chainId) {
-        case common_1.ChainId.ARBITRUM:
+        case enums_1.ChainId.ARBITRUM:
             return Object.values(arbitrum).flat();
-        case common_1.ChainId.AVALANCHE:
+        case enums_1.ChainId.AVAX:
             return Object.values(avalanche).flat();
-        case common_1.ChainId.BASE:
+        case enums_1.ChainId.BASE:
             return Object.values(base).flat();
-        case common_1.ChainId.BNB:
+        case enums_1.ChainId.BNB:
             return Object.values(bnb).flat();
-        case common_1.ChainId.LINEA:
+        case enums_1.ChainId.LINEA:
             return Object.values(linea).flat();
-        case common_1.ChainId.POLYGON:
+        case enums_1.ChainId.POLYGON:
             return Object.values(polygon).flat();
         default:
             console.warn(`No entries found for chain ID: ${chainId}`);

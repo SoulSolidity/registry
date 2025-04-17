@@ -71,6 +71,10 @@ const buildUniV2 = async (chainId, project, existingLpAddresses, task) => {
     const projectConfigMap = Object.values(projectConfigs).find((config) => config[chainId]?.project === project);
     const projectConfig = projectConfigMap?.[chainId];
     const chainConfig = config_1.chainConfigs[chainId];
+    if (!chainConfig) {
+        task.skip('Skipping UniV2 build due to missing chain configuration.');
+        return [];
+    }
     if (!projectConfig?.uniV2Config) {
         task.skip('Skipping UniV2 build: No uniV2Factory configured for this project/chain.');
         return [];

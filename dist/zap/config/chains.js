@@ -1,10 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.chainConfigs = void 0;
-/**
- * Chain configurations
- */
-const types_1 = require("../types");
+const enums_1 = require("../../types/enums");
 function getTrustwalletLogoURI(chainName, address) {
     return `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/${chainName}/assets/${address}/logo.png`;
 }
@@ -12,7 +9,7 @@ function getTrustwalletLogoURI(chainName, address) {
  * Chain configurations with RPC URLs and other settings
  */
 exports.chainConfigs = {
-    [types_1.ChainId.ETHEREUM]: {
+    [enums_1.ChainId.ETH]: {
         name: 'Ethereum',
         rpcUrl: 'https://eth.llamarpc.com',
         blockExplorerUrl: 'https://etherscan.io',
@@ -24,7 +21,7 @@ exports.chainConfigs = {
             decimals: 18,
         },
     },
-    [types_1.ChainId.BNB]: {
+    [enums_1.ChainId.BNB]: {
         name: 'BNB Chain',
         rpcUrl: 'https://bsc-dataseed.binance.org',
         blockExplorerUrl: 'https://bscscan.com',
@@ -36,7 +33,7 @@ exports.chainConfigs = {
             decimals: 18,
         },
     },
-    [types_1.ChainId.POLYGON]: {
+    [enums_1.ChainId.POLYGON]: {
         name: 'Polygon',
         rpcUrl: 'https://polygon-rpc.com',
         blockExplorerUrl: 'https://polygonscan.com',
@@ -48,7 +45,7 @@ exports.chainConfigs = {
             decimals: 18,
         },
     },
-    [types_1.ChainId.ARBITRUM]: {
+    [enums_1.ChainId.ARBITRUM]: {
         name: 'Arbitrum',
         rpcUrl: 'https://arb1.arbitrum.io/rpc',
         blockExplorerUrl: 'https://arbiscan.io',
@@ -60,7 +57,7 @@ exports.chainConfigs = {
             decimals: 18,
         },
     },
-    [types_1.ChainId.LINEA]: {
+    [enums_1.ChainId.LINEA]: {
         name: 'Linea',
         rpcUrl: 'https://rpc.linea.build',
         blockExplorerUrl: 'https://lineascan.build',
@@ -72,7 +69,7 @@ exports.chainConfigs = {
             decimals: 18,
         },
     },
-    [types_1.ChainId.BASE]: {
+    [enums_1.ChainId.BASE]: {
         name: 'Base',
         rpcUrl: 'https://mainnet.base.org',
         blockExplorerUrl: 'https://basescan.org',
@@ -84,7 +81,7 @@ exports.chainConfigs = {
             decimals: 18,
         },
     },
-    [types_1.ChainId.AVALANCHE]: {
+    [enums_1.ChainId.AVAX]: {
         name: 'Avalanche',
         rpcUrl: 'https://api.avax.network/ext/bc/C/rpc',
         blockExplorerUrl: 'https://snowtrace.io',

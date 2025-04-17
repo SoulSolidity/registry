@@ -1,7 +1,7 @@
 /**
  * Export all manual entries
  */
-import { ChainId } from '../types/common';
+import { ChainId } from '../../types/enums';
 import * as arbitrum from './arbitrum';
 import * as avalanche from './avalanche';
 import * as base from './base';

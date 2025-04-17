@@ -5,8 +5,9 @@ exports.APEBOND_CONFIG = exports.PANCAKESWAP_CONFIG = exports.LYNEX_CONFIG = exp
  * Project configurations
  */
 const types_1 = require("../types");
+const enums_1 = require("../../types/enums");
 exports.SUSHISWAP_CONFIG = {
-    [types_1.ChainId.ETHEREUM]: {
+    [enums_1.ChainId.ETH]: {
         project: types_1.Project.SushiSwap,
         logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/SushiSwap.jpg?raw=true',
         uniV2Config: {
@@ -25,7 +26,7 @@ exports.SUSHISWAP_CONFIG = {
     },
 };
 exports.LYNEX_CONFIG = {
-    [types_1.ChainId.LINEA]: {
+    [enums_1.ChainId.LINEA]: {
         project: types_1.Project.Lynex,
         logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg',
         solidlyConfig: {
@@ -47,7 +48,7 @@ exports.LYNEX_CONFIG = {
     },
 };
 exports.PANCAKESWAP_CONFIG = {
-    [types_1.ChainId.BNB]: {
+    [enums_1.ChainId.BNB]: {
         project: types_1.Project.PancakeSwap,
         logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/PancakeSwap%20V2.jpg?raw=true',
         uniV2Config: {
@@ -69,7 +70,7 @@ exports.PANCAKESWAP_CONFIG = {
     },
 };
 exports.APEBOND_CONFIG = {
-    [types_1.ChainId.BNB]: {
+    [enums_1.ChainId.BNB]: {
         project: types_1.Project.ApeBond,
         logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap.png?raw=true',
         uniV2Config: {

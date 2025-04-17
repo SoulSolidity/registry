@@ -2,7 +2,7 @@
  * Export all manual entries
  */
 
-import { ChainId } from '../types/common';
+import { ChainId } from '../../types/enums';
 import * as arbitrum from './arbitrum';
 import * as avalanche from './avalanche';
 import * as base from './base';
@@ -19,7 +19,7 @@ export function getEntriesForChain(chainId: ChainId): any[] {
   switch (chainId) {
     case ChainId.ARBITRUM:
       return Object.values(arbitrum).flat();
-    case ChainId.AVALANCHE:
+    case ChainId.AVAX:
       return Object.values(avalanche).flat();
     case ChainId.BASE:
       return Object.values(base).flat();

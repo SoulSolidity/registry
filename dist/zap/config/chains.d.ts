@@ -1,8 +1,9 @@
 /**
  * Chain configurations
  */
-import { ChainConfig, ChainId } from '../types';
+import { ChainConfig } from '../types';
+import { ChainId } from '../../types/enums';
 /**
  * Chain configurations with RPC URLs and other settings
  */
-export declare const chainConfigs: Record<ChainId, ChainConfig>;
+export declare const chainConfigs: Partial<Record<ChainId, ChainConfig>>;

@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { ChainId, Project, LPType, ChainNames, ZapInfo, UniV2LPInfo, GammaLPInfo, IchiLPInfo, SolidlyLPInfo } from './types'; // Assuming types are correctly exported
+import { Project, LPType, ChainNames, ZapInfo, UniV2LPInfo, GammaLPInfo, IchiLPInfo, SolidlyLPInfo } from './types'; // Assuming types are correctly exported
 import { buildGamma } from './builders/gamma-builder';
 import { buildIchi } from './builders/ichi-builder';
 import { buildUniV2 } from './builders/uniV2-builder'; // Import the new builder
@@ -9,6 +9,8 @@ import { Listr, ListrTask } from 'listr2';
 import * as projectConfigs from './config/projects';
 import { ProjectConfig } from './types/config';
 import { Address } from 'viem'; // Import Address type
+import { ChainId } from '../types/enums';
+import { getAddress } from 'viem';
 
 const MANUAL_ENTRIES_DIR = path.join(__dirname, 'manual-entries');
 const AUTO_GENERATED_DIR = path.join(__dirname, 'auto-generated');
@@ -379,8 +381,9 @@ function mergeData(existingData: Record<string, ZapInfo>, processedData: ZapInfo
     }
 
     for (const newEntry of processedData) {
-        const key = getIdentifier(newEntry);
+        let key = getIdentifier(newEntry);
         if (key) {
+            key = getAddress(key);
             if (!finalMap[key]) {
                 finalMap[key] = newEntry;
                 addedCount++;

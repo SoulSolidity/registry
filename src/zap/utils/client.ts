@@ -1,5 +1,5 @@
 import { createPublicClient, http, PublicClient } from 'viem';
-import { ChainId } from '../types';
+import { ChainId } from '../../types/enums';
 import { chainConfigs } from '../config/chains';
 
 /**

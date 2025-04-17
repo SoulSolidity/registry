@@ -1,6 +1,6 @@
 import { PublicClient, Abi } from 'viem';
 import { multicall } from 'viem/actions';
-import { ChainId, ERC20TokenInfo, IchiEntry, LPType, Project, ZapInfo } from '../types';
+import { ERC20TokenInfo, IchiEntry, LPType, Project, ZapInfo } from '../types';
 import { chainConfigs } from '../config/chains';
 import ICHIVault_ABI from '../abi/ICHIVault_ABI.json';
 import ERC20_ABI from '../abi/ERC20_ABI.json';
@@ -8,6 +8,7 @@ import * as projectConfigs from '../config/projects';
 import { ProjectConfig } from '../types/config';
 import { ListrTaskWrapper } from 'listr2';
 import { getClient } from '../utils/client';
+import { ChainId } from '../../types/enums';
 
 /**
  * Represents the possible result structure from a multicall when allowFailure is true.
@@ -42,6 +43,10 @@ export const buildIchi = async (
   ) as Partial<Record<ChainId, ProjectConfig>> | undefined;
 
   const chainConfig = chainConfigs[chainId];
+  if (!chainConfig) {
+    parentTask.skip('Skipping Ichi build due to missing chain configuration.');
+    return [];
+  }
   const projectConfig = projectConfigMap?.[chainId];
 
   if (!projectConfig) {

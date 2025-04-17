@@ -1,5 +1,5 @@
 {
-  "0x0b15a5e3ca0d4b492c3b476d0f807535f9b72079": {
+  "0x0B15A5E3cA0D4b492C3b476d0f807535F9B72079": {
     "name": "Lynex Gamma (USDC-WETH)",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
@@ -23,7 +23,7 @@
       "uniProxy": "0xFc13Ebe7FEB9595D70195E9168aA7F3acE153621"
     }
   },
-  "0x32e27ff479454e32868ff67ee9f06bafdc1e908f": {
+  "0x32e27fF479454e32868ff67Ee9F06BAFDC1E908F": {
     "name": "Lynex Gamma (BUSD-USDT)",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
@@ -47,7 +47,7 @@
       "uniProxy": "0xFc13Ebe7FEB9595D70195E9168aA7F3acE153621"
     }
   },
-  "0x6e9d701fb6478ed5972a37886c2ba6c82a4cbb4c": {
+  "0x6e9d701fB6478Ed5972a37886C2BA6C82a4cBb4C": {
     "name": "Lynex Gamma (BUSD-WETH)",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
@@ -71,7 +71,7 @@
       "uniProxy": "0xFc13Ebe7FEB9595D70195E9168aA7F3acE153621"
     }
   },
-  "0x8421c6102ee8a147facc01977df3b159f7921d54": {
+  "0x8421c6102EE8a147FAcC01977Df3b159F7921d54": {
     "name": "Lynex Gamma (MATIC-WETH)",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
@@ -95,7 +95,7 @@
       "uniProxy": "0xFc13Ebe7FEB9595D70195E9168aA7F3acE153621"
     }
   },
-  "0x8a9570ec97534277ade6e46d100939fbce4968f0": {
+  "0x8a9570ec97534277Ade6e46d100939FbCE4968f0": {
     "name": "Lynex Gamma (WBTC-WETH)",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
@@ -119,7 +119,7 @@
       "uniProxy": "0xFc13Ebe7FEB9595D70195E9168aA7F3acE153621"
     }
   },
-  "0xd6cc4a33da7557a629e819c68fb805ddb225f517": {
+  "0xD6Cc4a33dA7557A629e819c68fB805ddB225f517": {
     "name": "Lynex Gamma (USDC-BUSD)",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
@@ -143,7 +143,7 @@
       "uniProxy": "0xFc13Ebe7FEB9595D70195E9168aA7F3acE153621"
     }
   },
-  "0xf3b1125c8505f038503e002e61a78253610d4f60": {
+  "0xF3B1125C8505f038503E002e61a78253610D4F60": {
     "name": "Lynex Gamma (USDT-WETH)",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,

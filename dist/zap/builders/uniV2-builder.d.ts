@@ -1,6 +1,7 @@
 import { Address } from 'viem';
-import { ChainId, Project, ZapInfo } from '../types';
+import { Project, ZapInfo } from '../types';
 import { ListrTaskWrapper } from 'listr2';
+import { ChainId } from '../../types/enums';
 /**
  * Fetches Uniswap V2 style LP information directly from the factory contract.
  *

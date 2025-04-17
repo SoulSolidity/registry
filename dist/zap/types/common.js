@@ -3,31 +3,23 @@
  * Common types for the zap system
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LPType = exports.Project = exports.ChainNames = exports.ChainId = void 0;
-/**
- * Supported chains in the system
- */
-var ChainId;
-(function (ChainId) {
-    ChainId[ChainId["ETHEREUM"] = 1] = "ETHEREUM";
-    ChainId[ChainId["BNB"] = 56] = "BNB";
-    ChainId[ChainId["POLYGON"] = 137] = "POLYGON";
-    ChainId[ChainId["ARBITRUM"] = 42161] = "ARBITRUM";
-    ChainId[ChainId["LINEA"] = 59144] = "LINEA";
-    ChainId[ChainId["BASE"] = 8453] = "BASE";
-    ChainId[ChainId["AVALANCHE"] = 43114] = "AVALANCHE";
-})(ChainId || (exports.ChainId = ChainId = {}));
+exports.LPType = exports.ProjectProtocol = exports.Project = exports.ChainNames = void 0;
+const enums_1 = require("../../types/enums");
 /**
  * Chain names mapping
  */
 exports.ChainNames = {
-    [ChainId.ETHEREUM]: 'ethereum',
-    [ChainId.BNB]: 'bnb',
-    [ChainId.POLYGON]: 'polygon',
-    [ChainId.ARBITRUM]: 'arbitrum',
-    [ChainId.LINEA]: 'linea',
-    [ChainId.BASE]: 'base',
-    [ChainId.AVALANCHE]: 'avalanche',
+    [enums_1.ChainId.ETH]: 'ethereum',
+    [enums_1.ChainId.BNB]: 'bnb',
+    [enums_1.ChainId.POLYGON]: 'polygon',
+    [enums_1.ChainId.ARBITRUM]: 'arbitrum',
+    [enums_1.ChainId.LINEA]: 'linea',
+    [enums_1.ChainId.BASE]: 'base',
+    [enums_1.ChainId.AVAX]: 'avalanche',
+    [enums_1.ChainId.BLAST]: 'blast',
+    [enums_1.ChainId.LIGHTLINK]: 'lightlink',
+    [enums_1.ChainId.IOTA]: 'iota',
+    [enums_1.ChainId.BNB_TESTNET]: 'bnb_testnet',
 };
 /**
  * Supported projects
@@ -50,6 +42,11 @@ var Project;
     Project["BaseX"] = "BaseX";
     Project["SwapBased"] = "SwapBased";
 })(Project || (exports.Project = Project = {}));
+var ProjectProtocol;
+(function (ProjectProtocol) {
+    ProjectProtocol["ApeBond"] = "ApeBond";
+    ProjectProtocol["LynexGauge"] = "LynexGauge";
+})(ProjectProtocol || (exports.ProjectProtocol = ProjectProtocol = {}));
 /**
  * Supported LP types
  */

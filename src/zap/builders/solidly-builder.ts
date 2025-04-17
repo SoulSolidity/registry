@@ -1,6 +1,6 @@
 import { PublicClient, Abi, Address } from 'viem';
 import { multicall } from 'viem/actions';
-import { ChainId, ERC20TokenInfo, LPType, Project, ZapInfo, SolidlyLPInfo } from '../types';
+import { ERC20TokenInfo, LPType, Project, ZapInfo, SolidlyLPInfo } from '../types';
 import { chainConfigs } from '../config/chains';
 import * as projectConfigs from '../config/projects';
 import { ChainConfig, ProjectConfig } from '../types/config';
@@ -9,7 +9,7 @@ import { getClient } from '../utils/client';
 import SolidlyFactory_ABI from '../abi/SolidlyFactory_ABI.json';
 import SolidlyPair_ABI from '../abi/SolidlyPair_ABI.json';
 import ERC20_ABI from '../abi/ERC20_ABI.json';
-
+import { ChainId } from '../../types/enums';
 const BATCH_SIZE = 100; // Number of pairs to fetch from factory in one go
 
 /**
@@ -54,6 +54,11 @@ export const buildSolidly = async (
     ) as Partial<Record<ChainId, ProjectConfig>> | undefined;
     const projectConfig = projectConfigMap?.[chainId];
     const chainConfig = chainConfigs[chainId];
+
+    if (!chainConfig) {
+        task.skip('Skipping Solidly build due to missing chain configuration.');
+        return [];
+    }
 
     if (!projectConfig?.solidlyConfig) {
         task.skip('Skipping Solidly build: No solidlyFactory configured for this project/chain.');

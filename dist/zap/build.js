@@ -44,6 +44,7 @@ const ichi_builder_1 = require("./builders/ichi-builder");
 const uniV2_builder_1 = require("./builders/uniV2-builder"); // Import the new builder
 const solidly_builder_1 = require("./builders/solidly-builder"); // <-- Add Solidly builder import
 const listr2_1 = require("listr2");
+const viem_1 = require("viem");
 const MANUAL_ENTRIES_DIR = path_1.default.join(__dirname, 'manual-entries');
 const AUTO_GENERATED_DIR = path_1.default.join(__dirname, 'auto-generated');
 // --- Helper Functions ---
@@ -376,8 +377,9 @@ function mergeData(existingData, processedData, lpType) {
         return { finalMap, addedCount };
     }
     for (const newEntry of processedData) {
-        const key = getIdentifier(newEntry);
+        let key = getIdentifier(newEntry);
         if (key) {
+            key = (0, viem_1.getAddress)(key);
             if (!finalMap[key]) {
                 finalMap[key] = newEntry;
                 addedCount++;

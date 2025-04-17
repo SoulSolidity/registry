@@ -61,6 +61,10 @@ const buildGamma = async (manualEntries, chainId, project, parentTask) => {
     // Find the project configuration for the given project and chainId
     const projectConfigMap = Object.values(projectConfigs).find((config) => config[chainId]?.project === project);
     const chainConfig = chains_1.chainConfigs[chainId];
+    if (!chainConfig) {
+        parentTask.skip('Skipping Gamma build due to missing chain configuration.');
+        return [];
+    }
     const projectConfig = projectConfigMap?.[chainId];
     if (!projectConfig) {
         parentTask.skip('Skipping Gamma build due to missing project configuration.');

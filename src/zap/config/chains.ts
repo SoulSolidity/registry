@@ -1,7 +1,8 @@
 /**
  * Chain configurations
  */
-import { ChainConfig, ChainId } from '../types';
+import { ChainConfig } from '../types';
+import { ChainId } from '../../types/enums';
 
 function getTrustwalletLogoURI(chainName: string, address: string) {
   return `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/${chainName}/assets/${address}/logo.png`;
@@ -9,8 +10,8 @@ function getTrustwalletLogoURI(chainName: string, address: string) {
 /**
  * Chain configurations with RPC URLs and other settings
  */
-export const chainConfigs: Record<ChainId, ChainConfig> = {
-  [ChainId.ETHEREUM]: {
+export const chainConfigs: Partial<Record<ChainId, ChainConfig>> = {
+  [ChainId.ETH]: {
     name: 'Ethereum',
     rpcUrl: 'https://eth.llamarpc.com',
     blockExplorerUrl: 'https://etherscan.io',
@@ -82,7 +83,7 @@ export const chainConfigs: Record<ChainId, ChainConfig> = {
       decimals: 18,
     },
   },
-  [ChainId.AVALANCHE]: {
+  [ChainId.AVAX]: {
     name: 'Avalanche',
     rpcUrl: 'https://api.avax.network/ext/bc/C/rpc',
     blockExplorerUrl: 'https://snowtrace.io',

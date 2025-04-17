@@ -2,30 +2,23 @@
  * Common types for the zap system
  */
 
-/**
- * Supported chains in the system
- */
-export enum ChainId {
-  ETHEREUM = 1,
-  BNB = 56,
-  POLYGON = 137,
-  ARBITRUM = 42161,
-  LINEA = 59144,
-  BASE = 8453,
-  AVALANCHE = 43114,
-}
+import { ChainId } from "../../types/enums";
 
 /**
  * Chain names mapping
  */
 export const ChainNames: Record<ChainId, string> = {
-  [ChainId.ETHEREUM]: 'ethereum',
+  [ChainId.ETH]: 'ethereum',
   [ChainId.BNB]: 'bnb',
   [ChainId.POLYGON]: 'polygon',
   [ChainId.ARBITRUM]: 'arbitrum',
   [ChainId.LINEA]: 'linea',
   [ChainId.BASE]: 'base',
-  [ChainId.AVALANCHE]: 'avalanche',
+  [ChainId.AVAX]: 'avalanche',
+  [ChainId.BLAST]: 'blast',
+  [ChainId.LIGHTLINK]: 'lightlink',
+  [ChainId.IOTA]: 'iota',
+  [ChainId.BNB_TESTNET]: 'bnb_testnet',
 };
 
 /**
@@ -47,6 +40,11 @@ export enum Project {
   SynthSwap = 'SynthSwap',
   BaseX = 'BaseX',
   SwapBased = 'SwapBased',
+}
+
+export enum ProjectProtocol {
+  ApeBond = 'ApeBond',
+  LynexGauge = 'LynexGauge',
 }
 
 /**

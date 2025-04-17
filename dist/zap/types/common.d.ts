@@ -1,18 +1,7 @@
 /**
  * Common types for the zap system
  */
-/**
- * Supported chains in the system
- */
-export declare enum ChainId {
-    ETHEREUM = 1,
-    BNB = 56,
-    POLYGON = 137,
-    ARBITRUM = 42161,
-    LINEA = 59144,
-    BASE = 8453,
-    AVALANCHE = 43114
-}
+import { ChainId } from "../../types/enums";
 /**
  * Chain names mapping
  */
@@ -36,6 +25,10 @@ export declare enum Project {
     SynthSwap = "SynthSwap",
     BaseX = "BaseX",
     SwapBased = "SwapBased"
+}
+export declare enum ProjectProtocol {
+    ApeBond = "ApeBond",
+    LynexGauge = "LynexGauge"
 }
 /**
  * Supported LP types

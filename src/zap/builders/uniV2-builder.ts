@@ -1,6 +1,6 @@
 import { PublicClient, Abi, Address } from 'viem';
 import { multicall } from 'viem/actions';
-import { ChainId, ERC20TokenInfo, GammaEntry, LPType, Project, ZapInfo, UniV2LPInfo } from '../types';
+import { ERC20TokenInfo, GammaEntry, LPType, Project, ZapInfo, UniV2LPInfo } from '../types';
 import ERC20_ABI from '../abi/ERC20_ABI.json';
 import * as projectConfigs from '../config/projects';
 import { ChainConfig, ProjectConfig } from '../types/config';
@@ -9,7 +9,7 @@ import { getClient } from '../utils/client';
 import UniswapV2Factory_ABI from '../abi/UniswapV2Factory_ABI.json';
 import UniswapV2Pair_ABI from '../abi/UniswapV2Pair_ABI.json';
 import { chainConfigs } from '../config';
-
+import { ChainId } from '../../types/enums';
 const BATCH_SIZE = 100; // Number of pairs to fetch from factory in one go
 
 /**
@@ -54,6 +54,11 @@ export const buildUniV2 = async (
     ) as Partial<Record<ChainId, ProjectConfig>> | undefined;
     const projectConfig = projectConfigMap?.[chainId];
     const chainConfig = chainConfigs[chainId];
+
+    if (!chainConfig) {
+        task.skip('Skipping UniV2 build due to missing chain configuration.');
+        return [];
+    }
 
     if (!projectConfig?.uniV2Config) {
         task.skip('Skipping UniV2 build: No uniV2Factory configured for this project/chain.');

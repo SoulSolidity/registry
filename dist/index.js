@@ -17,3 +17,5 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // Export all types
 __exportStar(require("./types/types"), exports);
 __exportStar(require("./types/enums"), exports);
+__exportStar(require("./zap/types/output"), exports);
+__exportStar(require("./zap/types/common"), exports);
