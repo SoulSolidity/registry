@@ -1,6 +1,6 @@
 {
   "name": "@soulsolidity/registry",
-  "version": "0.0.1-test.15",
+  "version": "0.0.1-test.16",
   "description": "Registry for zap entries",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
