@@ -5,6 +5,7 @@ export interface ChainConfig {
   rpcUrl: string;
   blockExplorerUrl: string;
   multicallAddress: `0x${string}`;
+  trustwalletLogoURI: (address: string) => string;
   nativeCurrency: {
     name: string;
     symbol: string;
@@ -38,7 +39,7 @@ export interface SolidlyConfig {
 
 export interface ProjectConfig {
   project: Project;
-  icon: string;
+  logoURI: string;
   uniV2Config?: UniV2Config;
   solidlyConfig?: SolidlyConfig;
   gammaConfig?: GammaConfig;

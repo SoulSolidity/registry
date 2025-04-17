@@ -39,6 +39,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.buildSolidly = void 0;
 const actions_1 = require("viem/actions");
 const types_1 = require("../types");
+const chains_1 = require("../config/chains");
 const projectConfigs = __importStar(require("../config/projects"));
 const client_1 = require("../utils/client");
 const SolidlyFactory_ABI_json_1 = __importDefault(require("../abi/SolidlyFactory_ABI.json"));
@@ -46,13 +47,14 @@ const SolidlyPair_ABI_json_1 = __importDefault(require("../abi/SolidlyPair_ABI.j
 const ERC20_ABI_json_1 = __importDefault(require("../abi/ERC20_ABI.json"));
 const BATCH_SIZE = 100; // Number of pairs to fetch from factory in one go
 // Helper to safely get token info from the map
-const getERC20TokenInfo = (address, tokenDetailsMap) => {
+const getERC20TokenInfo = (address, tokenDetailsMap, chainConfig) => {
     const details = tokenDetailsMap.get(address);
     return {
         address: address,
         name: details?.name ?? 'Unknown Name',
         symbol: details?.symbol ?? '???',
         decimals: details?.decimals ?? 18,
+        logoURI: chainConfig.trustwalletLogoURI(address),
     };
 };
 /**
@@ -68,13 +70,13 @@ const buildSolidly = async (chainId, project, existingLpAddresses, task) => {
     // 1. Find Project Configuration
     const projectConfigMap = Object.values(projectConfigs).find((config) => config[chainId]?.project === project);
     const projectConfig = projectConfigMap?.[chainId];
+    const chainConfig = chains_1.chainConfigs[chainId];
     if (!projectConfig?.solidlyConfig) {
         task.skip('Skipping Solidly build: No solidlyFactory configured for this project/chain.');
         return [];
     }
     const factoryAddress = projectConfig.solidlyConfig.factoryAddress;
     const routerAddress = projectConfig.solidlyConfig.routerAddress;
-    const icon = projectConfig.icon;
     const client = (0, client_1.getClient)(chainId);
     const allNewZapInfo = [];
     let totalPairs = 0;
@@ -115,7 +117,7 @@ const buildSolidly = async (chainId, project, existingLpAddresses, task) => {
                 task.output = `Batch ${i / BATCH_SIZE + 1}: Fetched ${potentialPairAddresses.length}, Skipped ${potentialPairAddresses.length} existing/invalid. Progress: ${processedCount}/${totalPairs}`;
                 continue; // Skip to next batch if no new pairs
             }
-            task.output = `Batch ${i / BATCH_SIZE + 1}: Fetched ${potentialPairAddresses.length}, Found ${newPairAddresses.length} new. Fetching details...`;
+            task.output = `Batch ${i / BATCH_SIZE + 1}: Fetched ${potentialPairAddresses.length}, Found ${newPairAddresses.length} new. Fetching details... Progress: ${processedCount}/${totalPairs}`;
             // 3.3 Fetch token0, token1, stable status, symbol, and name for new pairs
             const pairDataCalls = newPairAddresses.flatMap(pairAddress => [
                 { address: pairAddress, abi: SolidlyPair_ABI_json_1.default, functionName: 'token0' },
@@ -178,8 +180,8 @@ const buildSolidly = async (chainId, project, existingLpAddresses, task) => {
             }
             // 3.5 Construct ZapInfo for valid new pairs
             const batchZapInfo = validPairData.map(pair => {
-                const token0Info = getERC20TokenInfo(pair.token0, tokenDetailsMap);
-                const token1Info = getERC20TokenInfo(pair.token1, tokenDetailsMap);
+                const token0Info = getERC20TokenInfo(pair.token0, tokenDetailsMap, chainConfig);
+                const token1Info = getERC20TokenInfo(pair.token1, tokenDetailsMap, chainConfig);
                 // Determine if 'sLP' or 'vLP' prefix is needed based on stable status
                 const stabilityPrefix = pair.stable ? 's' : 'v';
                 const defaultSymbolPrefix = `SOLID`; // Or whatever Solidly default symbol is, if any
@@ -197,7 +199,8 @@ const buildSolidly = async (chainId, project, existingLpAddresses, task) => {
                 };
                 return {
                     name: zapName,
-                    icon: icon,
+                    logoURI: projectConfig.logoURI,
+                    chainId: chainId,
                     lpData: lpData,
                 };
             });

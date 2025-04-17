@@ -6,7 +6,7 @@ import { ChainId, Project, ProjectConfig } from '../types';
 export const SUSHISWAP_CONFIG: Partial<Record<ChainId, ProjectConfig>> = {
   [ChainId.ETHEREUM]: {
     project: Project.SushiSwap,
-    icon: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/SushiSwap.jpg?raw=true',
+    logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/SushiSwap.jpg?raw=true',
     uniV2Config: {
       factoryAddress: '0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac',
       routerAddress: '',
@@ -26,7 +26,7 @@ export const SUSHISWAP_CONFIG: Partial<Record<ChainId, ProjectConfig>> = {
 export const LYNEX_CONFIG: Partial<Record<ChainId, ProjectConfig>> = {
   [ChainId.LINEA]: {
     project: Project.Lynex,
-    icon: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg',
+    logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg',
     solidlyConfig: {
       factoryAddress: '0xBc7695Fd00E3b32D08124b7a4287493aEE99f9ee', //'0x9dE10C26e2AF1BC10B9132326237Ae5d93617AB0',
       routerAddress: '0x610D2f07b7EdC67565160F587F37636194C34E74',
@@ -49,7 +49,7 @@ export const LYNEX_CONFIG: Partial<Record<ChainId, ProjectConfig>> = {
 export const PANCAKESWAP_CONFIG: Partial<Record<ChainId, ProjectConfig>> = {
   [ChainId.BNB]: {
     project: Project.PancakeSwap,
-    icon: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/PancakeSwap%20V2.jpg?raw=true',
+    logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/PancakeSwap%20V2.jpg?raw=true',
     uniV2Config: {
       factoryAddress: '0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73',
       routerAddress: '0x10ED43C718714eb63d5aA57B78B54704E256024E',
@@ -72,7 +72,7 @@ export const PANCAKESWAP_CONFIG: Partial<Record<ChainId, ProjectConfig>> = {
 export const APEBOND_CONFIG: Partial<Record<ChainId, ProjectConfig>> = {
   [ChainId.BNB]: {
     project: Project.ApeBond,
-    icon: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap.png?raw=true',
+    logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap.png?raw=true',
     uniV2Config: {
       factoryAddress: '0x0841BD0B734E4F5853f0dD8d7Ea041c241fb0Da6',
       routerAddress: '0xcF0feBd3f17CEf5b47b0cD257aCf6025c5BFf3b7',

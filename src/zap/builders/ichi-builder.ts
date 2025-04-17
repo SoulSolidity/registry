@@ -41,6 +41,7 @@ export const buildIchi = async (
     (config) => config[chainId]?.project === project
   ) as Partial<Record<ChainId, ProjectConfig>> | undefined;
 
+  const chainConfig = chainConfigs[chainId];
   const projectConfig = projectConfigMap?.[chainId];
 
   if (!projectConfig) {
@@ -53,7 +54,6 @@ export const buildIchi = async (
     parentTask.skip('Skipping Ichi build due to missing Ichi configuration.');
     return [];
   }
-  const icon = projectConfig.icon;
 
   const client = getClient(chainId);
   let lpResults: readonly unknown[] = [];
@@ -155,6 +155,7 @@ export const buildIchi = async (
       name: details?.name ?? 'Unknown Name',
       symbol: details?.symbol ?? '???',
       decimals: details?.decimals ?? 18,
+      logoURI: chainConfig.trustwalletLogoURI(address),
     };
   };
 
@@ -175,7 +176,8 @@ export const buildIchi = async (
 
     return {
       name: entry.name,
-      icon: icon,
+      logoURI: projectConfig.logoURI,
+      chainId: chainId,
       lpData: {
         lpType: LPType.ICHI,
         toToken0: getERC20TokenInfo(token0Address),

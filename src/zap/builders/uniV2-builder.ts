@@ -3,11 +3,12 @@ import { multicall } from 'viem/actions';
 import { ChainId, ERC20TokenInfo, GammaEntry, LPType, Project, ZapInfo, UniV2LPInfo } from '../types';
 import ERC20_ABI from '../abi/ERC20_ABI.json';
 import * as projectConfigs from '../config/projects';
-import { ProjectConfig } from '../types/config';
+import { ChainConfig, ProjectConfig } from '../types/config';
 import { ListrTaskWrapper } from 'listr2';
 import { getClient } from '../utils/client';
 import UniswapV2Factory_ABI from '../abi/UniswapV2Factory_ABI.json';
 import UniswapV2Pair_ABI from '../abi/UniswapV2Pair_ABI.json';
+import { chainConfigs } from '../config';
 
 const BATCH_SIZE = 100; // Number of pairs to fetch from factory in one go
 
@@ -20,13 +21,14 @@ type MulticallResult<TResult = unknown> =
 
 
 // Helper to safely get token info from the map
-const getERC20TokenInfo = (address: Address, tokenDetailsMap: Map<Address, Partial<ERC20TokenInfo>>): ERC20TokenInfo => {
+const getERC20TokenInfo = (address: Address, tokenDetailsMap: Map<Address, Partial<ERC20TokenInfo>>, chainConfig: ChainConfig): ERC20TokenInfo => {
     const details = tokenDetailsMap.get(address);
     return {
         address: address,
         name: details?.name ?? 'Unknown Name',
         symbol: details?.symbol ?? '???',
         decimals: details?.decimals ?? 18,
+        logoURI: chainConfig.trustwalletLogoURI(address),
     };
 };
 
@@ -51,6 +53,7 @@ export const buildUniV2 = async (
         (config) => config[chainId]?.project === project
     ) as Partial<Record<ChainId, ProjectConfig>> | undefined;
     const projectConfig = projectConfigMap?.[chainId];
+    const chainConfig = chainConfigs[chainId];
 
     if (!projectConfig?.uniV2Config) {
         task.skip('Skipping UniV2 build: No uniV2Factory configured for this project/chain.');
@@ -58,7 +61,6 @@ export const buildUniV2 = async (
     }
     const factoryAddress = projectConfig.uniV2Config.factoryAddress;
     const routerAddress = projectConfig.uniV2Config.routerAddress;
-    const icon = projectConfig.icon;
     const client = getClient(chainId);
 
     const allNewZapInfo: ZapInfo[] = [];
@@ -110,7 +112,7 @@ export const buildUniV2 = async (
                 continue; // Skip to next batch if no new pairs
             }
 
-            task.output = `Batch ${i / BATCH_SIZE + 1}: Fetched ${potentialPairAddresses.length}, Found ${newPairAddresses.length} new. Fetching details...`;
+            task.output = `Batch ${i / BATCH_SIZE + 1}: Fetched ${potentialPairAddresses.length}, Found ${newPairAddresses.length} new. Fetching details... Progress: ${processedCount}/${totalPairs}`;
 
             // 3.3 Fetch token0 and token1 for new pairs
             const pairTokenCalls = newPairAddresses.flatMap(pairAddress => [
@@ -184,8 +186,8 @@ export const buildUniV2 = async (
 
             // 3.5 Construct ZapInfo for valid new pairs
             const batchZapInfo = validPairData.map(pair => {
-                const token0Info = getERC20TokenInfo(pair.token0, tokenDetailsMap);
-                const token1Info = getERC20TokenInfo(pair.token1, tokenDetailsMap);
+                const token0Info = getERC20TokenInfo(pair.token0, tokenDetailsMap, chainConfig);
+                const token1Info = getERC20TokenInfo(pair.token1, tokenDetailsMap, chainConfig);
 
                 // Use LP Symbol or a combination if needed, fallback to LP Name or generic name
                 const zapName = pair.lpSymbol !== 'UNI-V2' // Default symbol often used
@@ -203,7 +205,8 @@ export const buildUniV2 = async (
                 };
                 return {
                     name: zapName, // Use fetched LP name/symbol or construct one
-                    icon: icon, // Use project icon
+                    logoURI: projectConfig.logoURI, // Use project icon
+                    chainId: chainId,
                     lpData: lpData,
                 };
             });

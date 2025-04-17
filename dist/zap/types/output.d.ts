@@ -2,7 +2,8 @@ import { LPType, ERC20TokenInfo } from './common';
 import { IchiConfig } from './config';
 export interface ZapInfo {
     name: string;
-    icon: string;
+    logoURI: string;
+    chainId: number;
     lpData: LPData;
     protocolData?: ProtocolData;
 }

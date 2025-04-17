@@ -8,11 +8,11 @@ const types_1 = require("../types");
 exports.SUSHISWAP_CONFIG = {
     [types_1.ChainId.ETHEREUM]: {
         project: types_1.Project.SushiSwap,
-        icon: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/SushiSwap.jpg?raw=true',
-        // uniV2Config: {
-        //   factoryAddress: '0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac',
-        //   routerAddress: '',
-        // },
+        logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/SushiSwap.jpg?raw=true',
+        uniV2Config: {
+            factoryAddress: '0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac',
+            routerAddress: '',
+        },
         ichiConfig: {
             factoryAddress: '0x5a40DFaF8C1115196A1CDF529F97122030F26112',
             depositGuard: {
@@ -27,7 +27,7 @@ exports.SUSHISWAP_CONFIG = {
 exports.LYNEX_CONFIG = {
     [types_1.ChainId.LINEA]: {
         project: types_1.Project.Lynex,
-        icon: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg',
+        logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg',
         solidlyConfig: {
             factoryAddress: '0xBc7695Fd00E3b32D08124b7a4287493aEE99f9ee', //'0x9dE10C26e2AF1BC10B9132326237Ae5d93617AB0',
             routerAddress: '0x610D2f07b7EdC67565160F587F37636194C34E74',
@@ -49,11 +49,11 @@ exports.LYNEX_CONFIG = {
 exports.PANCAKESWAP_CONFIG = {
     [types_1.ChainId.BNB]: {
         project: types_1.Project.PancakeSwap,
-        icon: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/PancakeSwap%20V2.jpg?raw=true',
-        // uniV2Config: {
-        //   factoryAddress: '0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73',
-        //   routerAddress: '0x10ED43C718714eb63d5aA57B78B54704E256024E',
-        // },
+        logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/PancakeSwap%20V2.jpg?raw=true',
+        uniV2Config: {
+            factoryAddress: '0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73',
+            routerAddress: '0x10ED43C718714eb63d5aA57B78B54704E256024E',
+        },
         gammaConfig: {
             uniProxyAddress: '0x1cc4eE0cB063e9db36E51F5d67218ff1f8dbfA0f',
         },
@@ -71,7 +71,7 @@ exports.PANCAKESWAP_CONFIG = {
 exports.APEBOND_CONFIG = {
     [types_1.ChainId.BNB]: {
         project: types_1.Project.ApeBond,
-        icon: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap.png?raw=true',
+        logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap.png?raw=true',
         uniV2Config: {
             factoryAddress: '0x0841BD0B734E4F5853f0dD8d7Ea041c241fb0Da6',
             routerAddress: '0xcF0feBd3f17CEf5b47b0cD257aCf6025c5BFf3b7',

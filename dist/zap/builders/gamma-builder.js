@@ -39,6 +39,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.buildGamma = void 0;
 const actions_1 = require("viem/actions");
 const types_1 = require("../types");
+const chains_1 = require("../config/chains");
 const Hypervisor_ABI_json_1 = __importDefault(require("../abi/Hypervisor_ABI.json"));
 const ERC20_ABI_json_1 = __importDefault(require("../abi/ERC20_ABI.json"));
 const projectConfigs = __importStar(require("../config/projects"));
@@ -59,6 +60,7 @@ const buildGamma = async (manualEntries, chainId, project, parentTask) => {
     }
     // Find the project configuration for the given project and chainId
     const projectConfigMap = Object.values(projectConfigs).find((config) => config[chainId]?.project === project);
+    const chainConfig = chains_1.chainConfigs[chainId];
     const projectConfig = projectConfigMap?.[chainId];
     if (!projectConfig) {
         parentTask.skip('Skipping Gamma build due to missing project configuration.');
@@ -69,8 +71,6 @@ const buildGamma = async (manualEntries, chainId, project, parentTask) => {
         parentTask.skip('Skipping Gamma build due to missing Gamma configuration.');
         return [];
     }
-    const uniProxy = gammaConfig.uniProxyAddress;
-    const icon = projectConfig.icon;
     const client = (0, client_1.getClient)(chainId);
     let lpResults = [];
     let tokenResults = [];
@@ -155,6 +155,7 @@ const buildGamma = async (manualEntries, chainId, project, parentTask) => {
             name: details?.name ?? 'Unknown Name',
             symbol: details?.symbol ?? '???',
             decimals: details?.decimals ?? 18,
+            logoURI: chainConfig.trustwalletLogoURI(address),
         };
     };
     // 5. Combine manual data with fetched on-chain data
@@ -163,13 +164,14 @@ const buildGamma = async (manualEntries, chainId, project, parentTask) => {
         const token1Address = lpResults[index * 2 + 1];
         return {
             name: entry.name,
-            icon: icon,
+            logoURI: projectConfig.logoURI,
+            chainId: chainId,
             lpData: {
                 lpType: types_1.LPType.GAMMA,
                 toToken0: getERC20TokenInfo(token0Address),
                 toToken1: getERC20TokenInfo(token1Address),
                 hypervisor: entry.address,
-                uniProxy: uniProxy,
+                uniProxy: gammaConfig.uniProxyAddress,
             },
         };
     });

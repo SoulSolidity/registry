@@ -68,4 +68,5 @@ export interface ERC20TokenInfo {
     name: string;
     symbol: string;
     decimals: number;
+    logoURI: string;
 }

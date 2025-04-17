@@ -39,6 +39,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.buildIchi = void 0;
 const actions_1 = require("viem/actions");
 const types_1 = require("../types");
+const chains_1 = require("../config/chains");
 const ICHIVault_ABI_json_1 = __importDefault(require("../abi/ICHIVault_ABI.json"));
 const ERC20_ABI_json_1 = __importDefault(require("../abi/ERC20_ABI.json"));
 const projectConfigs = __importStar(require("../config/projects"));
@@ -59,6 +60,7 @@ const buildIchi = async (manualEntries, chainId, project, parentTask) => {
     }
     // Find the project configuration for the given project and chainId
     const projectConfigMap = Object.values(projectConfigs).find((config) => config[chainId]?.project === project);
+    const chainConfig = chains_1.chainConfigs[chainId];
     const projectConfig = projectConfigMap?.[chainId];
     if (!projectConfig) {
         parentTask.skip('Skipping Ichi build due to missing project configuration.');
@@ -69,7 +71,6 @@ const buildIchi = async (manualEntries, chainId, project, parentTask) => {
         parentTask.skip('Skipping Ichi build due to missing Ichi configuration.');
         return [];
     }
-    const icon = projectConfig.icon;
     const client = (0, client_1.getClient)(chainId);
     let lpResults = [];
     let tokenResults = [];
@@ -163,6 +164,7 @@ const buildIchi = async (manualEntries, chainId, project, parentTask) => {
             name: details?.name ?? 'Unknown Name',
             symbol: details?.symbol ?? '???',
             decimals: details?.decimals ?? 18,
+            logoURI: chainConfig.trustwalletLogoURI(address),
         };
     };
     // 5. Combine manual data with fetched on-chain data
@@ -177,7 +179,8 @@ const buildIchi = async (manualEntries, chainId, project, parentTask) => {
         const allowToken1 = allowToken1Result;
         return {
             name: entry.name,
-            icon: icon,
+            logoURI: projectConfig.logoURI,
+            chainId: chainId,
             lpData: {
                 lpType: types_1.LPType.ICHI,
                 toToken0: getERC20TokenInfo(token0Address),

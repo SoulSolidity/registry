@@ -41,6 +41,7 @@ export const buildGamma = async (
     (config) => config[chainId]?.project === project
   ) as Partial<Record<ChainId, ProjectConfig>> | undefined;
 
+  const chainConfig = chainConfigs[chainId];
   const projectConfig = projectConfigMap?.[chainId];
 
   if (!projectConfig) {
@@ -53,8 +54,6 @@ export const buildGamma = async (
       parentTask.skip('Skipping Gamma build due to missing Gamma configuration.');
       return [];
   }
-  const uniProxy = gammaConfig.uniProxyAddress;
-  const icon = projectConfig.icon;
 
   const client = getClient(chainId);
   let lpResults: readonly `0x${string}`[] = [];
@@ -147,6 +146,7 @@ export const buildGamma = async (
       name: details?.name ?? 'Unknown Name',
       symbol: details?.symbol ?? '???',
       decimals: details?.decimals ?? 18,
+      logoURI: chainConfig.trustwalletLogoURI(address),
     };
   };
 
@@ -158,13 +158,14 @@ export const buildGamma = async (
 
     return {
       name: entry.name,
-      icon: icon,
+      logoURI: projectConfig.logoURI,
+      chainId: chainId,
       lpData: {
         lpType: LPType.GAMMA,
         toToken0: getERC20TokenInfo(token0Address),
         toToken1: getERC20TokenInfo(token1Address),
         hypervisor: entry.address,
-        uniProxy: uniProxy,
+        uniProxy: gammaConfig.uniProxyAddress,
       },
     };
   });

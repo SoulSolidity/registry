@@ -3,7 +3,7 @@ import { multicall } from 'viem/actions';
 import { ChainId, ERC20TokenInfo, LPType, Project, ZapInfo, SolidlyLPInfo } from '../types';
 import { chainConfigs } from '../config/chains';
 import * as projectConfigs from '../config/projects';
-import { ProjectConfig } from '../types/config';
+import { ChainConfig, ProjectConfig } from '../types/config';
 import { ListrTaskWrapper } from 'listr2';
 import { getClient } from '../utils/client';
 import SolidlyFactory_ABI from '../abi/SolidlyFactory_ABI.json';
@@ -21,13 +21,14 @@ type MulticallResult<TResult = unknown> =
 
 
 // Helper to safely get token info from the map
-const getERC20TokenInfo = (address: Address, tokenDetailsMap: Map<Address, Partial<ERC20TokenInfo>>): ERC20TokenInfo => {
+const getERC20TokenInfo = (address: Address, tokenDetailsMap: Map<Address, Partial<ERC20TokenInfo>>, chainConfig: ChainConfig): ERC20TokenInfo => {
     const details = tokenDetailsMap.get(address);
     return {
         address: address,
         name: details?.name ?? 'Unknown Name',
         symbol: details?.symbol ?? '???',
         decimals: details?.decimals ?? 18,
+        logoURI: chainConfig.trustwalletLogoURI(address),
     };
 };
 
@@ -52,6 +53,7 @@ export const buildSolidly = async (
         (config) => config[chainId]?.project === project
     ) as Partial<Record<ChainId, ProjectConfig>> | undefined;
     const projectConfig = projectConfigMap?.[chainId];
+    const chainConfig = chainConfigs[chainId];
 
     if (!projectConfig?.solidlyConfig) {
         task.skip('Skipping Solidly build: No solidlyFactory configured for this project/chain.');
@@ -59,7 +61,6 @@ export const buildSolidly = async (
     }
     const factoryAddress = projectConfig.solidlyConfig.factoryAddress;
     const routerAddress = projectConfig.solidlyConfig.routerAddress;
-    const icon = projectConfig.icon;
     const client = getClient(chainId);
 
     const allNewZapInfo: ZapInfo[] = [];
@@ -111,7 +112,7 @@ export const buildSolidly = async (
                 continue; // Skip to next batch if no new pairs
             }
 
-            task.output = `Batch ${i / BATCH_SIZE + 1}: Fetched ${potentialPairAddresses.length}, Found ${newPairAddresses.length} new. Fetching details...`;
+            task.output = `Batch ${i / BATCH_SIZE + 1}: Fetched ${potentialPairAddresses.length}, Found ${newPairAddresses.length} new. Fetching details... Progress: ${processedCount}/${totalPairs}`;
 
             // 3.3 Fetch token0, token1, stable status, symbol, and name for new pairs
             const pairDataCalls = newPairAddresses.flatMap(pairAddress => [
@@ -187,8 +188,8 @@ export const buildSolidly = async (
 
             // 3.5 Construct ZapInfo for valid new pairs
             const batchZapInfo = validPairData.map(pair => {
-                const token0Info = getERC20TokenInfo(pair.token0, tokenDetailsMap);
-                const token1Info = getERC20TokenInfo(pair.token1, tokenDetailsMap);
+                const token0Info = getERC20TokenInfo(pair.token0, tokenDetailsMap, chainConfig);
+                const token1Info = getERC20TokenInfo(pair.token1, tokenDetailsMap, chainConfig);
 
                 // Determine if 'sLP' or 'vLP' prefix is needed based on stable status
                 const stabilityPrefix = pair.stable ? 's' : 'v';
@@ -208,7 +209,8 @@ export const buildSolidly = async (
                 };
                 return {
                     name: zapName,
-                    icon: icon,
+                    logoURI: projectConfig.logoURI,
+                    chainId: chainId,
                     lpData: lpData,
                 };
             });

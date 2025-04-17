@@ -44,15 +44,17 @@ const projectConfigs = __importStar(require("../config/projects"));
 const client_1 = require("../utils/client");
 const UniswapV2Factory_ABI_json_1 = __importDefault(require("../abi/UniswapV2Factory_ABI.json"));
 const UniswapV2Pair_ABI_json_1 = __importDefault(require("../abi/UniswapV2Pair_ABI.json"));
+const config_1 = require("../config");
 const BATCH_SIZE = 100; // Number of pairs to fetch from factory in one go
 // Helper to safely get token info from the map
-const getERC20TokenInfo = (address, tokenDetailsMap) => {
+const getERC20TokenInfo = (address, tokenDetailsMap, chainConfig) => {
     const details = tokenDetailsMap.get(address);
     return {
         address: address,
         name: details?.name ?? 'Unknown Name',
         symbol: details?.symbol ?? '???',
         decimals: details?.decimals ?? 18,
+        logoURI: chainConfig.trustwalletLogoURI(address),
     };
 };
 /**
@@ -68,13 +70,13 @@ const buildUniV2 = async (chainId, project, existingLpAddresses, task) => {
     // 1. Find Project Configuration
     const projectConfigMap = Object.values(projectConfigs).find((config) => config[chainId]?.project === project);
     const projectConfig = projectConfigMap?.[chainId];
+    const chainConfig = config_1.chainConfigs[chainId];
     if (!projectConfig?.uniV2Config) {
         task.skip('Skipping UniV2 build: No uniV2Factory configured for this project/chain.');
         return [];
     }
     const factoryAddress = projectConfig.uniV2Config.factoryAddress;
     const routerAddress = projectConfig.uniV2Config.routerAddress;
-    const icon = projectConfig.icon;
     const client = (0, client_1.getClient)(chainId);
     const allNewZapInfo = [];
     let totalPairs = 0;
@@ -115,7 +117,7 @@ const buildUniV2 = async (chainId, project, existingLpAddresses, task) => {
                 task.output = `Batch ${i / BATCH_SIZE + 1}: Fetched ${potentialPairAddresses.length}, Skipped ${potentialPairAddresses.length} existing/invalid. Progress: ${processedCount}/${totalPairs}`;
                 continue; // Skip to next batch if no new pairs
             }
-            task.output = `Batch ${i / BATCH_SIZE + 1}: Fetched ${potentialPairAddresses.length}, Found ${newPairAddresses.length} new. Fetching details...`;
+            task.output = `Batch ${i / BATCH_SIZE + 1}: Fetched ${potentialPairAddresses.length}, Found ${newPairAddresses.length} new. Fetching details... Progress: ${processedCount}/${totalPairs}`;
             // 3.3 Fetch token0 and token1 for new pairs
             const pairTokenCalls = newPairAddresses.flatMap(pairAddress => [
                 { address: pairAddress, abi: UniswapV2Pair_ABI_json_1.default, functionName: 'token0' },
@@ -176,8 +178,8 @@ const buildUniV2 = async (chainId, project, existingLpAddresses, task) => {
             }
             // 3.5 Construct ZapInfo for valid new pairs
             const batchZapInfo = validPairData.map(pair => {
-                const token0Info = getERC20TokenInfo(pair.token0, tokenDetailsMap);
-                const token1Info = getERC20TokenInfo(pair.token1, tokenDetailsMap);
+                const token0Info = getERC20TokenInfo(pair.token0, tokenDetailsMap, chainConfig);
+                const token1Info = getERC20TokenInfo(pair.token1, tokenDetailsMap, chainConfig);
                 // Use LP Symbol or a combination if needed, fallback to LP Name or generic name
                 const zapName = pair.lpSymbol !== 'UNI-V2' // Default symbol often used
                     ? `${token0Info.symbol}-${token1Info.symbol} ${pair.lpSymbol}`
@@ -192,7 +194,8 @@ const buildUniV2 = async (chainId, project, existingLpAddresses, task) => {
                 };
                 return {
                     name: zapName, // Use fetched LP name/symbol or construct one
-                    icon: icon, // Use project icon
+                    logoURI: projectConfig.logoURI, // Use project icon
+                    chainId: chainId,
                     lpData: lpData,
                 };
             });
