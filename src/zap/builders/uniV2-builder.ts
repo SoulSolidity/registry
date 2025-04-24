@@ -197,15 +197,18 @@ export const buildUniV2 = async (
 
                 const lpData: UniV2LPInfo = {
                     lpType: LPType.UNIV2,
+                    name: pair.lpName,
+                    symbol: pair.lpSymbol,
                     lpAddress: pair.lpAddress,
                     toToken0: token0Info,
                     toToken1: token1Info,
                     factory: factoryAddress,
                     router: routerAddress
                 };
+                
+                const zapName = `${Project[project]} UniV2 (${token0Info.symbol}/${token1Info.symbol})`;
                 return {
-                    name: pair.lpName,
-                    symbol: pair.lpSymbol,
+                    name: zapName,
                     logoURI: projectConfig.logoURI, // Use project icon
                     chainId: chainId,
                     lpData: lpData,

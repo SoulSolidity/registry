@@ -13,6 +13,8 @@ export interface SingleTokenInfo {
 }
 export interface UniV2LPInfo {
     lpType: LPType.UNIV2;
+    name: string;
+    symbol: string;
     toToken0: ERC20TokenInfo;
     toToken1: ERC20TokenInfo;
     lpAddress: string;
@@ -21,6 +23,8 @@ export interface UniV2LPInfo {
 }
 export interface SolidlyLPInfo {
     lpType: LPType.SOLIDLY;
+    name: string;
+    symbol: string;
     toToken0: ERC20TokenInfo;
     toToken1: ERC20TokenInfo;
     stable: boolean;
@@ -30,6 +34,8 @@ export interface SolidlyLPInfo {
 }
 export interface GammaLPInfo {
     lpType: LPType.GAMMA;
+    name: string;
+    symbol: string;
     toToken0: ERC20TokenInfo;
     toToken1: ERC20TokenInfo;
     hypervisor: string;
@@ -37,6 +43,8 @@ export interface GammaLPInfo {
 }
 export interface IchiLPInfo {
     lpType: LPType.ICHI;
+    name: string;
+    symbol: string;
     toToken0: ERC20TokenInfo;
     toToken1: ERC20TokenInfo;
     allowToken0: boolean;
@@ -46,10 +54,14 @@ export interface IchiLPInfo {
 }
 export interface CurveLPInfo {
     lpType: LPType.CURVE;
+    name: string;
+    symbol: string;
     lpAddress: string;
 }
 export interface SteerLPInfo {
     lpType: LPType.STEER;
+    name: string;
+    symbol: string;
     toToken0: ERC20TokenInfo;
     toToken1: ERC20TokenInfo;
     lpAddress: string;

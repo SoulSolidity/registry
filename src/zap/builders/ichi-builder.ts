@@ -66,7 +66,7 @@ export const buildIchi = async (
   let uniqueTokenAddresses: `0x${string}`[] = [];
 
   try {
-    // Fetch LP details (token0, token1)
+    // Fetch LP details (token0, token1, name, symbol, allowToken0, allowToken1)
     const lpCalls = manualEntries.map((entry) => [
       {
         address: entry.address,
@@ -88,6 +88,16 @@ export const buildIchi = async (
         abi: ICHIVault_ABI as Abi,
         functionName: 'token1',
       },
+      {
+        address: entry.address,
+        abi: ICHIVault_ABI as Abi,
+        functionName: 'name',
+      },
+      {
+        address: entry.address,
+        abi: ICHIVault_ABI as Abi,
+        functionName: 'symbol',
+      },
     ]).flat();
 
     // Execute multicalls
@@ -96,8 +106,9 @@ export const buildIchi = async (
     // Collect unique token addresses
     const tokenAddresses = new Set<`0x${string}`>();
     for (let i = 0; i < manualEntries.length; i++) {
-      tokenAddresses.add(lpResults[i * 4 + 2] as `0x${string}`); // token0 address
-      tokenAddresses.add(lpResults[i * 4 + 3] as `0x${string}`); // token1 address
+      // Indexing adjusted for 6 calls per entry: [allow0, allow1, token0, token1, name, symbol]
+      tokenAddresses.add(lpResults[i * 6 + 2] as `0x${string}`);
+      tokenAddresses.add(lpResults[i * 6 + 3] as `0x${string}`);
     }
     uniqueTokenAddresses = Array.from(tokenAddresses);
 
@@ -167,11 +178,13 @@ export const buildIchi = async (
 
   // 5. Combine manual data with fetched on-chain data
   const processedData: ZapInfo[] = manualEntries.map((entry, index) => {
-    // Adjust indexing based on the lpCalls structure: [allowToken0, allowToken1, token0, token1] per entry
-    const allowToken0Result = lpResults[index * 4];
-    const allowToken1Result = lpResults[index * 4 + 1];
-    const token0Address = lpResults[index * 4 + 2] as `0x${string}`;
-    const token1Address = lpResults[index * 4 + 3] as `0x${string}`;
+    // Adjust indexing based on the lpCalls structure: [allowToken0, allowToken1, token0, token1, name, symbol] per entry
+    const allowToken0Result = lpResults[index * 6];
+    const allowToken1Result = lpResults[index * 6 + 1];
+    const token0Address = lpResults[index * 6 + 2] as `0x${string}`;
+    const token1Address = lpResults[index * 6 + 3] as `0x${string}`;
+    const lpName = lpResults[index * 6 + 4] as string;
+    const lpSymbol = lpResults[index * 6 + 5] as string;
 
 
     // Type assertion for boolean results from multicall
@@ -181,15 +194,16 @@ export const buildIchi = async (
 
     return {
       name: entry.name,
-      symbol: entry.symbol,
       logoURI: projectConfig.logoURI,
       chainId: chainId,
       lpData: {
         lpType: LPType.ICHI,
+        name: lpName,
+        symbol: lpSymbol,
         toToken0: getERC20TokenInfo(token0Address),
         toToken1: getERC20TokenInfo(token1Address),
-        allowToken0: allowToken0, // Use fetched value
-        allowToken1: allowToken1, // Use fetched value
+        allowToken0: allowToken0,
+        allowToken1: allowToken1,
         vault: entry.address,
         ichiConfig: ichiConfig,
       },

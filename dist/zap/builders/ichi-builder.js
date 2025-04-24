@@ -80,7 +80,7 @@ const buildIchi = async (manualEntries, chainId, project, parentTask) => {
     let tokenResults = [];
     let uniqueTokenAddresses = [];
     try {
-        // Fetch LP details (token0, token1)
+        // Fetch LP details (token0, token1, name, symbol, allowToken0, allowToken1)
         const lpCalls = manualEntries.map((entry) => [
             {
                 address: entry.address,
@@ -102,14 +102,25 @@ const buildIchi = async (manualEntries, chainId, project, parentTask) => {
                 abi: ICHIVault_ABI_json_1.default,
                 functionName: 'token1',
             },
+            {
+                address: entry.address,
+                abi: ICHIVault_ABI_json_1.default,
+                functionName: 'name',
+            },
+            {
+                address: entry.address,
+                abi: ICHIVault_ABI_json_1.default,
+                functionName: 'symbol',
+            },
         ]).flat();
         // Execute multicalls
         lpResults = await (0, actions_1.multicall)(client, { contracts: lpCalls, allowFailure: false });
         // Collect unique token addresses
         const tokenAddresses = new Set();
         for (let i = 0; i < manualEntries.length; i++) {
-            tokenAddresses.add(lpResults[i * 4 + 2]); // token0 address
-            tokenAddresses.add(lpResults[i * 4 + 3]); // token1 address
+            // Indexing adjusted for 6 calls per entry: [allow0, allow1, token0, token1, name, symbol]
+            tokenAddresses.add(lpResults[i * 6 + 2]);
+            tokenAddresses.add(lpResults[i * 6 + 3]);
         }
         uniqueTokenAddresses = Array.from(tokenAddresses);
         // Fetch token details (name, symbol, decimals)
@@ -173,11 +184,13 @@ const buildIchi = async (manualEntries, chainId, project, parentTask) => {
     };
     // 5. Combine manual data with fetched on-chain data
     const processedData = manualEntries.map((entry, index) => {
-        // Adjust indexing based on the lpCalls structure: [allowToken0, allowToken1, token0, token1] per entry
-        const allowToken0Result = lpResults[index * 4];
-        const allowToken1Result = lpResults[index * 4 + 1];
-        const token0Address = lpResults[index * 4 + 2];
-        const token1Address = lpResults[index * 4 + 3];
+        // Adjust indexing based on the lpCalls structure: [allowToken0, allowToken1, token0, token1, name, symbol] per entry
+        const allowToken0Result = lpResults[index * 6];
+        const allowToken1Result = lpResults[index * 6 + 1];
+        const token0Address = lpResults[index * 6 + 2];
+        const token1Address = lpResults[index * 6 + 3];
+        const lpName = lpResults[index * 6 + 4];
+        const lpSymbol = lpResults[index * 6 + 5];
         // Type assertion for boolean results from multicall
         const allowToken0 = allowToken0Result;
         const allowToken1 = allowToken1Result;
@@ -187,10 +200,12 @@ const buildIchi = async (manualEntries, chainId, project, parentTask) => {
             chainId: chainId,
             lpData: {
                 lpType: types_1.LPType.ICHI,
+                name: lpName,
+                symbol: lpSymbol,
                 toToken0: getERC20TokenInfo(token0Address),
                 toToken1: getERC20TokenInfo(token1Address),
-                allowToken0: allowToken0, // Use fetched value
-                allowToken1: allowToken1, // Use fetched value
+                allowToken0: allowToken0,
+                allowToken1: allowToken1,
                 vault: entry.address,
                 ichiConfig: ichiConfig,
             },

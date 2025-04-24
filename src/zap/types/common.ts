@@ -63,7 +63,6 @@ export enum LPType {
 export interface BaseEntry {
   address: `0x${string}`;
   name: string;
-  symbol: string;
 }
 
 export interface GammaEntry extends BaseEntry {

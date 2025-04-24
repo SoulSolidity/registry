@@ -61,13 +61,11 @@ export const buildGamma = async (
   }
 
   const client = getClient(chainId);
-  let lpResults: readonly `0x${string}`[] = [];
+  let lpResults: readonly unknown[] = [];
   let tokenResults: MulticallResult<string | number | bigint>[] = [];
   let uniqueTokenAddresses: `0x${string}`[] = [];
 
-  // Removed parentTask.newListr - execute sequentially
   try {
-    // Fetch LP details (token0, token1)
     const lpCalls = manualEntries.map((entry) => [
       {
         address: entry.address,
@@ -79,14 +77,24 @@ export const buildGamma = async (
         abi: Hypervisor_ABI as Abi,
         functionName: 'token1',
       },
+      {
+        address: entry.address,
+        abi: Hypervisor_ABI as Abi,
+        functionName: 'name',
+      },
+      {
+        address: entry.address,
+        abi: Hypervisor_ABI as Abi,
+        functionName: 'symbol',
+      },
     ]).flat();
 
     // Execute multicalls
-    lpResults = await multicall(client, { contracts: lpCalls, allowFailure: false }) as readonly `0x${string}`[];
+    lpResults = await multicall(client, { contracts: lpCalls, allowFailure: false });
 
     // Collect unique token addresses
     const tokenAddresses = new Set<`0x${string}`>();
-    for (let i = 0; i < lpResults.length; i += 2) {
+    for (let i = 0; i < lpResults.length; i += 4) {
       tokenAddresses.add(lpResults[i] as `0x${string}`);   // token0
       tokenAddresses.add(lpResults[i + 1] as `0x${string}`); // token1
     }
@@ -158,16 +166,19 @@ export const buildGamma = async (
 
   // 5. Combine manual data with fetched on-chain data
   const processedData: ZapInfo[] = manualEntries.map((entry, index) => {
-    const token0Address = lpResults[index * 2] as `0x${string}`;
-    const token1Address = lpResults[index * 2 + 1] as `0x${string}`;
+    const token0Address = lpResults[index * 4] as `0x${string}`;
+    const token1Address = lpResults[index * 4 + 1] as `0x${string}`;
+    const lpName = lpResults[index * 4 + 2] as string;
+    const lpSymbol = lpResults[index * 4 + 3] as string;
 
     return {
       name: entry.name,
-      symbol: entry.symbol,
       logoURI: projectConfig.logoURI,
       chainId: chainId,
       lpData: {
         lpType: LPType.GAMMA,
+        name: lpName,
+        symbol: lpSymbol,
         toToken0: getERC20TokenInfo(token0Address),
         toToken1: getERC20TokenInfo(token1Address),
         hypervisor: entry.address,

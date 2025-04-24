@@ -186,14 +186,10 @@ const buildSolidly = async (chainId, project, existingLpAddresses, task) => {
             const batchZapInfo = validPairData.map(pair => {
                 const token0Info = getERC20TokenInfo(pair.token0, tokenDetailsMap, chainConfig);
                 const token1Info = getERC20TokenInfo(pair.token1, tokenDetailsMap, chainConfig);
-                // Determine if 'sLP' or 'vLP' prefix is needed based on stable status
-                const stabilityPrefix = pair.stable ? 's' : 'v';
-                const defaultSymbolPrefix = `SOLID`; // Or whatever Solidly default symbol is, if any
-                const zapName = pair.lpSymbol !== defaultSymbolPrefix && pair.lpSymbol !== 'LP'
-                    ? `${token0Info.symbol}-${token1Info.symbol} ${pair.lpSymbol}`
-                    : `${stabilityPrefix}${token0Info.symbol}-${token1Info.symbol}`;
                 const lpData = {
                     lpType: types_1.LPType.SOLIDLY,
+                    name: pair.lpName,
+                    symbol: pair.lpSymbol,
                     lpAddress: pair.lpAddress,
                     toToken0: token0Info,
                     toToken1: token1Info,
@@ -201,6 +197,7 @@ const buildSolidly = async (chainId, project, existingLpAddresses, task) => {
                     factory: factoryAddress,
                     router: routerAddress
                 };
+                const zapName = `${types_1.Project[project]} Solidly (${token0Info.symbol}/${token1Info.symbol})`;
                 return {
                     name: zapName,
                     logoURI: projectConfig.logoURI,

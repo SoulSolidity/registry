@@ -198,6 +198,8 @@ export const buildSolidly = async (
 
                 const lpData: SolidlyLPInfo = {
                     lpType: LPType.SOLIDLY,
+                    name: pair.lpName,
+                    symbol: pair.lpSymbol,
                     lpAddress: pair.lpAddress,
                     toToken0: token0Info,
                     toToken1: token1Info,
@@ -205,9 +207,11 @@ export const buildSolidly = async (
                     factory: factoryAddress,
                     router: routerAddress
                 };
+
+                const zapName = `${Project[project]} Solidly (${token0Info.symbol}/${token1Info.symbol})`;
+
                 return {
-                    name: pair.lpName,
-                    symbol: pair.lpSymbol,
+                    name: zapName,
                     logoURI: projectConfig.logoURI,
                     chainId: chainId,
                     lpData: lpData,

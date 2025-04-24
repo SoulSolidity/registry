@@ -1,11 +1,12 @@
 {
   "0x9e480e37a036b6703818D701544763a36bfed35b": {
-    "name": "Lynex Ichi",
-    "symbol": "ZERO-WETH",
+    "name": "Lynex Ichi (ZERO-WETH)",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
       "lpType": "ichi",
+      "name": "ICHI Vault Liquidity",
+      "symbol": "IV-11-LYNX",
       "toToken0": {
         "address": "0x78354f8DcCB269a615A7e0a24f9B0718FDC3C7A7",
         "name": "ZeroLend",

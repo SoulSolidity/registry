@@ -79,9 +79,7 @@ const buildGamma = async (manualEntries, chainId, project, parentTask) => {
     let lpResults = [];
     let tokenResults = [];
     let uniqueTokenAddresses = [];
-    // Removed parentTask.newListr - execute sequentially
     try {
-        // Fetch LP details (token0, token1)
         const lpCalls = manualEntries.map((entry) => [
             {
                 address: entry.address,
@@ -93,12 +91,22 @@ const buildGamma = async (manualEntries, chainId, project, parentTask) => {
                 abi: Hypervisor_ABI_json_1.default,
                 functionName: 'token1',
             },
+            {
+                address: entry.address,
+                abi: Hypervisor_ABI_json_1.default,
+                functionName: 'name',
+            },
+            {
+                address: entry.address,
+                abi: Hypervisor_ABI_json_1.default,
+                functionName: 'symbol',
+            },
         ]).flat();
         // Execute multicalls
         lpResults = await (0, actions_1.multicall)(client, { contracts: lpCalls, allowFailure: false });
         // Collect unique token addresses
         const tokenAddresses = new Set();
-        for (let i = 0; i < lpResults.length; i += 2) {
+        for (let i = 0; i < lpResults.length; i += 4) {
             tokenAddresses.add(lpResults[i]); // token0
             tokenAddresses.add(lpResults[i + 1]); // token1
         }
@@ -164,14 +172,18 @@ const buildGamma = async (manualEntries, chainId, project, parentTask) => {
     };
     // 5. Combine manual data with fetched on-chain data
     const processedData = manualEntries.map((entry, index) => {
-        const token0Address = lpResults[index * 2];
-        const token1Address = lpResults[index * 2 + 1];
+        const token0Address = lpResults[index * 4];
+        const token1Address = lpResults[index * 4 + 1];
+        const lpName = lpResults[index * 4 + 2];
+        const lpSymbol = lpResults[index * 4 + 3];
         return {
             name: entry.name,
             logoURI: projectConfig.logoURI,
             chainId: chainId,
             lpData: {
                 lpType: types_1.LPType.GAMMA,
+                name: lpName,
+                symbol: lpSymbol,
                 toToken0: getERC20TokenInfo(token0Address),
                 toToken1: getERC20TokenInfo(token1Address),
                 hypervisor: entry.address,

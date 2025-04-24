@@ -182,22 +182,22 @@ const buildUniV2 = async (chainId, project, existingLpAddresses, task) => {
             }
             // 3.5 Construct ZapInfo for valid new pairs
             const batchZapInfo = validPairData.map(pair => {
+                const lpTokenInfo = getERC20TokenInfo(pair.lpAddress, tokenDetailsMap, chainConfig);
                 const token0Info = getERC20TokenInfo(pair.token0, tokenDetailsMap, chainConfig);
                 const token1Info = getERC20TokenInfo(pair.token1, tokenDetailsMap, chainConfig);
-                // Use LP Symbol or a combination if needed, fallback to LP Name or generic name
-                const zapName = pair.lpSymbol !== 'UNI-V2' // Default symbol often used
-                    ? `${token0Info.symbol}-${token1Info.symbol} ${pair.lpSymbol}`
-                    : `${token0Info.symbol}-${token1Info.symbol} LP`; // Fallback name structure
                 const lpData = {
                     lpType: types_1.LPType.UNIV2,
+                    name: pair.lpName,
+                    symbol: pair.lpSymbol,
                     lpAddress: pair.lpAddress,
                     toToken0: token0Info,
                     toToken1: token1Info,
                     factory: factoryAddress,
                     router: routerAddress
                 };
+                const zapName = `${types_1.Project[project]} UniV2 (${token0Info.symbol}/${token1Info.symbol})`;
                 return {
-                    name: zapName, // Use fetched LP name/symbol or construct one
+                    name: zapName,
                     logoURI: projectConfig.logoURI, // Use project icon
                     chainId: chainId,
                     lpData: lpData,
