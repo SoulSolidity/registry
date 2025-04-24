@@ -7,6 +7,9 @@ on:
   repository_dispatch:
     types: [trigger-build] # Optional: Specify event types to react to
 
+permissions:
+  contents: write # Grant write permission to the GITHUB_TOKEN for the contents scope
+
 jobs:
   build-and-commit:
     runs-on: ubuntu-latest
