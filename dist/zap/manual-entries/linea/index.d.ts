@@ -1,4 +1,4 @@
 /**
  * Export all Linea chain entries
  */
-export * from './lynex';
+export * from './lynex/index';
