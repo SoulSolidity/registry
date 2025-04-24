@@ -181,6 +181,7 @@ export const buildIchi = async (
 
     return {
       name: entry.name,
+      symbol: entry.symbol,
       logoURI: projectConfig.logoURI,
       chainId: chainId,
       lpData: {

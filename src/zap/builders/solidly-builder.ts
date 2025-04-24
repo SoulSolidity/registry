@@ -196,13 +196,6 @@ export const buildSolidly = async (
                 const token0Info = getERC20TokenInfo(pair.token0, tokenDetailsMap, chainConfig);
                 const token1Info = getERC20TokenInfo(pair.token1, tokenDetailsMap, chainConfig);
 
-                // Determine if 'sLP' or 'vLP' prefix is needed based on stable status
-                const stabilityPrefix = pair.stable ? 's' : 'v';
-                const defaultSymbolPrefix = `SOLID`; // Or whatever Solidly default symbol is, if any
-                const zapName = pair.lpSymbol !== defaultSymbolPrefix && pair.lpSymbol !== 'LP'
-                    ? `${token0Info.symbol}-${token1Info.symbol} ${pair.lpSymbol}`
-                    : `${stabilityPrefix}${token0Info.symbol}-${token1Info.symbol}`;
-
                 const lpData: SolidlyLPInfo = {
                     lpType: LPType.SOLIDLY,
                     lpAddress: pair.lpAddress,
@@ -213,7 +206,8 @@ export const buildSolidly = async (
                     router: routerAddress
                 };
                 return {
-                    name: zapName,
+                    name: pair.lpName,
+                    symbol: pair.lpSymbol,
                     logoURI: projectConfig.logoURI,
                     chainId: chainId,
                     lpData: lpData,

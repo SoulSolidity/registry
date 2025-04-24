@@ -3,6 +3,7 @@ import { IchiConfig } from './config';
 
 export interface ZapInfo {
   name: string;
+  symbol: string;
   logoURI: string;
   chainId: number;
   lpData: LPData;

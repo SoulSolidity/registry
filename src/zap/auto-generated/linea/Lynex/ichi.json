@@ -1,6 +1,7 @@
 {
   "0x9e480e37a036b6703818D701544763a36bfed35b": {
-    "name": "Lynex Ichi (ZERO-WETH)",
+    "name": "Lynex Ichi",
+    "symbol": "ZERO-WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {

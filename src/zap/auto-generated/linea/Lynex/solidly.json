@@ -1,6 +1,7 @@
 {
   "0x3E78c1F766D7FE2c3dceF6aFe6609966540B6391": {
-    "name": "USDC-LYNX vAMM-USDC/LYNX",
+    "name": "VolatileV1 AMM - USDC/LYNX",
+    "symbol": "vAMM-USDC/LYNX",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -26,7 +27,8 @@
     }
   },
   "0x6FB44889a9aA69F7290258D3716BfFcB33CdE184": {
-    "name": "USDC-WETH vAMM-USDC/WETH",
+    "name": "VolatileV1 AMM - USDC/WETH",
+    "symbol": "vAMM-USDC/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -52,7 +54,8 @@
     }
   },
   "0x94769abFbEb114cF7BA2e7B9cEF242ac70da20d6": {
-    "name": "USDT-WETH vAMM-USDT/WETH",
+    "name": "VolatileV1 AMM - USDT/WETH",
+    "symbol": "vAMM-USDT/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -78,7 +81,8 @@
     }
   },
   "0xa4477d98e519D4c1d66aEf4EfDF7cBEb84f4f778": {
-    "name": "USDC-USDT sAMM-USDC/USDT",
+    "name": "StableV1 AMM - USDC/USDT",
+    "symbol": "sAMM-USDC/USDT",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -104,7 +108,8 @@
     }
   },
   "0x8F3e0a2378B0B5838E0E0d99FCEcC167d47bc9A7": {
-    "name": "STONE-WETH sAMM-STONE/WETH",
+    "name": "StableV1 AMM - STONE/WETH",
+    "symbol": "sAMM-STONE/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -130,7 +135,8 @@
     }
   },
   "0xa8e4B5401F98cf20F7e4e9323B02c40f10661f06": {
-    "name": "wstETH-WETH sAMM-wstETH/WETH",
+    "name": "StableV1 AMM - wstETH/WETH",
+    "symbol": "sAMM-wstETH/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -156,7 +162,8 @@
     }
   },
   "0x58AaCbccAeC30938cb2bb11653Cad726e5c4194a": {
-    "name": "USDC-USD+ sAMM-USDC/USD+",
+    "name": "StableV1 AMM - USDC/USD+",
+    "symbol": "sAMM-USDC/USD+",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -182,7 +189,8 @@
     }
   },
   "0xbE23da11fbF9dA0F7C13eA73A4bB511b9Bc00177": {
-    "name": "USDT+-USDT sAMM-USDT+/USDT",
+    "name": "StableV1 AMM - USDT+/USDT",
+    "symbol": "sAMM-USDT+/USDT",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -208,7 +216,8 @@
     }
   },
   "0x7088A31d53Fc1fA300Ceb5F9103343137A62b545": {
-    "name": "USDC-DUSD sAMM-USDC/DUSD",
+    "name": "StableV1 AMM - USDC/DUSD",
+    "symbol": "sAMM-USDC/DUSD",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -234,7 +243,8 @@
     }
   },
   "0xE9E146f5bceBD71Fb8C526EA036dE6bbFB1B0Ad7": {
-    "name": "USDC-MAI sAMM-USDC/MAI",
+    "name": "StableV1 AMM - USDC/MAI",
+    "symbol": "sAMM-USDC/MAI",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -260,7 +270,8 @@
     }
   },
   "0xc5f4C5C2077BbbaC5a8381Cf30eCdf18fde42a91": {
-    "name": "USDT+-USD+ sAMM-USDT+/USD+",
+    "name": "StableV1 AMM - USDT+/USD+",
+    "symbol": "sAMM-USDT+/USD+",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -286,7 +297,8 @@
     }
   },
   "0xC6c46Cd01403AC0B28Ef92C4880f2E4Be2D410E1": {
-    "name": "USDC-USDT vAMM-USDC/USDT",
+    "name": "VolatileV1 AMM - USDC/USDT",
+    "symbol": "vAMM-USDC/USDT",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -312,7 +324,8 @@
     }
   },
   "0x1C6Fb08C1ef4E505a4Ae3Ffc3C99E443070Df64A": {
-    "name": "LYNX-WETH vAMM-LYNX/WETH",
+    "name": "VolatileV1 AMM - LYNX/WETH",
+    "symbol": "vAMM-LYNX/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -338,7 +351,8 @@
     }
   },
   "0x2a73093943232aFD02661a112E149c777cf01e57": {
-    "name": "MATIC-WETH vAMM-MATIC/WETH",
+    "name": "VolatileV1 AMM - MATIC/WETH",
+    "symbol": "vAMM-MATIC/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -364,7 +378,8 @@
     }
   },
   "0x9CBE4eBcF697e98efC22e2595209c5d62D8fC4F0": {
-    "name": "USDC-LYNX sAMM-USDC/LYNX",
+    "name": "StableV1 AMM - USDC/LYNX",
+    "symbol": "sAMM-USDC/LYNX",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -390,7 +405,8 @@
     }
   },
   "0x8d2a23eb25A0a8213319A4ED2984602a7C23f06B": {
-    "name": "WBTC-WETH vAMM-WBTC/WETH",
+    "name": "VolatileV1 AMM - WBTC/WETH",
+    "symbol": "vAMM-WBTC/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -416,7 +432,8 @@
     }
   },
   "0xaC716681656D3F22C23BF09C9b52786216827Ac3": {
-    "name": "wstETH-WETH vAMM-wstETH/WETH",
+    "name": "VolatileV1 AMM - wstETH/WETH",
+    "symbol": "vAMM-wstETH/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -442,7 +459,8 @@
     }
   },
   "0xFB957DE375cc10450D7a34aB85b1F15Ef58680b4": {
-    "name": "USDC-WETH sAMM-USDC/WETH",
+    "name": "StableV1 AMM - USDC/WETH",
+    "symbol": "sAMM-USDC/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -468,7 +486,8 @@
     }
   },
   "0x2CC4c3CceC1a16EFa23d8CaFd764EacEb9233486": {
-    "name": "LYNX-USDT sAMM-LYNX/USDT",
+    "name": "StableV1 AMM - LYNX/USDT",
+    "symbol": "sAMM-LYNX/USDT",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -494,7 +513,8 @@
     }
   },
   "0xE34b928996cC73fC3894898102842E86AA0BA33A": {
-    "name": "USDT-USD+ sAMM-USDT/USD+",
+    "name": "StableV1 AMM - USDT/USD+",
+    "symbol": "sAMM-USDT/USD+",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -520,7 +540,8 @@
     }
   },
   "0x52555fa67687288FC70791BEaE2b92754fdd0341": {
-    "name": "LUCIA-WETH vAMM-LUCIA/WETH",
+    "name": "VolatileV1 AMM - LUCIA/WETH",
+    "symbol": "vAMM-LUCIA/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -546,7 +567,8 @@
     }
   },
   "0xe8f2288c21105D9cBA6355c8833026F01e0f1cC3": {
-    "name": "oLYNX-WETH vAMM-oLYNX/WETH",
+    "name": "VolatileV1 AMM - oLYNX/WETH",
+    "symbol": "vAMM-oLYNX/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -572,7 +594,8 @@
     }
   },
   "0x6CE0414C17495D12e6744E0cE5330B258525975E": {
-    "name": "WETH-bveLYNX sAMM-WETH/bveLYNX",
+    "name": "StableV1 AMM - WETH/bveLYNX",
+    "symbol": "sAMM-WETH/bveLYNX",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -598,7 +621,8 @@
     }
   },
   "0xCCF4Fd9f2fBE89917821e4629cb2A6B760651baF": {
-    "name": "XRGB-WETH vAMM-XRGB/WETH",
+    "name": "VolatileV1 AMM - XRGB/WETH",
+    "symbol": "vAMM-XRGB/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -624,7 +648,8 @@
     }
   },
   "0xAAD8A008496d789f48f23C4778b4FbdDb7A1C937": {
-    "name": "axlLqdr-WETH vAMM-axlLqdr/WETH",
+    "name": "VolatileV1 AMM - axlLqdr/WETH",
+    "symbol": "vAMM-axlLqdr/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -650,7 +675,8 @@
     }
   },
   "0x1129a2B570906eA0d1a1CFf94C274cB17AD69a8c": {
-    "name": "MATIC-WETH sAMM-MATIC/WETH",
+    "name": "StableV1 AMM - MATIC/WETH",
+    "symbol": "sAMM-MATIC/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -676,7 +702,8 @@
     }
   },
   "0x06170045bbA66914FFA03f6Cb2fc5A3F8dC0ddB7": {
-    "name": "LYNX-XRGB vAMM-LYNX/XRGB",
+    "name": "VolatileV1 AMM - LYNX/XRGB",
+    "symbol": "vAMM-LYNX/XRGB",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -702,7 +729,8 @@
     }
   },
   "0xE5e19bBF39c76A8c980B48F2Ec89d0dE877bF567": {
-    "name": "USDC-MENDI vAMM-USDC/MENDI",
+    "name": "VolatileV1 AMM - USDC/MENDI",
+    "symbol": "vAMM-USDC/MENDI",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -728,7 +756,8 @@
     }
   },
   "0xD4630a296E33dfF7fdAcca2C6f192E9C78DCde13": {
-    "name": "USDC-WBTC vAMM-USDC/WBTC",
+    "name": "VolatileV1 AMM - USDC/WBTC",
+    "symbol": "vAMM-USDC/WBTC",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -754,7 +783,8 @@
     }
   },
   "0xCc3880B990B11A712f2F42c0c0Db57A0ca1529A9": {
-    "name": "USDC-NDX_2412 vAMM-USDC/NDX_2412",
+    "name": "VolatileV1 AMM - USDC/NDX_2412",
+    "symbol": "vAMM-USDC/NDX_2412",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -780,7 +810,8 @@
     }
   },
   "0xf93F79C2557EbC38c6eb9D020b8Ef50B8eb97B48": {
-    "name": "USDC-iNDX_2412 vAMM-USDC/iNDX_2412",
+    "name": "VolatileV1 AMM - USDC/iNDX_2412",
+    "symbol": "vAMM-USDC/iNDX_2412",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -806,7 +837,8 @@
     }
   },
   "0x79B2593E1e8fF882A6F26bC2cb4854b68751887d": {
-    "name": "LYNX-WETH sAMM-LYNX/WETH",
+    "name": "StableV1 AMM - LYNX/WETH",
+    "symbol": "sAMM-LYNX/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -832,7 +864,8 @@
     }
   },
   "0x00ecabF9Dc65Ea9B2468d702Ba2359f8137F776D": {
-    "name": "USDC-EURO3 sAMM-USDC/EURO3",
+    "name": "StableV1 AMM - USDC/EURO3",
+    "symbol": "sAMM-USDC/EURO3",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -858,7 +891,8 @@
     }
   },
   "0xbDE12bdbEB92B0DCA3F3c37A749633a24717b24D": {
-    "name": "USDC-A3A vAMM-USDC/A3A",
+    "name": "VolatileV1 AMM - USDC/A3A",
+    "symbol": "vAMM-USDC/A3A",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -884,7 +918,8 @@
     }
   },
   "0xF1866f414Ce68512a5e2923673AA376341cb6cDe": {
-    "name": "wDAI-USDC sAMM-wDAI/USDC",
+    "name": "StableV1 AMM - wDAI/USDC",
+    "symbol": "sAMM-wDAI/USDC",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -910,7 +945,8 @@
     }
   },
   "0x3c66E918025739E2e61D7B98Da6ca6759841fCf8": {
-    "name": "SATS-WETH vAMM-SATS/WETH",
+    "name": "VolatileV1 AMM - SATS/WETH",
+    "symbol": "vAMM-SATS/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -936,7 +972,8 @@
     }
   },
   "0xC674B36Ce15Abe09777eFeB11C47e849921D2Ca4": {
-    "name": "WETH-ORDI sAMM-WETH/ORDI",
+    "name": "StableV1 AMM - WETH/ORDI",
+    "symbol": "sAMM-WETH/ORDI",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -962,7 +999,8 @@
     }
   },
   "0xB2E8EcA0AdD374AA63f6DF92DcDfDA596eaa470A": {
-    "name": "WBTC-WETH sAMM-WBTC/WETH",
+    "name": "StableV1 AMM - WBTC/WETH",
+    "symbol": "sAMM-WBTC/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -988,7 +1026,8 @@
     }
   },
   "0xba4BeCDB0394d3db69BcA50f70caCB7d2BAB0Ea9": {
-    "name": "LYNX-oLYNX vAMM-LYNX/oLYNX",
+    "name": "VolatileV1 AMM - LYNX/oLYNX",
+    "symbol": "vAMM-LYNX/oLYNX",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1014,7 +1053,8 @@
     }
   },
   "0x53c3B77DF14d9dbE572a858ba6ed2Cc073A0cfE0": {
-    "name": "MENDI-WETH vAMM-MENDI/WETH",
+    "name": "VolatileV1 AMM - MENDI/WETH",
+    "symbol": "vAMM-MENDI/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1040,7 +1080,8 @@
     }
   },
   "0xFB636707412d580F5333635a0d61523bE5b09bDD": {
-    "name": "LINE-MENDI vAMM-LINE/MENDI",
+    "name": "VolatileV1 AMM - LINE/MENDI",
+    "symbol": "vAMM-LINE/MENDI",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1066,7 +1107,8 @@
     }
   },
   "0xC5c2f8beabD4D4553063f7359C38B4f1Aa0c3808": {
-    "name": "LYNX-LINE vAMM-LYNX/LINE",
+    "name": "VolatileV1 AMM - LYNX/LINE",
+    "symbol": "vAMM-LYNX/LINE",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1092,7 +1134,8 @@
     }
   },
   "0x6Fb413595E0949B85B0861233B39d8DDec872aFa": {
-    "name": "LUBE-LINE vAMM-LUBE/LINE",
+    "name": "VolatileV1 AMM - LUBE/LINE",
+    "symbol": "vAMM-LUBE/LINE",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1118,7 +1161,8 @@
     }
   },
   "0x11E29b541AbE15984c863c10F3Ef9eCBcC078031": {
-    "name": "USDT-WETH sAMM-USDT/WETH",
+    "name": "StableV1 AMM - USDT/WETH",
+    "symbol": "sAMM-USDT/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1144,7 +1188,8 @@
     }
   },
   "0x49bC134Cb005A24D32540AE23f9b50235473D14A": {
-    "name": "USDC-MENDI sAMM-USDC/MENDI",
+    "name": "StableV1 AMM - USDC/MENDI",
+    "symbol": "sAMM-USDC/MENDI",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1170,7 +1215,8 @@
     }
   },
   "0x4d776eb578196eE0725bdA3319B4fb615bBf0Ac5": {
-    "name": "STONE-WETH vAMM-STONE/WETH",
+    "name": "VolatileV1 AMM - STONE/WETH",
+    "symbol": "vAMM-STONE/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1196,7 +1242,8 @@
     }
   },
   "0x0CafBb18fFE4d91A858Bb05011818c5358D99095": {
-    "name": "USDC-MAI vAMM-USDC/MAI",
+    "name": "VolatileV1 AMM - USDC/MAI",
+    "symbol": "vAMM-USDC/MAI",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1222,7 +1269,8 @@
     }
   },
   "0x8CB615373F16a727F61457213866267B70051AE5": {
-    "name": "A3A-WETH vAMM-A3A/WETH",
+    "name": "VolatileV1 AMM - A3A/WETH",
+    "symbol": "vAMM-A3A/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1248,7 +1296,8 @@
     }
   },
   "0x29df8A5D68937aB016A354a45510208d6e75c5cC": {
-    "name": "LILI-WETH vAMM-LILI/WETH",
+    "name": "VolatileV1 AMM - LILI/WETH",
+    "symbol": "vAMM-LILI/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1274,7 +1323,8 @@
     }
   },
   "0x23ccaFF2639695b74D11Da36bEf2B5ECefE3509E": {
-    "name": "USDC-A3A sAMM-USDC/A3A",
+    "name": "StableV1 AMM - USDC/A3A",
+    "symbol": "sAMM-USDC/A3A",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1300,7 +1350,8 @@
     }
   },
   "0xA5d10e2350C4794d06de9Ac1B373e4114ff0F0ec": {
-    "name": "WETH-ORDI vAMM-WETH/ORDI",
+    "name": "VolatileV1 AMM - WETH/ORDI",
+    "symbol": "vAMM-WETH/ORDI",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1326,7 +1377,8 @@
     }
   },
   "0x740BB4250398f2b87e70CB21f459DE4Df80012Dc": {
-    "name": "MENDI-oLYNX sAMM-MENDI/oLYNX",
+    "name": "StableV1 AMM - MENDI/oLYNX",
+    "symbol": "sAMM-MENDI/oLYNX",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1352,7 +1404,8 @@
     }
   },
   "0xfb26FDeb0D7151731afcCdFfB0E38D2c5f33C807": {
-    "name": "LINUS-WETH vAMM-LINUS/WETH",
+    "name": "VolatileV1 AMM - LINUS/WETH",
+    "symbol": "vAMM-LINUS/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1378,7 +1431,8 @@
     }
   },
   "0x8E9f777f2448590ccd9d547f49489948A6001d41": {
-    "name": "MENDI-uMendi vAMM-MENDI/uMendi",
+    "name": "VolatileV1 AMM - MENDI/uMendi",
+    "symbol": "vAMM-MENDI/uMendi",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1404,7 +1458,8 @@
     }
   },
   "0x1C843458Ab1D2f8198B632F519232223e9D81370": {
-    "name": "sMendi-MENDI vAMM-sMendi/MENDI",
+    "name": "VolatileV1 AMM - sMendi/MENDI",
+    "symbol": "vAMM-sMendi/MENDI",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1430,7 +1485,8 @@
     }
   },
   "0xbB9da18545F6705047b42523AAc1d558260B213c": {
-    "name": "LYNX-USDT vAMM-LYNX/USDT",
+    "name": "VolatileV1 AMM - LYNX/USDT",
+    "symbol": "vAMM-LYNX/USDT",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1456,7 +1512,8 @@
     }
   },
   "0x0C978a9529B01DFe1A0745b6F97e3A05A8F81023": {
-    "name": "MATIC-MENDI vAMM-MATIC/MENDI",
+    "name": "VolatileV1 AMM - MATIC/MENDI",
+    "symbol": "vAMM-MATIC/MENDI",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1482,7 +1539,8 @@
     }
   },
   "0xdB4eCdF24559fBAC12Eb4AB7574185409c09875f": {
-    "name": "USDC-DAI vAMM-USDC/DAI",
+    "name": "VolatileV1 AMM - USDC/DAI",
+    "symbol": "vAMM-USDC/DAI",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1508,7 +1566,8 @@
     }
   },
   "0x0aEF9098F45B6A85a3C33B5c48E47a7e91b9ba1a": {
-    "name": "MENDI-USDT vAMM-MENDI/USDT",
+    "name": "VolatileV1 AMM - MENDI/USDT",
+    "symbol": "vAMM-MENDI/USDT",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1534,7 +1593,8 @@
     }
   },
   "0x60890CF6dE535Dbb5dA9F1b8841481b408E011a2": {
-    "name": "USDC-DUSD vAMM-USDC/DUSD",
+    "name": "VolatileV1 AMM - USDC/DUSD",
+    "symbol": "vAMM-USDC/DUSD",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1560,7 +1620,8 @@
     }
   },
   "0x80295173FD6962F38671C39ba726309B637cA241": {
-    "name": "ezETH-WETH vAMM-ezETH/WETH",
+    "name": "VolatileV1 AMM - ezETH/WETH",
+    "symbol": "vAMM-ezETH/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1586,7 +1647,8 @@
     }
   },
   "0x4E78173588F16Ee42B61Aa6b6BF7F02FC86a7d89": {
-    "name": "LYNX-WBTC vAMM-LYNX/WBTC",
+    "name": "VolatileV1 AMM - LYNX/WBTC",
+    "symbol": "vAMM-LYNX/WBTC",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1612,7 +1674,8 @@
     }
   },
   "0x7F80ffe8E0FBBb82aeFA9d848636C73f679219C4": {
-    "name": "dnb-WETH vAMM-dnb/WETH",
+    "name": "VolatileV1 AMM - dnb/WETH",
+    "symbol": "vAMM-dnb/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1638,7 +1701,8 @@
     }
   },
   "0xCeF24c763E79329F48756F5a76D08B650C6F2293": {
-    "name": "LYNX-STONE vAMM-LYNX/STONE",
+    "name": "VolatileV1 AMM - LYNX/STONE",
+    "symbol": "vAMM-LYNX/STONE",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1664,7 +1728,8 @@
     }
   },
   "0xAFbB06b87b8142E3E2492B59861C26341B57b3A1": {
-    "name": "LAB1-WETH vAMM-LAB1/WETH",
+    "name": "VolatileV1 AMM - LAB1/WETH",
+    "symbol": "vAMM-LAB1/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1690,7 +1755,8 @@
     }
   },
   "0x6ADfE27c0430de3de2Dd32F121Af9c69cEE96D11": {
-    "name": "AOXY-WETH vAMM-AOXY/WETH",
+    "name": "VolatileV1 AMM - AOXY/WETH",
+    "symbol": "vAMM-AOXY/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1716,7 +1782,8 @@
     }
   },
   "0x32665DC81169176DEbFC4F2145d9Fd5FB9a27998": {
-    "name": "BOXY-WETH vAMM-BOXY/WETH",
+    "name": "VolatileV1 AMM - BOXY/WETH",
+    "symbol": "vAMM-BOXY/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1742,7 +1809,8 @@
     }
   },
   "0xA420222933F158249Ed57bf12f70dE0fC66cDc4E": {
-    "name": "COXY-WETH vAMM-COXY/WETH",
+    "name": "VolatileV1 AMM - COXY/WETH",
+    "symbol": "vAMM-COXY/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1768,7 +1836,8 @@
     }
   },
   "0xbd6b43cDBE497892692e73350FCDe075eDe83D33": {
-    "name": "USDC-USD+ vAMM-USDC/USD+",
+    "name": "VolatileV1 AMM - USDC/USD+",
+    "symbol": "vAMM-USDC/USD+",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1794,7 +1863,8 @@
     }
   },
   "0xd4c69bCd53AAF29FcB47C47B81c172D72fAe62bB": {
-    "name": "LINDA-WETH vAMM-LINDA/WETH",
+    "name": "VolatileV1 AMM - LINDA/WETH",
+    "symbol": "vAMM-LINDA/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1820,7 +1890,8 @@
     }
   },
   "0xd09513F40C8B4EC890e7Dd6a0ca9c3E62BF950b5": {
-    "name": "RED-WETH vAMM-RED/WETH",
+    "name": "VolatileV1 AMM - RED/WETH",
+    "symbol": "vAMM-RED/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1846,7 +1917,8 @@
     }
   },
   "0xE4dDB1DA034919BbeD2D5a203bB9991efaDa16D0": {
-    "name": "GOXY-WETH vAMM-GOXY/WETH",
+    "name": "VolatileV1 AMM - GOXY/WETH",
+    "symbol": "vAMM-GOXY/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1872,7 +1944,8 @@
     }
   },
   "0x17A80E00892c9fb40EEBf8d0123D1E70A7897DDb": {
-    "name": "FOXCONN-WETH vAMM-FOXCONN/WETH",
+    "name": "VolatileV1 AMM - FOXCONN/WETH",
+    "symbol": "vAMM-FOXCONN/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1898,7 +1971,8 @@
     }
   },
   "0xC9888EAeFeD21D33Ae6BbF659778eD06F4656A67": {
-    "name": "IOXY-WETH vAMM-IOXY/WETH",
+    "name": "VolatileV1 AMM - IOXY/WETH",
+    "symbol": "vAMM-IOXY/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1924,7 +1998,8 @@
     }
   },
   "0x65bD47B99deC53605e390ACb9F5508169a796Bb0": {
-    "name": "JOXY-WETH vAMM-JOXY/WETH",
+    "name": "VolatileV1 AMM - JOXY/WETH",
+    "symbol": "vAMM-JOXY/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1950,7 +2025,8 @@
     }
   },
   "0x5452dEdFfedCF6F9cd8D550f4E008AB66357951E": {
-    "name": "WETH-KOXY vAMM-WETH/KOXY",
+    "name": "VolatileV1 AMM - WETH/KOXY",
+    "symbol": "vAMM-WETH/KOXY",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -1976,7 +2052,8 @@
     }
   },
   "0x57d2EF499Ace72f10Be152808F73CE75f1639Ed9": {
-    "name": "MOXY-WETH vAMM-MOXY/WETH",
+    "name": "VolatileV1 AMM - MOXY/WETH",
+    "symbol": "vAMM-MOXY/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2002,7 +2079,8 @@
     }
   },
   "0xd02F9d76901f034820d1029732ffa6e88390c190": {
-    "name": "WETH-NOXY vAMM-WETH/NOXY",
+    "name": "VolatileV1 AMM - WETH/NOXY",
+    "symbol": "vAMM-WETH/NOXY",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2028,7 +2106,8 @@
     }
   },
   "0x763c452D471D18EF55F70E383CC3fCD77eaE5CAD": {
-    "name": "OOXY-WETH vAMM-OOXY/WETH",
+    "name": "VolatileV1 AMM - OOXY/WETH",
+    "symbol": "vAMM-OOXY/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2054,7 +2133,8 @@
     }
   },
   "0xD00531070Aded5f3D5Fbe7Fc44d528769776FE40": {
-    "name": "RED-WETH sAMM-RED/WETH",
+    "name": "StableV1 AMM - RED/WETH",
+    "symbol": "sAMM-RED/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2080,7 +2160,8 @@
     }
   },
   "0xE549E5401707c430d92FaD861d10aF9074c3274D": {
-    "name": "FOXY-WETH vAMM-FOXY/WETH",
+    "name": "VolatileV1 AMM - FOXY/WETH",
+    "symbol": "vAMM-FOXY/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2106,7 +2187,8 @@
     }
   },
   "0x248B7Ef9DD10D8534aC6b0fDcc99BEEc596f89b0": {
-    "name": "POXY-WETH vAMM-POXY/WETH",
+    "name": "VolatileV1 AMM - POXY/WETH",
+    "symbol": "vAMM-POXY/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2132,7 +2214,8 @@
     }
   },
   "0x0E144F87C02427f1A38E36c3fB258Da691aA11E9": {
-    "name": "QOXY-WETH vAMM-QOXY/WETH",
+    "name": "VolatileV1 AMM - QOXY/WETH",
+    "symbol": "vAMM-QOXY/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2158,7 +2241,8 @@
     }
   },
   "0x0978e09B79e9037Bb78434Fa648F72e7a112b804": {
-    "name": "BB-WETH vAMM-BB/WETH",
+    "name": "VolatileV1 AMM - BB/WETH",
+    "symbol": "vAMM-BB/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2184,7 +2268,8 @@
     }
   },
   "0x6cB078A1d428A203D569F7f092e38157590362c9": {
-    "name": "Foxy-WETH sAMM-Foxy/WETH",
+    "name": "StableV1 AMM - Foxy/WETH",
+    "symbol": "sAMM-Foxy/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2210,7 +2295,8 @@
     }
   },
   "0x8F63B44D31FbCA1D62Ab4e32663Fb91B4a363D01": {
-    "name": "FOXY-WETH vAMM-FOXY/WETH",
+    "name": "VolatileV1 AMM - FOXY/WETH",
+    "symbol": "vAMM-FOXY/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2236,7 +2322,8 @@
     }
   },
   "0x49ECb11e7a0031c371eD0377057C205569d322eC": {
-    "name": "Foxy-WETH vAMM-Foxy/WETH",
+    "name": "VolatileV1 AMM - Foxy/WETH",
+    "symbol": "vAMM-Foxy/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2262,7 +2349,8 @@
     }
   },
   "0x1DB4F885025B3Aa1dddAc9c10461B871fCB2C6dD": {
-    "name": "test-WETH vAMM-test/WETH",
+    "name": "VolatileV1 AMM - test/WETH",
+    "symbol": "vAMM-test/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2288,7 +2376,8 @@
     }
   },
   "0x31cDc18f1b682eF15b023997bE39829cFD0f0628": {
-    "name": "KIT-WETH vAMM-KIT/WETH",
+    "name": "VolatileV1 AMM - KIT/WETH",
+    "symbol": "vAMM-KIT/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2314,7 +2403,8 @@
     }
   },
   "0x77EaFc6d2594EF5b7430f2c69fa95961f0175FDD": {
-    "name": "LSHIB-WETH vAMM-LSHIB/WETH",
+    "name": "VolatileV1 AMM - LSHIB/WETH",
+    "symbol": "vAMM-LSHIB/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2340,7 +2430,8 @@
     }
   },
   "0x6Fd181396c1B6869b2592bABB461bcA2B2887f1d": {
-    "name": "ROXY-WETH vAMM-ROXY/WETH",
+    "name": "VolatileV1 AMM - ROXY/WETH",
+    "symbol": "vAMM-ROXY/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2366,7 +2457,8 @@
     }
   },
   "0x9262edDE191bD9B6914821e75019D327F5E42A4f": {
-    "name": "SUE-WETH vAMM-SUE/WETH",
+    "name": "VolatileV1 AMM - SUE/WETH",
+    "symbol": "vAMM-SUE/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2392,7 +2484,8 @@
     }
   },
   "0x90b85EA29D1Df5Fe44432E1847067e494c2D50CA": {
-    "name": "FOXY-WETH sAMM-FOXY/WETH",
+    "name": "StableV1 AMM - FOXY/WETH",
+    "symbol": "sAMM-FOXY/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2418,7 +2511,8 @@
     }
   },
   "0x42544dA1a642Eb32F36841CdE92f2BEd85514Fb3": {
-    "name": "USDC-FOXY vAMM-USDC/FOXY",
+    "name": "VolatileV1 AMM - USDC/FOXY",
+    "symbol": "vAMM-USDC/FOXY",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2444,7 +2538,8 @@
     }
   },
   "0x399dB3758C53885E6019C576ad5aa678e6789558": {
-    "name": "test2-WETH vAMM-test2/WETH",
+    "name": "VolatileV1 AMM - test2/WETH",
+    "symbol": "vAMM-test2/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2470,7 +2565,8 @@
     }
   },
   "0x31F0F3A927e17782c60bfFC68a805Bb0AD0b1ACD": {
-    "name": "DUSD-WETH sAMM-DUSD/WETH",
+    "name": "StableV1 AMM - DUSD/WETH",
+    "symbol": "sAMM-DUSD/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2496,7 +2592,8 @@
     }
   },
   "0xDA5e27b907F8b2dDA973C6aEABc52011b0422dC7": {
-    "name": "USDT-DUSD sAMM-USDT/DUSD",
+    "name": "StableV1 AMM - USDT/DUSD",
+    "symbol": "sAMM-USDT/DUSD",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2522,7 +2619,8 @@
     }
   },
   "0x878C05f03a177188937CC3DE6Cc370f961F91404": {
-    "name": "Foxy2.0-WETH vAMM-Foxy2.0/WETH",
+    "name": "VolatileV1 AMM - Foxy2.0/WETH",
+    "symbol": "vAMM-Foxy2.0/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2548,7 +2646,8 @@
     }
   },
   "0x068892dc4C617d088ADc01840f6127C097D1E249": {
-    "name": "testX-WETH vAMM-testX/WETH",
+    "name": "VolatileV1 AMM - testX/WETH",
+    "symbol": "vAMM-testX/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2574,7 +2673,8 @@
     }
   },
   "0x398072d50080150FF1f7fDa72F73873DCAE94CD3": {
-    "name": "testXsfd-WETH sAMM-testXsfd/WETH",
+    "name": "StableV1 AMM - testXsfd/WETH",
+    "symbol": "sAMM-testXsfd/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2600,7 +2700,8 @@
     }
   },
   "0x189Aa52c0b90167EA8182c6270a358d05F5E6654": {
-    "name": "testXsfd-WETH vAMM-testXsfd/WETH",
+    "name": "VolatileV1 AMM - testXsfd/WETH",
+    "symbol": "vAMM-testXsfd/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2626,7 +2727,8 @@
     }
   },
   "0xE3164204a93bcB833f09b3FC9552680547Bb3039": {
-    "name": "ezETH-USDT vAMM-ezETH/USDT",
+    "name": "VolatileV1 AMM - ezETH/USDT",
+    "symbol": "vAMM-ezETH/USDT",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2652,7 +2754,8 @@
     }
   },
   "0x5eC38a5E010D4Fc99c1285CA3BfeDD51eec2E193": {
-    "name": "ezETH-WETH sAMM-ezETH/WETH",
+    "name": "StableV1 AMM - ezETH/WETH",
+    "symbol": "sAMM-ezETH/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2678,7 +2781,8 @@
     }
   },
   "0x5bcc6C14F962d8062AEf6505B6e047e86B92b366": {
-    "name": "LYNX-WBTC sAMM-LYNX/WBTC",
+    "name": "StableV1 AMM - LYNX/WBTC",
+    "symbol": "sAMM-LYNX/WBTC",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2704,7 +2808,8 @@
     }
   },
   "0xcbD199dAc72793139De3fc6026d8D0da5F833154": {
-    "name": "LYNX-FOXY sAMM-LYNX/FOXY",
+    "name": "StableV1 AMM - LYNX/FOXY",
+    "symbol": "sAMM-LYNX/FOXY",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2730,7 +2835,8 @@
     }
   },
   "0x93b6d53d8a33c92003D0c41065cb2842934C2619": {
-    "name": "EURO3-USD+ sAMM-EURO3/USD+",
+    "name": "StableV1 AMM - EURO3/USD+",
+    "symbol": "sAMM-EURO3/USD+",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2756,7 +2862,8 @@
     }
   },
   "0xd4025fA2e6B8c1726B12eEcD0A8fd05A88b85FEA": {
-    "name": "LYNX-FOXY vAMM-LYNX/FOXY",
+    "name": "VolatileV1 AMM - LYNX/FOXY",
+    "symbol": "vAMM-LYNX/FOXY",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2782,7 +2889,8 @@
     }
   },
   "0xCa2BB0D69e78D9b64E7F3aC02A4F1Ff365e3b896": {
-    "name": "LYNX-wstETH vAMM-LYNX/wstETH",
+    "name": "VolatileV1 AMM - LYNX/wstETH",
+    "symbol": "vAMM-LYNX/wstETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2808,7 +2916,8 @@
     }
   },
   "0xfbc7deb1aff394131e5C550B984023096C54388F": {
-    "name": "EURO3-USD+ vAMM-EURO3/USD+",
+    "name": "VolatileV1 AMM - EURO3/USD+",
+    "symbol": "vAMM-EURO3/USD+",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2834,7 +2943,8 @@
     }
   },
   "0xc97CE419663d9E1c06F48C5032ab61715A62272A": {
-    "name": "NILE-WETH vAMM-NILE/WETH",
+    "name": "VolatileV1 AMM - NILE/WETH",
+    "symbol": "vAMM-NILE/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2860,7 +2970,8 @@
     }
   },
   "0x7Cac0BD586FdD087FCB7635A62280a30ddB547aF": {
-    "name": "EURO3-FOXY vAMM-EURO3/FOXY",
+    "name": "VolatileV1 AMM - EURO3/FOXY",
+    "symbol": "vAMM-EURO3/FOXY",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2886,7 +2997,8 @@
     }
   },
   "0xa9A369b28390829b7103BB3b5b3597EA220c1250": {
-    "name": "🚬2PUFFS-WETH vAMM-🚬2PUFFS/WETH",
+    "name": "VolatileV1 AMM - 🚬2PUFFS/WETH",
+    "symbol": "vAMM-🚬2PUFFS/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2912,7 +3024,8 @@
     }
   },
   "0xe9B8d8db72E15d4396BFD1619e7dd82A551e1092": {
-    "name": "CATA-WETH vAMM-CATA/WETH",
+    "name": "VolatileV1 AMM - CATA/WETH",
+    "symbol": "vAMM-CATA/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2938,7 +3051,8 @@
     }
   },
   "0xE9eaBF2a9D930314cc8fA388Be2d78C4330F3eeA": {
-    "name": "PUSSASSIN-WETH vAMM-PUSSASSIN/WETH",
+    "name": "VolatileV1 AMM - PUSSASSIN/WETH",
+    "symbol": "vAMM-PUSSASSIN/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2964,7 +3078,8 @@
     }
   },
   "0xb456626eb905A7548869e2f82b0433A3C8431436": {
-    "name": "uniETH-WETH vAMM-uniETH/WETH",
+    "name": "VolatileV1 AMM - uniETH/WETH",
+    "symbol": "vAMM-uniETH/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -2990,7 +3105,8 @@
     }
   },
   "0xd9Ce0C669C3f83C2836a6748beA3A98152bC5Ec6": {
-    "name": "MANA-LINA vAMM-MANA/LINA",
+    "name": "VolatileV1 AMM - MANA/LINA",
+    "symbol": "vAMM-MANA/LINA",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3016,7 +3132,8 @@
     }
   },
   "0x9e1881B7af88c468cf048E265e5AFCd92852767D": {
-    "name": "weETH-WETH sAMM-weETH/WETH",
+    "name": "StableV1 AMM - weETH/WETH",
+    "symbol": "sAMM-weETH/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3042,7 +3159,8 @@
     }
   },
   "0x9D2495eE468dd08E072514B6924a140632c281B1": {
-    "name": "weETH-WETH vAMM-weETH/WETH",
+    "name": "VolatileV1 AMM - weETH/WETH",
+    "symbol": "vAMM-weETH/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3068,7 +3186,8 @@
     }
   },
   "0xbbD94Eef0109ec29433073E30c6ecE83Fd3C4C52": {
-    "name": "EURA-USDT vAMM-agEUR/USDT",
+    "name": "VolatileV1 AMM - agEUR/USDT",
+    "symbol": "vAMM-agEUR/USDT",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3094,7 +3213,8 @@
     }
   },
   "0x2bAbfb5f0f40e77be0a9011f83A6252ECc796D54": {
-    "name": "EURA-USDT sAMM-agEUR/USDT",
+    "name": "StableV1 AMM - agEUR/USDT",
+    "symbol": "sAMM-agEUR/USDT",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3120,7 +3240,8 @@
     }
   },
   "0xB302D7236E7B53bbB384A25608c4FB55152AC6cC": {
-    "name": "WETH-XHNY vAMM-WETH/XHNY",
+    "name": "VolatileV1 AMM - WETH/XHNY",
+    "symbol": "vAMM-WETH/XHNY",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3146,7 +3267,8 @@
     }
   },
   "0x7a21302BD6D314C1f46797115D704D664e0635D0": {
-    "name": "TEUR-USDT vAMM-TEUR/USDT",
+    "name": "VolatileV1 AMM - TEUR/USDT",
+    "symbol": "vAMM-TEUR/USDT",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3172,7 +3294,8 @@
     }
   },
   "0x904e2BBDb669cB30f51d69DaEfdcDeB83759D833": {
-    "name": "ZERO-WETH vAMM-ZERO/WETH",
+    "name": "VolatileV1 AMM - ZERO/WETH",
+    "symbol": "vAMM-ZERO/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3198,7 +3321,8 @@
     }
   },
   "0xD7D93bE6DFeA608961F794C0B0a2a719a038c945": {
-    "name": "USDC-ZERO sAMM-USDC/ZERO",
+    "name": "StableV1 AMM - USDC/ZERO",
+    "symbol": "sAMM-USDC/ZERO",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3224,7 +3348,8 @@
     }
   },
   "0x0A00e92d507FdF6c8A743BcF65E08818EcF6ae7B": {
-    "name": "WETH-MEMEFI vAMM-WETH/MEMEFI",
+    "name": "VolatileV1 AMM - WETH/MEMEFI",
+    "symbol": "vAMM-WETH/MEMEFI",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3250,7 +3375,8 @@
     }
   },
   "0x56732De537ca41B06452Aa783d0FC75655ed3525": {
-    "name": "QI-MAI vAMM-QI/MAI",
+    "name": "VolatileV1 AMM - QI/MAI",
+    "symbol": "vAMM-QI/MAI",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3276,7 +3402,8 @@
     }
   },
   "0x6F501662A76577FBB3Bb230Be5E8e69D41d8c711": {
-    "name": "FLY-USD+ vAMM-FLY/USD+",
+    "name": "VolatileV1 AMM - FLY/USD+",
+    "symbol": "vAMM-FLY/USD+",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3302,7 +3429,8 @@
     }
   },
   "0x22B4e0eaab455d42B316f9694b65c64772C48006": {
-    "name": "weETH-ezETH sAMM-weETH/ezETH",
+    "name": "StableV1 AMM - weETH/ezETH",
+    "symbol": "sAMM-weETH/ezETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3328,7 +3456,8 @@
     }
   },
   "0xCCbE14A02267a224E25431B798a128091d32B3eF": {
-    "name": "fBOMB-WETH vAMM-fBOMB/WETH",
+    "name": "VolatileV1 AMM - fBOMB/WETH",
+    "symbol": "vAMM-fBOMB/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3354,7 +3483,8 @@
     }
   },
   "0x251AaE3587dD86bB66443B507497d2c9A064a4cC": {
-    "name": "ZERO-WETH sAMM-ZERO/WETH",
+    "name": "StableV1 AMM - ZERO/WETH",
+    "symbol": "sAMM-ZERO/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3380,7 +3510,8 @@
     }
   },
   "0xe400C1a76a26a4F02D5591a676fddBC66Ed07Baf": {
-    "name": "LYNX-MATIC vAMM-LYNX/MATIC",
+    "name": "VolatileV1 AMM - LYNX/MATIC",
+    "symbol": "vAMM-LYNX/MATIC",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3406,7 +3537,8 @@
     }
   },
   "0x31f5FB5D70B00398821b0e1d1Db9bAB4A0231fC3": {
-    "name": "QI-WETH vAMM-QI/WETH",
+    "name": "VolatileV1 AMM - QI/WETH",
+    "symbol": "vAMM-QI/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3432,7 +3564,8 @@
     }
   },
   "0x80b3b2BDC115b70F4fD5A50352F81cbd3AaF48B3": {
-    "name": "weETH-FOXY vAMM-weETH/FOXY",
+    "name": "VolatileV1 AMM - weETH/FOXY",
+    "symbol": "vAMM-weETH/FOXY",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3458,7 +3591,8 @@
     }
   },
   "0x2ac5966684F33384163c0f924BE2c83817A88A23": {
-    "name": "LYNX-bveLYNX vAMM-LYNX/bveLYNX",
+    "name": "VolatileV1 AMM - LYNX/bveLYNX",
+    "symbol": "vAMM-LYNX/bveLYNX",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3484,7 +3618,8 @@
     }
   },
   "0x20f9106f711d41081dbbF79fEe8De92cB7547e77": {
-    "name": "ankrETH-wstETH vAMM-ankrETH/wstETH",
+    "name": "VolatileV1 AMM - ankrETH/wstETH",
+    "symbol": "vAMM-ankrETH/wstETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3510,7 +3645,8 @@
     }
   },
   "0x6057F9dff137315e0eb9560F6bC3759061a5c013": {
-    "name": "USDC-weETH vAMM-USDC/weETH",
+    "name": "VolatileV1 AMM - USDC/weETH",
+    "symbol": "vAMM-USDC/weETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3536,7 +3672,8 @@
     }
   },
   "0xB0290cCF9fC890415C86ac208e3b78224dc1d12A": {
-    "name": "inETH-wstETH vAMM-inETH/wstETH",
+    "name": "VolatileV1 AMM - inETH/wstETH",
+    "symbol": "vAMM-inETH/wstETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3562,7 +3699,8 @@
     }
   },
   "0x46E3847474B0AEb1a6b693CCC222af430896A593": {
-    "name": "USDC-LYU sAMM-USDC/LYU",
+    "name": "StableV1 AMM - USDC/LYU",
+    "symbol": "sAMM-USDC/LYU",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3588,7 +3726,8 @@
     }
   },
   "0x1E0015f45E339C08F7c891F83E579Fbe9EA9cd37": {
-    "name": "WBTC-SolvBTC.m sAMM-WBTC/SolvBTC.m",
+    "name": "StableV1 AMM - WBTC/SolvBTC.m",
+    "symbol": "sAMM-WBTC/SolvBTC.m",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3614,7 +3753,8 @@
     }
   },
   "0xCa23b0Ff0b5E22b04633c982738e0714e91b934a": {
-    "name": "WBTC-SolvBTC.m vAMM-WBTC/SolvBTC.m",
+    "name": "VolatileV1 AMM - WBTC/SolvBTC.m",
+    "symbol": "vAMM-WBTC/SolvBTC.m",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3640,7 +3780,8 @@
     }
   },
   "0xb114EffC5C76Fe697c6A2400948DcE1dE1eC2442": {
-    "name": "USDC-ezETH sAMM-USDC/ezETH",
+    "name": "StableV1 AMM - USDC/ezETH",
+    "symbol": "sAMM-USDC/ezETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3666,7 +3807,8 @@
     }
   },
   "0xE27529456541Bdeb011a9F5f591095FDDF9E00f0": {
-    "name": "USDC-ezETH vAMM-USDC/ezETH",
+    "name": "VolatileV1 AMM - USDC/ezETH",
+    "symbol": "vAMM-USDC/ezETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3692,7 +3834,8 @@
     }
   },
   "0x2Ae0bD5712afae42F8E4404fAA7C4Cd6c420283e": {
-    "name": "WETH-TEST vAMM-WETH/TEST",
+    "name": "VolatileV1 AMM - WETH/TEST",
+    "symbol": "vAMM-WETH/TEST",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3718,7 +3861,8 @@
     }
   },
   "0x4b7BbEf16ec422Dd4c2Ca823cb3d986e4044A25e": {
-    "name": "tok-WETH vAMM-tok/WETH",
+    "name": "VolatileV1 AMM - tok/WETH",
+    "symbol": "vAMM-tok/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3744,7 +3888,8 @@
     }
   },
   "0x7FEE4f637BC38e73eBf4CaEd22A1941236b79BF4": {
-    "name": "FAITH-WETH vAMM-FAITH/WETH",
+    "name": "VolatileV1 AMM - FAITH/WETH",
+    "symbol": "vAMM-FAITH/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3770,7 +3915,8 @@
     }
   },
   "0x75D0E6a78DD8f693c73275a1A86f0ca054E5a95F": {
-    "name": "USDC-DAI sAMM-USDC/DAI",
+    "name": "StableV1 AMM - USDC/DAI",
+    "symbol": "sAMM-USDC/DAI",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3796,7 +3942,8 @@
     }
   },
   "0x1bb15aA9a8bDEEa7bB3a21bd239a232c5A09b0c6": {
-    "name": "WBTC-M-BTC sAMM-WBTC/M-BTC",
+    "name": "StableV1 AMM - WBTC/M-BTC",
+    "symbol": "sAMM-WBTC/M-BTC",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3822,7 +3969,8 @@
     }
   },
   "0x1577fb60deb25DC9d9c6f0ED736a682b849E6bfb": {
-    "name": "M-BTC-WETH vAMM-M-BTC/WETH",
+    "name": "VolatileV1 AMM - M-BTC/WETH",
+    "symbol": "vAMM-M-BTC/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3848,7 +3996,8 @@
     }
   },
   "0xC6B70e88332cCe9c946a45D0381A14b92AbfECf3": {
-    "name": "M-BTC-WETH sAMM-M-BTC/WETH",
+    "name": "StableV1 AMM - M-BTC/WETH",
+    "symbol": "sAMM-M-BTC/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3874,7 +4023,8 @@
     }
   },
   "0x38400DA4F6562E93875ae161d790BCB6F36eB722": {
-    "name": "USDC-wstETH vAMM-USDC/wstETH",
+    "name": "VolatileV1 AMM - USDC/wstETH",
+    "symbol": "vAMM-USDC/wstETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3900,7 +4050,8 @@
     }
   },
   "0x624dB235d1F39Ac8fe9B96814CE8ACc9E7010B05": {
-    "name": "ANL-WETH vAMM-ANL/WETH",
+    "name": "VolatileV1 AMM - ANL/WETH",
+    "symbol": "vAMM-ANL/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3926,7 +4077,8 @@
     }
   },
   "0x54789D829AaC7f7c0Cecf661deEf8Bd524c42879": {
-    "name": "WETH-ALN vAMM-WETH/ALN",
+    "name": "VolatileV1 AMM - WETH/ALN",
+    "symbol": "vAMM-WETH/ALN",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3952,7 +4104,8 @@
     }
   },
   "0x9a9987C6853c513b1C1ADa3dB8bc8FEDf426ACce": {
-    "name": "ALM-WETH vAMM-ALM/WETH",
+    "name": "VolatileV1 AMM - ALM/WETH",
+    "symbol": "vAMM-ALM/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -3978,7 +4131,8 @@
     }
   },
   "0xeDEa699669BdE2f4CD6A319268fB250a32D04606": {
-    "name": "USDC-LINUS vAMM-USDC/LINUS",
+    "name": "VolatileV1 AMM - USDC/LINUS",
+    "symbol": "vAMM-USDC/LINUS",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4004,7 +4158,8 @@
     }
   },
   "0x9832a4Cc0cfbAdDA9e535e5bfF65928e6b9c06E2": {
-    "name": "WBTC-M-BTC vAMM-WBTC/M-BTC",
+    "name": "VolatileV1 AMM - WBTC/M-BTC",
+    "symbol": "vAMM-WBTC/M-BTC",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4030,7 +4185,8 @@
     }
   },
   "0xb7D02ec92Fe7BF5e47fCf82Ac21575E01fe4f5f1": {
-    "name": "SolvBTC.m-M-BTC sAMM-SolvBTC.m/M-BTC",
+    "name": "StableV1 AMM - SolvBTC.m/M-BTC",
+    "symbol": "sAMM-SolvBTC.m/M-BTC",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4056,7 +4212,8 @@
     }
   },
   "0x31d5B4D07b8855b6a8cF41ed5DAe99d0F25Da329": {
-    "name": "SolvBTC.m-M-BTC vAMM-SolvBTC.m/M-BTC",
+    "name": "VolatileV1 AMM - SolvBTC.m/M-BTC",
+    "symbol": "vAMM-SolvBTC.m/M-BTC",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4082,7 +4239,8 @@
     }
   },
   "0xF6E908E2A70E6af4D1fFA770e684f4F4F0Ab2867": {
-    "name": "LYNX-wstETH sAMM-LYNX/wstETH",
+    "name": "StableV1 AMM - LYNX/wstETH",
+    "symbol": "sAMM-LYNX/wstETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4108,7 +4266,8 @@
     }
   },
   "0x06324F8Abb83Fc0D161C7a8D67A1C05D524f255B": {
-    "name": "ONEPUNCH-WETH vAMM-ONEPUNCH/WETH",
+    "name": "VolatileV1 AMM - ONEPUNCH/WETH",
+    "symbol": "vAMM-ONEPUNCH/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4134,7 +4293,8 @@
     }
   },
   "0xB79Dd267455DF54595938060d379b82F40eBfA63": {
-    "name": "LYNX-oLYNX sAMM-LYNX/oLYNX",
+    "name": "StableV1 AMM - LYNX/oLYNX",
+    "symbol": "sAMM-LYNX/oLYNX",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4160,7 +4320,8 @@
     }
   },
   "0x9a146698b16DC334f9B99aF20b359649e6f4C844": {
-    "name": "LYNX-weETH vAMM-LYNX/weETH",
+    "name": "VolatileV1 AMM - LYNX/weETH",
+    "symbol": "vAMM-LYNX/weETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4186,7 +4347,8 @@
     }
   },
   "0xd92B724E02b7D43cD13197a9E1eF4b654A856eb3": {
-    "name": "oLYNX-WETH sAMM-oLYNX/WETH",
+    "name": "StableV1 AMM - oLYNX/WETH",
+    "symbol": "sAMM-oLYNX/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4212,7 +4374,8 @@
     }
   },
   "0x8954bc9a15176Ba2302Fa68C6ec6a7534B563CA0": {
-    "name": "CROAK-WETH vAMM-CROAK/WETH",
+    "name": "VolatileV1 AMM - CROAK/WETH",
+    "symbol": "vAMM-CROAK/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4238,7 +4401,8 @@
     }
   },
   "0xaB065835669eB9EDeEFe5E0Fa7aE90c8fB93B35C": {
-    "name": "USDT-bveLYNX sAMM-USDT/bveLYNX",
+    "name": "StableV1 AMM - USDT/bveLYNX",
+    "symbol": "sAMM-USDT/bveLYNX",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4264,7 +4428,8 @@
     }
   },
   "0xFc69ad9D220d03D8644D2a1b7CE8537e587D1F4a": {
-    "name": "uniETH-WETH sAMM-uniETH/WETH",
+    "name": "StableV1 AMM - uniETH/WETH",
+    "symbol": "sAMM-uniETH/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4290,7 +4455,8 @@
     }
   },
   "0x774869310922c4e0748f9F477754a5725e383A83": {
-    "name": "MENDI-ZERO sAMM-MENDI/ZERO",
+    "name": "StableV1 AMM - MENDI/ZERO",
+    "symbol": "sAMM-MENDI/ZERO",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4316,7 +4482,8 @@
     }
   },
   "0x5e4df5861dFE516f8Ab88766Dca04A2FF7141cDf": {
-    "name": "DAGOBAH-WETH vAMM-DAGOBAH/WETH",
+    "name": "VolatileV1 AMM - DAGOBAH/WETH",
+    "symbol": "vAMM-DAGOBAH/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4342,7 +4509,8 @@
     }
   },
   "0xeE18362b766905cC47Df273fE0ed967c0c2827E0": {
-    "name": "LYNX-weETH sAMM-LYNX/weETH",
+    "name": "StableV1 AMM - LYNX/weETH",
+    "symbol": "sAMM-LYNX/weETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4368,7 +4536,8 @@
     }
   },
   "0x8A33Eae82534b8e6CCE270538FAf83D11734F1F1": {
-    "name": "USDC-USDe sAMM-USDC/USDe",
+    "name": "StableV1 AMM - USDC/USDe",
+    "symbol": "sAMM-USDC/USDe",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4394,7 +4563,8 @@
     }
   },
   "0xF9069043603cF745935b9f7558E1917E9A276ed9": {
-    "name": "LYNX-LINUS vAMM-LYNX/LINUS",
+    "name": "VolatileV1 AMM - LYNX/LINUS",
+    "symbol": "vAMM-LYNX/LINUS",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4420,7 +4590,8 @@
     }
   },
   "0xE9cCbDd21486Ed72844e18776f79aF10E4c07Ad5": {
-    "name": "weETH-USDT sAMM-weETH/USDT",
+    "name": "StableV1 AMM - weETH/USDT",
+    "symbol": "sAMM-weETH/USDT",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4446,7 +4617,8 @@
     }
   },
   "0x087D32F6D6d95B63D418A151A45B6f8AE06Fb30F": {
-    "name": "USDC-CROAK vAMM-USDC/CROAK",
+    "name": "VolatileV1 AMM - USDC/CROAK",
+    "symbol": "vAMM-USDC/CROAK",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4472,7 +4644,8 @@
     }
   },
   "0xEcf459bfD8764C700f05d2aff37aC40b27ADe330": {
-    "name": "KJGAYQIC-WETH vAMM-KJGAYQIC/WETH",
+    "name": "VolatileV1 AMM - KJGAYQIC/WETH",
+    "symbol": "vAMM-KJGAYQIC/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4498,7 +4671,8 @@
     }
   },
   "0xd6F4060669F4F2fE8be4d612a8019b8aA5Cab9f8": {
-    "name": "CHDR-WETH vAMM-CHDR/WETH",
+    "name": "VolatileV1 AMM - CHDR/WETH",
+    "symbol": "vAMM-CHDR/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4524,7 +4698,8 @@
     }
   },
   "0xAf453A22C59BC4796f78a176fDcc443CFD9Ab3C3": {
-    "name": "DOGE-WETH vAMM-DOGE/WETH",
+    "name": "VolatileV1 AMM - DOGE/WETH",
+    "symbol": "vAMM-DOGE/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4550,7 +4725,8 @@
     }
   },
   "0xD72c68B1d6b677b2903F45d7677Bd9A59157b57E": {
-    "name": "FLY-WETH vAMM-FLY/WETH",
+    "name": "VolatileV1 AMM - FLY/WETH",
+    "symbol": "vAMM-FLY/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4576,7 +4752,8 @@
     }
   },
   "0xeBdC263df047256D0D06c4cBc83D8Ba97aDeeE39": {
-    "name": "LYNX-ZERO vAMM-LYNX/ZERO",
+    "name": "VolatileV1 AMM - LYNX/ZERO",
+    "symbol": "vAMM-LYNX/ZERO",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4602,7 +4779,8 @@
     }
   },
   "0x3a3262386e6D564e22bBbd06F2FC5318E9E9D42D": {
-    "name": "USDC-FLY vAMM-USDC/FLY",
+    "name": "VolatileV1 AMM - USDC/FLY",
+    "symbol": "vAMM-USDC/FLY",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4628,7 +4806,8 @@
     }
   },
   "0x106Fe82Eddaf926F71DF5C423f4DAA94ec73a6c8": {
-    "name": "DAI-USDT sAMM-DAI/USDT",
+    "name": "StableV1 AMM - DAI/USDT",
+    "symbol": "sAMM-DAI/USDT",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4654,7 +4833,8 @@
     }
   },
   "0xb8FCDEf79792e94973A2B4bb3be2Df3830fa0283": {
-    "name": "WETH-TBH vAMM-WETH/TBH",
+    "name": "VolatileV1 AMM - WETH/TBH",
+    "symbol": "vAMM-WETH/TBH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4680,7 +4860,8 @@
     }
   },
   "0x279187DF2EC4c95438dcf80bcb31fF8bC96232b1": {
-    "name": "LINUS-WETH sAMM-LINUS/WETH",
+    "name": "StableV1 AMM - LINUS/WETH",
+    "symbol": "sAMM-LINUS/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4706,7 +4887,8 @@
     }
   },
   "0x330799636C16b3442C67e12EB72A9f2aaf904586": {
-    "name": "WEF-WETH vAMM-WEF/WETH",
+    "name": "VolatileV1 AMM - WEF/WETH",
+    "symbol": "vAMM-WEF/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4732,7 +4914,8 @@
     }
   },
   "0xB93498171d5F0E395c868aedCe72d77888f532bC": {
-    "name": "SolvBTC.m-WETH vAMM-SolvBTC.m/WETH",
+    "name": "VolatileV1 AMM - SolvBTC.m/WETH",
+    "symbol": "vAMM-SolvBTC.m/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4758,7 +4941,8 @@
     }
   },
   "0x77dc428D56C1fB3D77043C5077a281C4ecbB3146": {
-    "name": "inETH-wstETH sAMM-inETH/wstETH",
+    "name": "StableV1 AMM - inETH/wstETH",
+    "symbol": "sAMM-inETH/wstETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4784,7 +4968,8 @@
     }
   },
   "0x1F6a27B3df88B96c2560cc296801599e7F057f73": {
-    "name": "MENDI-bveLYNX vAMM-MENDI/bveLYNX",
+    "name": "VolatileV1 AMM - MENDI/bveLYNX",
+    "symbol": "vAMM-MENDI/bveLYNX",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4810,7 +4995,8 @@
     }
   },
   "0xE91022615bbD55C8140109FD75Ea18A573360917": {
-    "name": "DAI-WETH vAMM-DAI/WETH",
+    "name": "VolatileV1 AMM - DAI/WETH",
+    "symbol": "vAMM-DAI/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4836,7 +5022,8 @@
     }
   },
   "0x7679b3b4C2f9930ABb54B4199F81105445f564b5": {
-    "name": "NWG-WETH vAMM-NWG/WETH",
+    "name": "VolatileV1 AMM - NWG/WETH",
+    "symbol": "vAMM-NWG/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4862,7 +5049,8 @@
     }
   },
   "0xbcFd78835d3c6bADE26a606F40fD90Fc580FA3F6": {
-    "name": "weETH-wstETH vAMM-weETH/wstETH",
+    "name": "VolatileV1 AMM - weETH/wstETH",
+    "symbol": "vAMM-weETH/wstETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4888,7 +5076,8 @@
     }
   },
   "0x9B3Eaa1c305F32c9B651Ac8521563462705e2358": {
-    "name": "LYNX-DAI vAMM-LYNX/DAI",
+    "name": "VolatileV1 AMM - LYNX/DAI",
+    "symbol": "vAMM-LYNX/DAI",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4914,7 +5103,8 @@
     }
   },
   "0x4Cc73F7240F29a9F5d419a4696eBe8138a06D438": {
-    "name": "weETH-STONE vAMM-weETH/STONE",
+    "name": "VolatileV1 AMM - weETH/STONE",
+    "symbol": "vAMM-weETH/STONE",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4940,7 +5130,8 @@
     }
   },
   "0xfAE49AE339c053D7b639bd666e2b3b19De9E06E3": {
-    "name": "USDC-EURO3 vAMM-USDC/EURO3",
+    "name": "VolatileV1 AMM - USDC/EURO3",
+    "symbol": "vAMM-USDC/EURO3",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4966,7 +5157,8 @@
     }
   },
   "0x4d999d130bAA971cc640Bfea3AD704b58553Bc17": {
-    "name": "BUSD-WETH vAMM-BUSD/WETH",
+    "name": "VolatileV1 AMM - BUSD/WETH",
+    "symbol": "vAMM-BUSD/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -4992,7 +5184,8 @@
     }
   },
   "0x00c3f088726b18210dE2886d7c4b0501AcB15262": {
-    "name": "ankrETH-WETH vAMM-ankrETH/WETH",
+    "name": "VolatileV1 AMM - ankrETH/WETH",
+    "symbol": "vAMM-ankrETH/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5018,7 +5211,8 @@
     }
   },
   "0xd125b51c93C574ecd415167F6955E6F43957FCA6": {
-    "name": "CROAK-WETH sAMM-CROAK/WETH",
+    "name": "StableV1 AMM - CROAK/WETH",
+    "symbol": "sAMM-CROAK/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5044,7 +5238,8 @@
     }
   },
   "0xE6c38e4572281E390a7231b9DC96f1a52E78EC4c": {
-    "name": "MECH-WETH vAMM-MECH/WETH",
+    "name": "VolatileV1 AMM - MECH/WETH",
+    "symbol": "vAMM-MECH/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5070,7 +5265,8 @@
     }
   },
   "0xf0759FCDa52471aC0Bdf434E4E043d0193A0f639": {
-    "name": "BULL-WETH vAMM-BULL/WETH",
+    "name": "VolatileV1 AMM - BULL/WETH",
+    "symbol": "vAMM-BULL/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5096,7 +5292,8 @@
     }
   },
   "0xd5Bef1E3Dae741172cbC7F01d0B9F9d97C3630dC": {
-    "name": "inETH-WETH vAMM-inETH/WETH",
+    "name": "VolatileV1 AMM - inETH/WETH",
+    "symbol": "vAMM-inETH/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5122,7 +5319,8 @@
     }
   },
   "0x1EaAFfC13165df39A5FBa67409d623FaB4d90E5D": {
-    "name": "USDC-ZERO vAMM-USDC/ZERO",
+    "name": "VolatileV1 AMM - USDC/ZERO",
+    "symbol": "vAMM-USDC/ZERO",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5148,7 +5346,8 @@
     }
   },
   "0x26c07a030a36d6FB2D373B32DDDd93C96cBc440A": {
-    "name": "LYU-WETH vAMM-LYU/WETH",
+    "name": "VolatileV1 AMM - LYU/WETH",
+    "symbol": "vAMM-LYU/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5174,7 +5373,8 @@
     }
   },
   "0x46463aA62249E21188cA9bAbBfF08b5C4542EEFD": {
-    "name": "USDC-eUSD sAMM-USDC/eUSD",
+    "name": "StableV1 AMM - USDC/eUSD",
+    "symbol": "sAMM-USDC/eUSD",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5200,7 +5400,8 @@
     }
   },
   "0x4cF89Aa883B261221c8858709c3D09B7d4901939": {
-    "name": "APE-WETH vAMM-APE/WETH",
+    "name": "VolatileV1 AMM - APE/WETH",
+    "symbol": "vAMM-APE/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5226,7 +5427,8 @@
     }
   },
   "0xB24E6Cc3f8637063FC465Fe992fBC5B747e20825": {
-    "name": "MAAV3-WETH vAMM-MAAV3/WETH",
+    "name": "VolatileV1 AMM - MAAV3/WETH",
+    "symbol": "vAMM-MAAV3/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5252,7 +5454,8 @@
     }
   },
   "0xF0E450aF028a37124417aBF7a0D6830C1300d9aa": {
-    "name": "DAI-USDT vAMM-DAI/USDT",
+    "name": "VolatileV1 AMM - DAI/USDT",
+    "symbol": "vAMM-DAI/USDT",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5278,7 +5481,8 @@
     }
   },
   "0x309A3FD172236057C949D3655872C407333024bd": {
-    "name": "WOLF-WETH vAMM-WOLF/WETH",
+    "name": "VolatileV1 AMM - WOLF/WETH",
+    "symbol": "vAMM-WOLF/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5304,7 +5508,8 @@
     }
   },
   "0x34F274F6c11e843B55F0FC60197394f26c1e22A8": {
-    "name": "MOLLY-WETH vAMM-MOLLY/WETH",
+    "name": "VolatileV1 AMM - MOLLY/WETH",
+    "symbol": "vAMM-MOLLY/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5330,7 +5535,8 @@
     }
   },
   "0xE164b26B7b3F10AA77932034b3fEFCB4656aef56": {
-    "name": "USDC-CROAK sAMM-USDC/CROAK",
+    "name": "StableV1 AMM - USDC/CROAK",
+    "symbol": "sAMM-USDC/CROAK",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5356,7 +5562,8 @@
     }
   },
   "0x73c68023cAc6b8d98cDEFB97cd22ea20b9E862Bd": {
-    "name": "WETH-bveLYNX vAMM-WETH/bveLYNX",
+    "name": "VolatileV1 AMM - WETH/bveLYNX",
+    "symbol": "vAMM-WETH/bveLYNX",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5382,7 +5589,8 @@
     }
   },
   "0x86CB563DB2C28dBaf2815868dD65c579501020D4": {
-    "name": "WOLF-USDT sAMM-WOLF/USDT",
+    "name": "StableV1 AMM - WOLF/USDT",
+    "symbol": "sAMM-WOLF/USDT",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5408,7 +5616,8 @@
     }
   },
   "0x1325b2695A684f6F4c94681D4C65F6dF86521758": {
-    "name": "DAI-WETH sAMM-DAI/WETH",
+    "name": "StableV1 AMM - DAI/WETH",
+    "symbol": "sAMM-DAI/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5434,7 +5643,8 @@
     }
   },
   "0xC4C44B5Af838D939a4f6A7B1e8dB1b2128c0eD3F": {
-    "name": "WOLF-USDT vAMM-WOLF/USDT",
+    "name": "VolatileV1 AMM - WOLF/USDT",
+    "symbol": "vAMM-WOLF/USDT",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5460,7 +5670,8 @@
     }
   },
   "0x634F2AD08d0776dFbE29d3252E17bEBEAfE4f221": {
-    "name": "USDC-eUSD vAMM-USDC/eUSD",
+    "name": "VolatileV1 AMM - USDC/eUSD",
+    "symbol": "vAMM-USDC/eUSD",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5486,7 +5697,8 @@
     }
   },
   "0x36CDB4222cE551D74e4001A660b628CbBE0E4c9B": {
-    "name": "HOTDOG-WETH vAMM-HOTDOG/WETH",
+    "name": "VolatileV1 AMM - HOTDOG/WETH",
+    "symbol": "vAMM-HOTDOG/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5512,7 +5724,8 @@
     }
   },
   "0xDd02f57010C71F9629524631366c4258538A57CB": {
-    "name": "USDT-bveLYNX vAMM-USDT/bveLYNX",
+    "name": "VolatileV1 AMM - USDT/bveLYNX",
+    "symbol": "vAMM-USDT/bveLYNX",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5538,7 +5751,8 @@
     }
   },
   "0x8499af113887b2D3D2CD4c96e8eBb0F13883EF95": {
-    "name": "oLYNX-bveLYNX vAMM-oLYNX/bveLYNX",
+    "name": "VolatileV1 AMM - oLYNX/bveLYNX",
+    "symbol": "vAMM-oLYNX/bveLYNX",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5564,7 +5778,8 @@
     }
   },
   "0x77689595aF9Fdd134fE40616082Fb0c41a6Fe83b": {
-    "name": "FMEMEFI-WETH vAMM-FMEMEFI/WETH",
+    "name": "VolatileV1 AMM - FMEMEFI/WETH",
+    "symbol": "vAMM-FMEMEFI/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5590,7 +5805,8 @@
     }
   },
   "0x2F65D4C1d277C32C37f4eEC39ed440DCbbfDF134": {
-    "name": "USDC-weETH sAMM-USDC/weETH",
+    "name": "StableV1 AMM - USDC/weETH",
+    "symbol": "sAMM-USDC/weETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5616,7 +5832,8 @@
     }
   },
   "0x0FF6b388D58dEb370D616E3e7CAFB17957B39B43": {
-    "name": "USD+-WETH vAMM-USD+/WETH",
+    "name": "VolatileV1 AMM - USD+/WETH",
+    "symbol": "vAMM-USD+/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5642,7 +5859,8 @@
     }
   },
   "0x23670cc51B6Ab084126DF23aD7dF7801337AaEeE": {
-    "name": "wrsETH-WETH vAMM-wrsETH/WETH",
+    "name": "VolatileV1 AMM - wrsETH/WETH",
+    "symbol": "vAMM-wrsETH/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5668,7 +5886,8 @@
     }
   },
   "0xf1Fe8ba112329706909396F6039359D2935cD05e": {
-    "name": "FOXY-oLYNX vAMM-FOXY/oLYNX",
+    "name": "VolatileV1 AMM - FOXY/oLYNX",
+    "symbol": "vAMM-FOXY/oLYNX",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5694,7 +5913,8 @@
     }
   },
   "0xAD61216892d3CF0E03beD031cF086350b7553E4F": {
-    "name": "$SAT-WETH vAMM-$SAT/WETH",
+    "name": "VolatileV1 AMM - $SAT/WETH",
+    "symbol": "vAMM-$SAT/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5720,7 +5940,8 @@
     }
   },
   "0x3199807c7888Acd1f663F0d6f38651A8B25E4531": {
-    "name": "SURGE-WETH vAMM-SURGE/WETH",
+    "name": "VolatileV1 AMM - SURGE/WETH",
+    "symbol": "vAMM-SURGE/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5746,7 +5967,8 @@
     }
   },
   "0x848e93Bf0F82123628738C7c1553D22E6c16F65a": {
-    "name": "USDC-veUSD vAMM-USDC/veUSD",
+    "name": "VolatileV1 AMM - USDC/veUSD",
+    "symbol": "vAMM-USDC/veUSD",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5772,7 +5994,8 @@
     }
   },
   "0x83888B175a97ae7A90E42f9dB217141248d324FE": {
-    "name": "USDT-eUSD sAMM-USDT/eUSD",
+    "name": "StableV1 AMM - USDT/eUSD",
+    "symbol": "sAMM-USDT/eUSD",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5798,7 +6021,8 @@
     }
   },
   "0x5Db4533ECC4C455504821fA2dee56c2Ea459Ce37": {
-    "name": "alUSD-USDC sAMM-alUSD/USDC",
+    "name": "StableV1 AMM - alUSD/USDC",
+    "symbol": "sAMM-alUSD/USDC",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5824,7 +6048,8 @@
     }
   },
   "0x51b41Ed7d7869B84bE5647e9BeEC9F8B7e70bA1D": {
-    "name": "alETH-WETH sAMM-alETH/WETH",
+    "name": "StableV1 AMM - alETH/WETH",
+    "symbol": "sAMM-alETH/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5850,7 +6075,8 @@
     }
   },
   "0x5e1945925D93Ae391Cb1c869bbe54151B3f2522c": {
-    "name": "WETH-SOULS vAMM-WETH/SOULS",
+    "name": "VolatileV1 AMM - WETH/SOULS",
+    "symbol": "vAMM-WETH/SOULS",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5876,7 +6102,8 @@
     }
   },
   "0xd234e3fb6FDfae5b5c7c77F84d4e3314462Aa21f": {
-    "name": "WETH-SOULS sAMM-WETH/SOULS",
+    "name": "StableV1 AMM - WETH/SOULS",
+    "symbol": "sAMM-WETH/SOULS",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5902,7 +6129,8 @@
     }
   },
   "0x5143de5B7B492B210CDa6a0B1860412C2d0e8A88": {
-    "name": "USDC-SOULS vAMM-USDC/SOULS",
+    "name": "VolatileV1 AMM - USDC/SOULS",
+    "symbol": "vAMM-USDC/SOULS",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5928,7 +6156,8 @@
     }
   },
   "0xbb7DD479c8Bdda24122695079F2Cf68eBa308152": {
-    "name": "LYNX-abcLYNX sAMM-LYNX/abcLYNX",
+    "name": "StableV1 AMM - LYNX/abcLYNX",
+    "symbol": "sAMM-LYNX/abcLYNX",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5954,7 +6183,8 @@
     }
   },
   "0xaC73C5f3d110Bb051100cfD8Afa4aC4339f239E7": {
-    "name": "USDC-ALCX vAMM-USDC/ALCX",
+    "name": "VolatileV1 AMM - USDC/ALCX",
+    "symbol": "vAMM-USDC/ALCX",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -5980,7 +6210,8 @@
     }
   },
   "0x79a334521018DCbe044E1d07d3cEF28b1864cFFF": {
-    "name": "CLIP-USDT vAMM-CLIP/USDT",
+    "name": "VolatileV1 AMM - CLIP/USDT",
+    "symbol": "vAMM-CLIP/USDT",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6006,7 +6237,8 @@
     }
   },
   "0xD1Cd6A2062963E4a62Ff65a5AB07c69b28F16BE1": {
-    "name": "RYZE-WETH vAMM-RYZE/WETH",
+    "name": "VolatileV1 AMM - RYZE/WETH",
+    "symbol": "vAMM-RYZE/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6032,7 +6264,8 @@
     }
   },
   "0x0417609FFa4b675790F824f459b9C41B0f675DCA": {
-    "name": "eGold-RYZE vAMM-eGold/RYZE",
+    "name": "VolatileV1 AMM - eGold/RYZE",
+    "symbol": "vAMM-eGold/RYZE",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6058,7 +6291,8 @@
     }
   },
   "0x7b14FD20A6136578541699C7b0041EbbA7af0C40": {
-    "name": "DT-WETH vAMM-DT/WETH",
+    "name": "VolatileV1 AMM - DT/WETH",
+    "symbol": "vAMM-DT/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6084,7 +6318,8 @@
     }
   },
   "0xd650e5511f8b131fFA719d6507105bDE54EdD7e5": {
-    "name": "WETH-DTC vAMM-WETH/DTC",
+    "name": "VolatileV1 AMM - WETH/DTC",
+    "symbol": "vAMM-WETH/DTC",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6110,7 +6345,8 @@
     }
   },
   "0xB6D1dEC41395F70181768e8b91AfA57eA511e0c3": {
-    "name": "IBEX-WETH vAMM-IBEX/WETH",
+    "name": "VolatileV1 AMM - IBEX/WETH",
+    "symbol": "vAMM-IBEX/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6136,7 +6372,8 @@
     }
   },
   "0xEC6D78649ea1AC0908f3d0CA4303DF548D7C20ce": {
-    "name": "FOXY-LINUS vAMM-FOXY/LINUS",
+    "name": "VolatileV1 AMM - FOXY/LINUS",
+    "symbol": "vAMM-FOXY/LINUS",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6162,7 +6399,8 @@
     }
   },
   "0xDEE1640182907096061d8B31C33b75bF84e36C45": {
-    "name": "APE-NWG vAMM-APE/NWG",
+    "name": "VolatileV1 AMM - APE/NWG",
+    "symbol": "vAMM-APE/NWG",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6188,7 +6426,8 @@
     }
   },
   "0x075ce660a13C7F83E5452652A3f3D936d2601c79": {
-    "name": "WETH-DTC sAMM-WETH/DTC",
+    "name": "StableV1 AMM - WETH/DTC",
+    "symbol": "sAMM-WETH/DTC",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6214,7 +6453,8 @@
     }
   },
   "0xa3C6236D46bFec75387e91d5324939c288b9976B": {
-    "name": "BULL-WETH sAMM-BULL/WETH",
+    "name": "StableV1 AMM - BULL/WETH",
+    "symbol": "sAMM-BULL/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6240,7 +6480,8 @@
     }
   },
   "0xd44EEdb11f16D7A9e2e755EFCe3799d073B2C534": {
-    "name": "WBTC-FOXY vAMM-WBTC/FOXY",
+    "name": "VolatileV1 AMM - WBTC/FOXY",
+    "symbol": "vAMM-WBTC/FOXY",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6266,7 +6507,8 @@
     }
   },
   "0x5D50B44A1d36Ca854B103d19e203C7B95657735c": {
-    "name": "LPUSS-WETH vAMM-LPUSS/WETH",
+    "name": "VolatileV1 AMM - LPUSS/WETH",
+    "symbol": "vAMM-LPUSS/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6292,7 +6534,8 @@
     }
   },
   "0x2A978Ad1cC4b5ff626F2D2FE6705D55cc0A31CD5": {
-    "name": "GRAI-WETH vAMM-GRAI/WETH",
+    "name": "VolatileV1 AMM - GRAI/WETH",
+    "symbol": "vAMM-GRAI/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6318,7 +6561,8 @@
     }
   },
   "0xb915FaFD85d24b2F92539252175Cbe90f5a6b66e": {
-    "name": "USDC-LYCAN vAMM-USDC/LYCAN",
+    "name": "VolatileV1 AMM - USDC/LYCAN",
+    "symbol": "vAMM-USDC/LYCAN",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6344,7 +6588,8 @@
     }
   },
   "0xcD3fd045C80120092a6BdA7ea851D72231D45d66": {
-    "name": "USDC-LYCAN sAMM-USDC/LYCAN",
+    "name": "StableV1 AMM - USDC/LYCAN",
+    "symbol": "sAMM-USDC/LYCAN",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6370,7 +6615,8 @@
     }
   },
   "0x2ce48d62F409E5D8D4A650Ed82D60339664643E6": {
-    "name": "LINEA-WETH vAMM-LINEA/WETH",
+    "name": "VolatileV1 AMM - LINEA/WETH",
+    "symbol": "vAMM-LINEA/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6396,7 +6642,8 @@
     }
   },
   "0xad556EEBc73D061eD778fCf06844BD7Da7CfBeA4": {
-    "name": "CLIP-WETH vAMM-CLIP/WETH",
+    "name": "VolatileV1 AMM - CLIP/WETH",
+    "symbol": "vAMM-CLIP/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6422,7 +6669,8 @@
     }
   },
   "0x00dbfEc74CB19896634486F053ecD4bE7E8172C8": {
-    "name": "LXP-WETH sAMM-LXP/WETH",
+    "name": "StableV1 AMM - LXP/WETH",
+    "symbol": "sAMM-LXP/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6448,7 +6696,8 @@
     }
   },
   "0xf44659bCd9c1e777CA1743Ba4087FC62388A9E05": {
-    "name": "YEE-WETH vAMM-YEE/WETH",
+    "name": "VolatileV1 AMM - YEE/WETH",
+    "symbol": "vAMM-YEE/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6474,7 +6723,8 @@
     }
   },
   "0x729D1143E6cCcb9ccF4ee6bb79aC7Dc3950b8035": {
-    "name": "ELON-WETH vAMM-ELON/WETH",
+    "name": "VolatileV1 AMM - ELON/WETH",
+    "symbol": "vAMM-ELON/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6500,7 +6750,8 @@
     }
   },
   "0xf32E85ACCd24f50b90f5c0F3E306b2D10C335c20": {
-    "name": "PENGU-WETH vAMM-PENGU/WETH",
+    "name": "VolatileV1 AMM - PENGU/WETH",
+    "symbol": "vAMM-PENGU/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6526,7 +6777,8 @@
     }
   },
   "0x72dd59362B01d915Eb08f5E2E22D3E6513798f03": {
-    "name": "BUSD-USDT sAMM-BUSD/USDT",
+    "name": "StableV1 AMM - BUSD/USDT",
+    "symbol": "sAMM-BUSD/USDT",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6552,7 +6804,8 @@
     }
   },
   "0xDbfCDCf27168a1615AdEfd20DD78ebC239048e68": {
-    "name": "LLL-WETH vAMM-LLL/WETH",
+    "name": "VolatileV1 AMM - LLL/WETH",
+    "symbol": "vAMM-LLL/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6578,7 +6831,8 @@
     }
   },
   "0xa191DC2de2fe548E5B9b4e709b6470E9BB895604": {
-    "name": "YUNGOG-WETH vAMM-YUNGOG/WETH",
+    "name": "VolatileV1 AMM - YUNGOG/WETH",
+    "symbol": "vAMM-YUNGOG/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6604,7 +6858,8 @@
     }
   },
   "0x6ce8930459e97b5696C0030ECd6446a69aD8Dba6": {
-    "name": "WETH-ARFVT vAMM-WETH/ARFVT",
+    "name": "VolatileV1 AMM - WETH/ARFVT",
+    "symbol": "vAMM-WETH/ARFVT",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6630,7 +6885,8 @@
     }
   },
   "0x2eB83dcaaE270Fc58fce257C82191F04537653Ad": {
-    "name": "USDC-TRUMP vAMM-USDC/TRUMP",
+    "name": "VolatileV1 AMM - USDC/TRUMP",
+    "symbol": "vAMM-USDC/TRUMP",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6656,7 +6912,8 @@
     }
   },
   "0x83372FC0E10087fBCb9fa24F7297278F11d0CE62": {
-    "name": "TKN-WETH vAMM-TKN/WETH",
+    "name": "VolatileV1 AMM - TKN/WETH",
+    "symbol": "vAMM-TKN/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6682,7 +6939,8 @@
     }
   },
   "0x29561A407Bc4Fa7Edc73dB30f09BDdC8a13a5AB7": {
-    "name": "USDC-TKN vAMM-USDC/TKN",
+    "name": "VolatileV1 AMM - USDC/TKN",
+    "symbol": "vAMM-USDC/TKN",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6708,7 +6966,8 @@
     }
   },
   "0x46d27Ea6c9C2d1BF0d05001FA33B8d19b13Eae52": {
-    "name": "TSTL1-WETH vAMM-TSTL1/WETH",
+    "name": "VolatileV1 AMM - TSTL1/WETH",
+    "symbol": "vAMM-TSTL1/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6734,7 +6993,8 @@
     }
   },
   "0xC9BE3917D88065ea73247Dd1Df043eA90d1D46e9": {
-    "name": "DGAF-WETH vAMM-DGAF/WETH",
+    "name": "VolatileV1 AMM - DGAF/WETH",
+    "symbol": "vAMM-DGAF/WETH",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6760,7 +7020,8 @@
     }
   },
   "0x22bDd80E16FCB5C5fB996365d7f038F599a3f940": {
-    "name": "RYZE-eUSD vAMM-RYZE/eUSD",
+    "name": "VolatileV1 AMM - RYZE/eUSD",
+    "symbol": "vAMM-RYZE/eUSD",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6786,7 +7047,8 @@
     }
   },
   "0x48A62b84eE25D5e8a3D43670B41786e2DC91ECE4": {
-    "name": "LYNX-LPUSS vAMM-LYNX/LPUSS",
+    "name": "VolatileV1 AMM - LYNX/LPUSS",
+    "symbol": "vAMM-LYNX/LPUSS",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6812,7 +7074,8 @@
     }
   },
   "0x688a1723e9E7AC5d81B86B807e316974906E9920": {
-    "name": "USDC-RYZE vAMM-USDC/RYZE",
+    "name": "VolatileV1 AMM - USDC/RYZE",
+    "symbol": "vAMM-USDC/RYZE",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {
@@ -6838,7 +7101,8 @@
     }
   },
   "0x21fA67bF02877AB2D537a2B9715aEC3485CC19c4": {
-    "name": "alETH-abcLYNX vAMM-alETH/abcLYNX",
+    "name": "VolatileV1 AMM - alETH/abcLYNX",
+    "symbol": "vAMM-alETH/abcLYNX",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
     "chainId": 59144,
     "lpData": {

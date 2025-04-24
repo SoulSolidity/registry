@@ -163,6 +163,7 @@ export const buildGamma = async (
 
     return {
       name: entry.name,
+      symbol: entry.symbol,
       logoURI: projectConfig.logoURI,
       chainId: chainId,
       lpData: {
