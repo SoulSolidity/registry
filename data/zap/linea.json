@@ -7608,5 +7608,61 @@
       "factory": "0xBc7695Fd00E3b32D08124b7a4287493aEE99f9ee",
       "router": "0x610D2f07b7EdC67565160F587F37636194C34E74"
     }
+  },
+  "0x5C20E7890fAB5743E55D8084FF53461e4F4bde07": {
+    "name": "Lynex Solidly (USDC/TRUMP)",
+    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
+    "chainId": 59144,
+    "lpData": {
+      "lpType": "solidly",
+      "name": "StableV1 AMM - USDC/TRUMP",
+      "symbol": "sAMM-USDC/TRUMP",
+      "lpAddress": "0x5C20E7890fAB5743E55D8084FF53461e4F4bde07",
+      "toToken0": {
+        "address": "0x176211869cA2b568f2A7D4EE941E073a821EE1ff",
+        "name": "USDC",
+        "symbol": "USDC",
+        "decimals": 6,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/linea/assets/0x176211869cA2b568f2A7D4EE941E073a821EE1ff/logo.png"
+      },
+      "toToken1": {
+        "address": "0xea3910f1C6E687B59835885904A2FD1944B51Ec6",
+        "name": "OFFICIAL TRUMP",
+        "symbol": "TRUMP",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/linea/assets/0xea3910f1C6E687B59835885904A2FD1944B51Ec6/logo.png"
+      },
+      "stable": true,
+      "factory": "0xBc7695Fd00E3b32D08124b7a4287493aEE99f9ee",
+      "router": "0x610D2f07b7EdC67565160F587F37636194C34E74"
+    }
+  },
+  "0xa7a2d862950f4F8FcB4D0315684122a789bC9331": {
+    "name": "Lynex Solidly (oLYNX/bveLYNX)",
+    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
+    "chainId": 59144,
+    "lpData": {
+      "lpType": "solidly",
+      "name": "StableV1 AMM - oLYNX/bveLYNX",
+      "symbol": "sAMM-oLYNX/bveLYNX",
+      "lpAddress": "0xa7a2d862950f4F8FcB4D0315684122a789bC9331",
+      "toToken0": {
+        "address": "0x63349BA5E1F71252eCD56E8F950D1A518B400b60",
+        "name": "Option LYNX Token",
+        "symbol": "oLYNX",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/linea/assets/0x63349BA5E1F71252eCD56E8F950D1A518B400b60/logo.png"
+      },
+      "toToken1": {
+        "address": "0xe8a4c9B6a2b79Fd844c9e3AdBc8Dc841eEce557B",
+        "name": "Bribe veLYNX",
+        "symbol": "bveLYNX",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/linea/assets/0xe8a4c9B6a2b79Fd844c9e3AdBc8Dc841eEce557B/logo.png"
+      },
+      "stable": true,
+      "factory": "0xBc7695Fd00E3b32D08124b7a4287493aEE99f9ee",
+      "router": "0x610D2f07b7EdC67565160F587F37636194C34E74"
+    }
   }
 }
