@@ -7664,5 +7664,145 @@
       "factory": "0xBc7695Fd00E3b32D08124b7a4287493aEE99f9ee",
       "router": "0x610D2f07b7EdC67565160F587F37636194C34E74"
     }
+  },
+  "0xFa0D1acF05B085503Dbb657d049d5aACF6634435": {
+    "name": "Lynex Solidly (DNB/WETH)",
+    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
+    "chainId": 59144,
+    "lpData": {
+      "lpType": "solidly",
+      "name": "VolatileV1 AMM - DNB/WETH",
+      "symbol": "vAMM-DNB/WETH",
+      "lpAddress": "0xFa0D1acF05B085503Dbb657d049d5aACF6634435",
+      "toToken0": {
+        "address": "0x365994a2e4b4705c961C5D110970D2e7f52ADdb9",
+        "name": "Do Not Buy",
+        "symbol": "DNB",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/linea/assets/0x365994a2e4b4705c961C5D110970D2e7f52ADdb9/logo.png"
+      },
+      "toToken1": {
+        "address": "0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f",
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/linea/assets/0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f/logo.png"
+      },
+      "stable": false,
+      "factory": "0xBc7695Fd00E3b32D08124b7a4287493aEE99f9ee",
+      "router": "0x610D2f07b7EdC67565160F587F37636194C34E74"
+    }
+  },
+  "0x9EB09a0345c0AF4839b68630398d6861d1753115": {
+    "name": "Lynex Solidly (DNB/WETH)",
+    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
+    "chainId": 59144,
+    "lpData": {
+      "lpType": "solidly",
+      "name": "VolatileV1 AMM - DNB/WETH",
+      "symbol": "vAMM-DNB/WETH",
+      "lpAddress": "0x9EB09a0345c0AF4839b68630398d6861d1753115",
+      "toToken0": {
+        "address": "0x7F1fe5bf694DB4c48825E0831D5F0AB99992628b",
+        "name": "Do Not Buy",
+        "symbol": "DNB",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/linea/assets/0x7F1fe5bf694DB4c48825E0831D5F0AB99992628b/logo.png"
+      },
+      "toToken1": {
+        "address": "0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f",
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/linea/assets/0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f/logo.png"
+      },
+      "stable": false,
+      "factory": "0xBc7695Fd00E3b32D08124b7a4287493aEE99f9ee",
+      "router": "0x610D2f07b7EdC67565160F587F37636194C34E74"
+    }
+  },
+  "0x0d02Ae8c359D26aE9E191965228195de4e117C4e": {
+    "name": "Lynex Solidly (DNB/WETH)",
+    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
+    "chainId": 59144,
+    "lpData": {
+      "lpType": "solidly",
+      "name": "StableV1 AMM - DNB/WETH",
+      "symbol": "sAMM-DNB/WETH",
+      "lpAddress": "0x0d02Ae8c359D26aE9E191965228195de4e117C4e",
+      "toToken0": {
+        "address": "0x36F2777fb1305A38187104eA0a5e2B29318874dD",
+        "name": "Do Not Buy",
+        "symbol": "DNB",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/linea/assets/0x36F2777fb1305A38187104eA0a5e2B29318874dD/logo.png"
+      },
+      "toToken1": {
+        "address": "0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f",
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/linea/assets/0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f/logo.png"
+      },
+      "stable": true,
+      "factory": "0xBc7695Fd00E3b32D08124b7a4287493aEE99f9ee",
+      "router": "0x610D2f07b7EdC67565160F587F37636194C34E74"
+    }
+  },
+  "0x455C17a83Eb1eedc790529C6de822ADFC3DeaceC": {
+    "name": "Lynex Solidly (DNB/WETH)",
+    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
+    "chainId": 59144,
+    "lpData": {
+      "lpType": "solidly",
+      "name": "VolatileV1 AMM - DNB/WETH",
+      "symbol": "vAMM-DNB/WETH",
+      "lpAddress": "0x455C17a83Eb1eedc790529C6de822ADFC3DeaceC",
+      "toToken0": {
+        "address": "0x720B7D182C0fbf5C67187c50930D9F3a7F5078Af",
+        "name": "Do Not Buy",
+        "symbol": "DNB",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/linea/assets/0x720B7D182C0fbf5C67187c50930D9F3a7F5078Af/logo.png"
+      },
+      "toToken1": {
+        "address": "0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f",
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/linea/assets/0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f/logo.png"
+      },
+      "stable": false,
+      "factory": "0xBc7695Fd00E3b32D08124b7a4287493aEE99f9ee",
+      "router": "0x610D2f07b7EdC67565160F587F37636194C34E74"
+    }
+  },
+  "0x8aF6C0b4a977Ba1422Ff97aA0cd1629e0112422e": {
+    "name": "Lynex Solidly (DNB/WETH)",
+    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
+    "chainId": 59144,
+    "lpData": {
+      "lpType": "solidly",
+      "name": "VolatileV1 AMM - DNB/WETH",
+      "symbol": "vAMM-DNB/WETH",
+      "lpAddress": "0x8aF6C0b4a977Ba1422Ff97aA0cd1629e0112422e",
+      "toToken0": {
+        "address": "0x7080078295A2c7178cDF01B51B2c48B952B39b97",
+        "name": "Do Not Buy",
+        "symbol": "DNB",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/linea/assets/0x7080078295A2c7178cDF01B51B2c48B952B39b97/logo.png"
+      },
+      "toToken1": {
+        "address": "0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f",
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/linea/assets/0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f/logo.png"
+      },
+      "stable": false,
+      "factory": "0xBc7695Fd00E3b32D08124b7a4287493aEE99f9ee",
+      "router": "0x610D2f07b7EdC67565160F587F37636194C34E74"
+    }
   }
 }
