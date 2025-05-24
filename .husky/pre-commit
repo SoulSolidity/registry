@@ -1,1 +1,8 @@
 yarn build
+BUILD_EXIT_CODE=$?
+
+# Only exit with error if build actually failed
+if [ $BUILD_EXIT_CODE -ne 0 ]; then
+  echo "Build failed with exit code $BUILD_EXIT_CODE"
+  exit $BUILD_EXIT_CODE
+fi
