@@ -4,6 +4,6 @@ declare const defaultZapInputTokens: Record<ChainId, {
     symbol: string;
     name: string;
     decimals: number;
-    icon?: string;
+    logoURI?: string;
 }[]>;
 export default defaultZapInputTokens;

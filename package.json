@@ -20,7 +20,8 @@
     "build:consolidated": "npm run build && npm run generate && npm run consolidate",
     "build:zap": "ts-node src/zap/build.ts",
     "build:zap:consolidated": "ts-node scripts/buildZap.ts",
-    "build:constants": "ts-node scripts/buildConstants.ts"
+    "build:constants": "ts-node scripts/buildConstants.ts",
+    "prepare": "husky"
   },
   "keywords": [
     "zap",
@@ -40,8 +41,15 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.24",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
     "rimraf": "^5.0.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "yarn build"
+    ]
   }
 }
