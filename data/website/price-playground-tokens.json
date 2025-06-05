@@ -3,108 +3,108 @@
     "name": "BNB",
     "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
     "chainId": 56,
-    "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/binance/info/logo.png"
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/binance/info/logo.png"
   },
   {
     "name": "ABOND",
     "address": "0x34294AfABCbaFfc616ac6614F6d2e17260b78BEd",
     "chainId": 56,
-    "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/smartchain/assets/0x34294AfABCbaFfc616ac6614F6d2e17260b78BEd/logo.png"
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/smartchain/assets/0x34294AfABCbaFfc616ac6614F6d2e17260b78BEd/logo.png"
   },
   {
     "name": "Pancake LPs (CAKE-BNB)",
     "address": "0x0eD7e52944161450477ee417DE9Cd3a859b14fD0",
     "chainId": 56,
-    "lpIcons": [
+    "lpLogoURIs": [
       "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/smartchain/assets/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82/logo.png",
       "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/smartchain/info/logo.png"
     ],
-    "icon": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/PancakeSwap%20V2.jpg"
+    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/PancakeSwap%20V2.jpg"
   },
   {
     "name": "ETH",
     "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
     "chainId": 1,
-    "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/ethereum/info/logo.png"
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/ethereum/info/logo.png"
   },
   {
     "name": "stETH",
     "address": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
     "chainId": 1,
-    "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/ethereum/assets/0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84/logo.png"
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/ethereum/assets/0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84/logo.png"
   },
   {
     "name": "Chainlink",
     "address": "0x514910771AF9Ca656af840dff83E8264EcF986CA",
     "chainId": 1,
-    "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/logo.png"
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/logo.png"
   },
   {
     "name": "Uniswap V2 (ETH-USDC)",
     "address": "0xB4e16d0168e52d35CaCD2c6185b44281Ec28C9Dc",
     "chainId": 1,
-    "lpIcons": [
+    "lpLogoURIs": [
       "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/ethereum/info/logo.png",
       "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
     ],
-    "icon": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/PancakeSwap%20V2.jpg"
+    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/PancakeSwap%20V2.jpg"
   },
   {
     "name": "POL",
     "address": "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270",
     "chainId": 137,
-    "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/polygon/assets/0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270/logo.png"
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/polygon/assets/0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270/logo.png"
   },
   {
     "name": "ETH",
     "address": "0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f",
     "chainId": 59144,
-    "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/linea/assets/0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f/logo.png"
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/linea/assets/0xe5D7C2a44FfDDf6b295A15c148167daaAf5Cf34f/logo.png"
   },
   {
     "name": "Lynex",
     "address": "0x1a51b19CE03dbE0Cb44C1528E34a7EDD7771E9Af",
     "chainId": 59144,
-    "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/linea/assets/0x1a51b19CE03dbE0Cb44C1528E34a7EDD7771E9Af/logo.png"
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/linea/assets/0x1a51b19CE03dbE0Cb44C1528E34a7EDD7771E9Af/logo.png"
   },
   {
     "name": "Coinbase Wrapped BTC",
     "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
     "chainId": 8453,
-    "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/bitcoin/info/logo.png"
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/bitcoin/info/logo.png"
   },
   {
     "name": "Aerodrome",
     "address": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
     "chainId": 8453,
-    "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/base/assets/0x940181a94A35A4569E4529A3CDfB74e38FD98631/logo.png"
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/base/assets/0x940181a94A35A4569E4529A3CDfB74e38FD98631/logo.png"
   },
   {
     "name": "USD Coin",
     "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
     "chainId": 8453,
-    "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
   },
   {
     "name": "ICHI Vault Liquidity(IV-TREB-1-USDC-WETH)",
     "address": "0xa0CABEe4d9F5bEb83aaca2e030436D3c514d4fb4",
     "chainId": 8453,
-    "lpIcons": [
+    "lpLogoURIs": [
       "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
       "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/ethereum/info/logo.png"
     ],
-    "icon": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/Ichi.png"
+    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/Ichi.png"
   },
   {
     "name": "ETH",
     "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
     "chainId": 42161,
-    "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/arbitrum/assets/0x82aF49447D8a07e3bd95BD0d56f35241523fBab1/logo.png"
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/arbitrum/assets/0x82aF49447D8a07e3bd95BD0d56f35241523fBab1/logo.png"
   },
   {
     "name": "USDC",
     "address": "0x9623063377AD1B27544C965cCd7342f7EA7e88C7",
     "chainId": 42161,
-    "icon": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/arbitrum/assets/0x9623063377AD1B27544C965cCd7342f7EA7e88C7/logo.png"
+    "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/refs/heads/master/blockchains/arbitrum/assets/0x9623063377AD1B27544C965cCd7342f7EA7e88C7/logo.png"
   }
 ]
