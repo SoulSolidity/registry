@@ -214,7 +214,18 @@ export const APEBOND_CONFIG: Partial<Record<ChainId, ProjectConfig>> = {
     project: Project.ApeBond,
     logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap%20V2.jpg',
   },
+  [ChainId.BASE]: {
+    project: Project.ApeBond,
+    logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap%20V2.jpg',
+  },
 };
+
+export const GOO_MONEY_CONFIG: Partial<Record<ChainId, ProjectConfig>> = {
+  [ChainId.BASE]: {
+    project: Project.GooMoney,
+    logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/GooMoney.jpg',
+  },
+}
 
 export const THENA_CONFIG: Partial<Record<ChainId, ProjectConfig>> = {
   [ChainId.BNB]: {

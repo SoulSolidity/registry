@@ -43,6 +43,7 @@ var Project;
     Project["SwapBased"] = "SwapBased";
     Project["Aerodrome"] = "Aerodrome";
     Project["Nile"] = "Nile";
+    Project["GooMoney"] = "GooMoney";
 })(Project || (exports.Project = Project = {}));
 var ProjectProtocol;
 (function (ProjectProtocol) {

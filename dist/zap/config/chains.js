@@ -71,7 +71,7 @@ exports.chainConfigs = {
     },
     [enums_1.ChainId.BASE]: {
         name: 'Base',
-        rpcUrl: 'https://mainnet.base.org',
+        rpcUrl: 'https://1rpc.io/base',
         blockExplorerUrl: 'https://basescan.org',
         multicallAddress: '0xcA11bde05977b3631167028862bE2a173976CA11',
         trustwalletLogoURI: (address) => `${getTrustwalletLogoURI('base', address)}`,

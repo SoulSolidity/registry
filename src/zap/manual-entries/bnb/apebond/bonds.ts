@@ -10,7 +10,7 @@ import { ProtocolEntry, LPType, Project } from '../../../types';
  */
 export const apeBondBonds: ProtocolEntry[] = [
     {
-        name: "ApeBond (BNB => PLT)",
+        name: "ApeBond PLT Bond",
         address: "0x39d56b60964ab6f3f886968b5a6dde3e5434a873",
         type: LPType.SINGLE,
         inputToken: {
@@ -19,7 +19,7 @@ export const apeBondBonds: ProtocolEntry[] = [
         },
     },
     {
-        name: "ApeBond (USDT => SCPT)",
+        name: "ApeBond SCPT Bond",
         address: "0x5aeb9f8e8b132b9b74c74f8a20a75f29e4e3ba78",
         type: LPType.SINGLE,
         inputToken: {
@@ -28,7 +28,7 @@ export const apeBondBonds: ProtocolEntry[] = [
         },
     },
     {
-        name: "ApeBond (GLD/BNB => GLD)",
+        name: "ApeBond GLD Bond",
         address: "0xe9f79078a97fe410945dc626c07442a016a6ba14",
         type: LPType.ICHI,
         inputTokenProject: Project.Thena,

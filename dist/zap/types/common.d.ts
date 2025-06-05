@@ -36,7 +36,8 @@ export declare enum Project {
     BaseX = "BaseX",
     SwapBased = "SwapBased",
     Aerodrome = "Aerodrome",
-    Nile = "Nile"
+    Nile = "Nile",
+    GooMoney = "GooMoney"
 }
 export declare enum ProjectProtocol {
     ApeBond = "ApeBond",

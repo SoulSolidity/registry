@@ -1,0 +1,118 @@
+{
+  "0xF81BD0754b698cDbF248E7b4A3E60228Fa0b7E93": {
+    "name": "ApeBond EMT Bond",
+    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap%20V2.jpg",
+    "chainId": 8453,
+    "lpData": {
+      "lpType": "single",
+      "toToken": {
+        "address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "name": "USD Coin",
+        "symbol": "USDC",
+        "decimals": 6,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/base/assets/0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913/logo.png"
+      }
+    },
+    "protocolData": {
+      "protocol": "ApeBond",
+      "bond": "0xf81bd0754b698cdbf248e7b4a3e60228fa0b7e93"
+    }
+  },
+  "0x54286E6584dc01f658F4B6fdBdd5E35553c26c12": {
+    "name": "ApeBond FULA Bond",
+    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap%20V2.jpg",
+    "chainId": 8453,
+    "lpData": {
+      "lpType": "single",
+      "toToken": {
+        "address": "0x4200000000000000000000000000000000000006",
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/base/assets/0x4200000000000000000000000000000000000006/logo.png"
+      }
+    },
+    "protocolData": {
+      "protocol": "ApeBond",
+      "bond": "0x54286e6584dc01f658f4b6fdbdd5e35553c26c12"
+    }
+  },
+  "0x7933424992FF4F73050ba96E3cCbFC7296853d61": {
+    "name": "ApeBond UP Bond",
+    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap%20V2.jpg",
+    "chainId": 8453,
+    "lpData": {
+      "lpType": "ichi",
+      "name": "ICHI Vault Liquidity",
+      "symbol": "ICHI_Vault_LP",
+      "toToken0": {
+        "address": "0x4200000000000000000000000000000000000006",
+        "name": "Wrapped Ether",
+        "symbol": "WETH",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/base/assets/0x4200000000000000000000000000000000000006/logo.png"
+      },
+      "toToken1": {
+        "address": "0xaC27fa800955849d6D17cC8952Ba9dD6EAA66187",
+        "name": "UnlockProtocolToken",
+        "symbol": "UP",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/base/assets/0xaC27fa800955849d6D17cC8952Ba9dD6EAA66187/logo.png"
+      },
+      "allowToken0": true,
+      "allowToken1": false,
+      "vault": "0xf349fa49651d5ae67771b61840c4ccc7a2565764",
+      "ichiConfig": {
+        "factoryAddress": "0xaBe5B5AC472Ead17B4B4CaC7fAF42430748ab3b3",
+        "depositGuard": {
+          "address": "0xe2381b5AFae99B899596Bc550184a080dAa31F26",
+          "version": 2
+        },
+        "vaultDeployerAddress": "0x7d11De61c219b70428Bb3199F0DD88bA9E76bfEE",
+        "isAlgebra": false
+      }
+    },
+    "protocolData": {
+      "protocol": "ApeBond",
+      "bond": "0x7933424992ff4f73050ba96e3ccbfc7296853d61"
+    }
+  },
+  "0xeA62f76EdC1da14bc473b8F0fE1416a7F1E47Fcf": {
+    "name": "ApeBond VPT Bond",
+    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap%20V2.jpg",
+    "chainId": 8453,
+    "lpData": {
+      "lpType": "single",
+      "toToken": {
+        "address": "0xfde4c96c8593536e31f229ea8f37b2ada2699bb2",
+        "name": "Tether USD",
+        "symbol": "USDT",
+        "decimals": 6,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/base/assets/0xfde4c96c8593536e31f229ea8f37b2ada2699bb2/logo.png"
+      }
+    },
+    "protocolData": {
+      "protocol": "ApeBond",
+      "bond": "0xea62f76edc1da14bc473b8f0fe1416a7f1e47fcf"
+    }
+  },
+  "0x313A15A47b7D9862aD5266B9ea2D5A5117014F88": {
+    "name": "ApeBond GMRT Bond",
+    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap%20V2.jpg",
+    "chainId": 8453,
+    "lpData": {
+      "lpType": "single",
+      "toToken": {
+        "address": "0xfde4c96c8593536e31f229ea8f37b2ada2699bb2",
+        "name": "Tether USD",
+        "symbol": "USDT",
+        "decimals": 6,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/base/assets/0xfde4c96c8593536e31f229ea8f37b2ada2699bb2/logo.png"
+      }
+    },
+    "protocolData": {
+      "protocol": "ApeBond",
+      "bond": "0x313a15a47b7d9862ad5266b9ea2d5a5117014f88"
+    }
+  }
+}

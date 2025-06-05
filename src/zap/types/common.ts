@@ -50,6 +50,7 @@ export enum Project {
   SwapBased = 'SwapBased',
   Aerodrome = 'Aerodrome',
   Nile = 'Nile',
+  GooMoney = 'GooMoney',
 }
 
 export enum ProjectProtocol {

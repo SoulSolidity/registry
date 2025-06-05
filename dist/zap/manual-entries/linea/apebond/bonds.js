@@ -12,7 +12,7 @@ const types_1 = require("../../../types");
  */
 exports.apeBondBonds = [
     {
-        name: "ApeBond (USDC => HOTDOG)",
+        name: "ApeBond HOTDOG Bond",
         address: "0x383dcc61af360b73c24caaed805ca0fd4cadeb52",
         type: types_1.LPType.SINGLE,
         inputToken: {
@@ -21,7 +21,7 @@ exports.apeBondBonds = [
         },
     },
     {
-        name: "ApeBond (USDT => LINUS)",
+        name: "ApeBond LINUS Bond",
         address: "0x00ab24b9d36b4a4368775a1c523dfc457148ec62",
         type: types_1.LPType.SINGLE,
         inputToken: {

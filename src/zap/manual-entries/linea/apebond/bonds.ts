@@ -10,7 +10,7 @@ import { ProtocolEntry, LPType } from '../../../types';
  */
 export const apeBondBonds: ProtocolEntry[] = [
     {
-        name: "ApeBond (USDC => HOTDOG)",
+        name: "ApeBond HOTDOG Bond",
         address: "0x383dcc61af360b73c24caaed805ca0fd4cadeb52",
         type: LPType.SINGLE,
         inputToken: {
@@ -19,7 +19,7 @@ export const apeBondBonds: ProtocolEntry[] = [
         },
     },
     {
-        name: "ApeBond (USDT => LINUS)",
+        name: "ApeBond LINUS Bond",
         address: "0x00ab24b9d36b4a4368775a1c523dfc457148ec62",
         type: LPType.SINGLE,
         inputToken: {

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AERODROME_CONFIG = exports.NILE_CONFIG = exports.SYNTHSWAP_CONFIG = exports.RAMSES_CONFIG = exports.RETRO_CONFIG = exports.ZYBERSWAP_CONFIG = exports.CAMELOT_CONFIG = exports.QUICKSWAP_CONFIG = exports.THENA_CONFIG = exports.APEBOND_CONFIG = exports.PANCAKESWAP_CONFIG = exports.LYNEX_CONFIG = exports.SUSHISWAP_CONFIG = exports.UNISWAP_CONFIG = void 0;
+exports.AERODROME_CONFIG = exports.NILE_CONFIG = exports.SYNTHSWAP_CONFIG = exports.RAMSES_CONFIG = exports.RETRO_CONFIG = exports.ZYBERSWAP_CONFIG = exports.CAMELOT_CONFIG = exports.QUICKSWAP_CONFIG = exports.THENA_CONFIG = exports.GOO_MONEY_CONFIG = exports.APEBOND_CONFIG = exports.PANCAKESWAP_CONFIG = exports.LYNEX_CONFIG = exports.SUSHISWAP_CONFIG = exports.UNISWAP_CONFIG = void 0;
 /**
  * Project configurations
  */
@@ -211,6 +211,16 @@ exports.APEBOND_CONFIG = {
     [enums_1.ChainId.LINEA]: {
         project: types_1.Project.ApeBond,
         logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap%20V2.jpg',
+    },
+    [enums_1.ChainId.BASE]: {
+        project: types_1.Project.ApeBond,
+        logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap%20V2.jpg',
+    },
+};
+exports.GOO_MONEY_CONFIG = {
+    [enums_1.ChainId.BASE]: {
+        project: types_1.Project.GooMoney,
+        logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/GooMoney.jpg',
     },
 };
 exports.THENA_CONFIG = {

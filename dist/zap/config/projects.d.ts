@@ -8,6 +8,7 @@ export declare const SUSHISWAP_CONFIG: Partial<Record<ChainId, ProjectConfig>>;
 export declare const LYNEX_CONFIG: Partial<Record<ChainId, ProjectConfig>>;
 export declare const PANCAKESWAP_CONFIG: Partial<Record<ChainId, ProjectConfig>>;
 export declare const APEBOND_CONFIG: Partial<Record<ChainId, ProjectConfig>>;
+export declare const GOO_MONEY_CONFIG: Partial<Record<ChainId, ProjectConfig>>;
 export declare const THENA_CONFIG: Partial<Record<ChainId, ProjectConfig>>;
 export declare const QUICKSWAP_CONFIG: Partial<Record<ChainId, ProjectConfig>>;
 export declare const CAMELOT_CONFIG: Partial<Record<ChainId, ProjectConfig>>;

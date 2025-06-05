@@ -1,6 +1,6 @@
 {
   "0x39D56B60964aB6f3f886968b5A6DdE3e5434A873": {
-    "name": "ApeBond (BNB => PLT)",
+    "name": "ApeBond PLT Bond",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap%20V2.jpg",
     "chainId": 56,
     "lpData": {
@@ -19,7 +19,7 @@
     }
   },
   "0x5aeb9f8e8b132B9b74c74F8a20a75F29e4E3bA78": {
-    "name": "ApeBond (USDT => SCPT)",
+    "name": "ApeBond SCPT Bond",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap%20V2.jpg",
     "chainId": 56,
     "lpData": {
@@ -38,7 +38,7 @@
     }
   },
   "0xe9F79078a97fE410945dc626c07442a016A6BA14": {
-    "name": "ApeBond (GLD/BNB => GLD)",
+    "name": "ApeBond GLD Bond",
     "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap%20V2.jpg",
     "chainId": 56,
     "lpData": {

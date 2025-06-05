@@ -12,7 +12,7 @@ const types_1 = require("../../../types");
  */
 exports.apeBondBonds = [
     {
-        name: "ApeBond (BNB => PLT)",
+        name: "ApeBond PLT Bond",
         address: "0x39d56b60964ab6f3f886968b5a6dde3e5434a873",
         type: types_1.LPType.SINGLE,
         inputToken: {
@@ -21,7 +21,7 @@ exports.apeBondBonds = [
         },
     },
     {
-        name: "ApeBond (USDT => SCPT)",
+        name: "ApeBond SCPT Bond",
         address: "0x5aeb9f8e8b132b9b74c74f8a20a75f29e4e3ba78",
         type: types_1.LPType.SINGLE,
         inputToken: {
@@ -30,7 +30,7 @@ exports.apeBondBonds = [
         },
     },
     {
-        name: "ApeBond (GLD/BNB => GLD)",
+        name: "ApeBond GLD Bond",
         address: "0xe9f79078a97fe410945dc626c07442a016a6ba14",
         type: types_1.LPType.ICHI,
         inputTokenProject: types_1.Project.Thena,
