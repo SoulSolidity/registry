@@ -1,0 +1,40 @@
+{
+  "0x383DCc61af360b73c24CaaeD805Ca0fd4cadEB52": {
+    "name": "ApeBond (USDC => HOTDOG)",
+    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap.png?raw=true",
+    "chainId": 59144,
+    "lpData": {
+      "lpType": "single",
+      "toToken": {
+        "address": "0x176211869cA2b568f2A7D4EE941E073a821EE1ff",
+        "name": "USDC",
+        "symbol": "USDC",
+        "decimals": 6,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/linea/assets/0x176211869cA2b568f2A7D4EE941E073a821EE1ff/logo.png"
+      }
+    },
+    "protocolData": {
+      "protocol": "ApeBond",
+      "bond": "0x383dcc61af360b73c24caaed805ca0fd4cadeb52"
+    }
+  },
+  "0x00aB24b9d36B4a4368775A1c523dFc457148EC62": {
+    "name": "ApeBond (USDT => LINUS)",
+    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap.png?raw=true",
+    "chainId": 59144,
+    "lpData": {
+      "lpType": "single",
+      "toToken": {
+        "address": "0xA219439258ca9da29E9Cc4cE5596924745e12B93",
+        "name": "Tether USD",
+        "symbol": "USDT",
+        "decimals": 6,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/linea/assets/0xA219439258ca9da29E9Cc4cE5596924745e12B93/logo.png"
+      }
+    },
+    "protocolData": {
+      "protocol": "ApeBond",
+      "bond": "0x00ab24b9d36b4a4368775a1c523dfc457148ec62"
+    }
+  }
+}

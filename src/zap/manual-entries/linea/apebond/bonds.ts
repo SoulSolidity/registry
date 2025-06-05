@@ -1,7 +1,7 @@
 /**
  * Manual entries for ApeBond Bonds on BNB
  */
-import { ProtocolEntry, LPType, Project } from '../../../types';
+import { ProtocolEntry, LPType } from '../../../types';
 
 /**
  * ApeBond entries on Linea

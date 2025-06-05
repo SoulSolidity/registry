@@ -157,14 +157,15 @@ const buildApeBond = async (manualEntries, chainId, project, parentTask) => {
                 protocol: types_1.ProjectProtocol.ApeBond,
                 bond: entry.address,
             };
-            return {
+            const zapInfo = {
                 name: entry.name,
                 logoURI: projectConfig.logoURI,
                 chainId: chainId,
-                inputToken: inputTokenInfo,
                 lpData: lpData,
                 protocolData,
             };
+            console.log(zapInfo);
+            return zapInfo;
         }));
         return processedData;
     }

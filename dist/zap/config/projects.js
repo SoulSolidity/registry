@@ -208,6 +208,10 @@ exports.APEBOND_CONFIG = {
             routerAddress: '0xcF0feBd3f17CEf5b47b0cD257aCf6025c5BFf3b7',
         },
     },
+    [enums_1.ChainId.LINEA]: {
+        project: types_1.Project.ApeBond,
+        logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap.png?raw=true',
+    },
 };
 exports.THENA_CONFIG = {
     [enums_1.ChainId.BNB]: {

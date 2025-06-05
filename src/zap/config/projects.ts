@@ -210,6 +210,10 @@ export const APEBOND_CONFIG: Partial<Record<ChainId, ProjectConfig>> = {
       routerAddress: '0xcF0feBd3f17CEf5b47b0cD257aCf6025c5BFf3b7',
     },
   },
+  [ChainId.LINEA]: {
+    project: Project.ApeBond,
+    logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap.png?raw=true',
+  },
 };
 
 export const THENA_CONFIG: Partial<Record<ChainId, ProjectConfig>> = {

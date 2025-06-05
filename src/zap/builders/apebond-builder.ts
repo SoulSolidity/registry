@@ -143,14 +143,17 @@ export const buildApeBond = async (
           bond: entry.address,
         };
 
-        return {
+        const zapInfo: ZapInfo = {
           name: entry.name,
           logoURI: projectConfig.logoURI,
           chainId: chainId,
-          inputToken: inputTokenInfo,
           lpData: lpData,
           protocolData,
         };
+
+        console.log(zapInfo);
+
+        return zapInfo;
       })
     );
 
