@@ -1,6 +1,6 @@
 import { PublicClient, Abi, Address } from 'viem';
 import { multicall } from 'viem/actions';
-import { ERC20TokenInfo, LPType, Project, ZapInfo, SolidlyLPInfo } from '../types';
+import { ERC20TokenInfo, LPType, Project, ZapInfo, SolidlyLPInfo, MulticallResult } from '../types';
 import { chainConfigs } from '../config/chains';
 import * as projectConfigs from '../config/projects';
 import { ChainConfig, ProjectConfig } from '../types/config';
@@ -12,14 +12,6 @@ import ERC20_ABI from '../abi/ERC20_ABI.json';
 import { ChainId } from '../../types/enums';
 const BATCH_SIZE = 100; // Number of pairs to fetch from factory in one go
 
-/**
- * Represents the possible result structure from a multicall when allowFailure is true.
- */
-type MulticallResult<TResult = unknown> =
-    | { result: TResult; status: 'success' }
-    | { error: Error; status: 'failure' };
-
-
 // Helper to safely get token info from the map
 const getERC20TokenInfo = (address: Address, tokenDetailsMap: Map<Address, Partial<ERC20TokenInfo>>, chainConfig: ChainConfig): ERC20TokenInfo => {
     const details = tokenDetailsMap.get(address);
@@ -30,6 +22,124 @@ const getERC20TokenInfo = (address: Address, tokenDetailsMap: Map<Address, Parti
         decimals: details?.decimals ?? 18,
         logoURI: chainConfig.trustwalletLogoURI(address),
     };
+};
+
+/**
+ * Builds data for a single Solidly pair entry
+ * 
+ * @param pairAddress The Solidly pair address to build data for
+ * @param chainId The chain ID
+ * @param project The project identifier
+ * @returns Promise resolving to ZapInfo
+ */
+export const buildSingleSolidlyEntry = async (
+  pairAddress: Address,
+  chainId: ChainId,
+  project: Project,
+): Promise<ZapInfo> => {
+  const projectConfigMap = Object.values(projectConfigs).find(
+    (config) => config[chainId]?.project === project
+  ) as Partial<Record<ChainId, ProjectConfig>> | undefined;
+
+  const chainConfig = chainConfigs[chainId];
+  if (!chainConfig) {
+    throw new Error('Missing chain configuration');
+  }
+
+  const projectConfig = projectConfigMap?.[chainId];
+  if (!projectConfig) {
+    throw new Error('Missing project configuration');
+  }
+
+  if (!projectConfig.solidlyConfig) {
+    throw new Error('Missing Solidly configuration');
+  }
+
+  const factoryAddress = projectConfig.solidlyConfig.factoryAddress;
+  const routerAddress = projectConfig.solidlyConfig.routerAddress;
+  const client = getClient(chainId);
+
+  const pairCalls = [
+    { address: pairAddress, abi: SolidlyPair_ABI as Abi, functionName: 'token0' },
+    { address: pairAddress, abi: SolidlyPair_ABI as Abi, functionName: 'token1' },
+    { address: pairAddress, abi: SolidlyPair_ABI as Abi, functionName: 'stable' },
+    { address: pairAddress, abi: SolidlyPair_ABI as Abi, functionName: 'symbol' },
+    { address: pairAddress, abi: SolidlyPair_ABI as Abi, functionName: 'name' },
+  ];
+
+  const pairResults = await multicall(client, { contracts: pairCalls, allowFailure: false }) as readonly unknown[];
+
+  const token0Address = pairResults[0] as Address;
+  const token1Address = pairResults[1] as Address;
+  const stable = pairResults[2] as boolean;
+  const lpSymbol = pairResults[3] as string;
+  const lpName = pairResults[4] as string;
+
+  const uniqueTokenAddresses: Address[] = [token0Address, token1Address];
+
+  const tokenCalls = uniqueTokenAddresses.map((tokenAddress) => [
+    {
+      address: tokenAddress,
+      abi: ERC20_ABI as Abi,
+      functionName: 'name',
+    },
+    {
+      address: tokenAddress,
+      abi: ERC20_ABI as Abi,
+      functionName: 'symbol',
+    },
+    {
+      address: tokenAddress,
+      abi: ERC20_ABI as Abi,
+      functionName: 'decimals',
+    },
+  ]).flat();
+
+  const tokenResults = await multicall(client, { contracts: tokenCalls, allowFailure: true }) as MulticallResult<string | number | bigint>[];
+
+  const tokenDetailsMap = new Map<Address, Partial<ERC20TokenInfo>>();
+  for (let i = 0; i < uniqueTokenAddresses.length; i++) {
+    const address = uniqueTokenAddresses[i];
+    const nameResult = tokenResults[i * 3];
+    const symbolResult = tokenResults[i * 3 + 1];
+    const decimalsResult = tokenResults[i * 3 + 2];
+
+    const name = nameResult.status === 'success' && typeof nameResult.result === 'string'
+      ? nameResult.result
+      : 'Unknown Name';
+    const symbol = symbolResult.status === 'success' && typeof symbolResult.result === 'string'
+      ? symbolResult.result
+      : '???';
+    const decimals = decimalsResult.status === 'success' && (typeof decimalsResult.result === 'number' || typeof decimalsResult.result === 'bigint')
+      ? Number(decimalsResult.result)
+      : 18;
+
+    tokenDetailsMap.set(address, { address, name, symbol, decimals });
+  }
+
+  const token0Info = getERC20TokenInfo(token0Address, tokenDetailsMap, chainConfig);
+  const token1Info = getERC20TokenInfo(token1Address, tokenDetailsMap, chainConfig);
+
+  const lpData: SolidlyLPInfo = {
+    lpType: LPType.SOLIDLY,
+    name: lpName,
+    symbol: lpSymbol,
+    lpAddress: pairAddress,
+    toToken0: token0Info,
+    toToken1: token1Info,
+    stable: stable,
+    factory: factoryAddress,
+    router: routerAddress
+  };
+
+  const zapName = `${Project[project]} Solidly (${token0Info.symbol}/${token1Info.symbol})`;
+  
+  return {
+    name: zapName,
+    logoURI: projectConfig.logoURI,
+    chainId: chainId,
+    lpData: lpData,
+  };
 };
 
 /**

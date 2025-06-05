@@ -2,7 +2,7 @@ declare const priceGetterPlaygroundTokens: {
     name: string;
     address: string;
     chainId: number;
-    icon: string;
-    lpIcons?: string[];
+    logoURI: string;
+    lpLogoURIs?: string[];
 }[];
 export default priceGetterPlaygroundTokens;

@@ -36,7 +36,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.buildIchi = void 0;
+exports.buildIchi = exports.buildSingleIchiEntry = void 0;
 const actions_1 = require("viem/actions");
 const types_1 = require("../types");
 const chains_1 = require("../config/chains");
@@ -45,121 +45,93 @@ const ERC20_ABI_json_1 = __importDefault(require("../abi/ERC20_ABI.json"));
 const projectConfigs = __importStar(require("../config/projects"));
 const client_1 = require("../utils/client");
 /**
- * Fetches on-chain data for Gamma LPs and combines it with manual entries.
+ * Builds data for a single Ichi entry
  *
- * @param manualEntries Array of manual Gamma entries.
- * @param chainId The chain ID.
- * @param project The project identifier.
- * @param parentTask The parent Listr task wrapper for reporting progress.
- * @returns Promise resolving to an array of GammaLPInfo.
+ * @param entry The Ichi entry to build data for
+ * @param chainId The chain ID
+ * @param project The project identifier
+ * @returns Promise resolving to ZapInfo
  */
-const buildIchi = async (manualEntries, chainId, project, parentTask) => {
-    if (manualEntries.length === 0) {
-        parentTask.skip('No manual entries provided.');
-        return [];
-    }
+const buildSingleIchiEntry = async (entry, chainId, project) => {
     // Find the project configuration for the given project and chainId
     const projectConfigMap = Object.values(projectConfigs).find((config) => config[chainId]?.project === project);
     const chainConfig = chains_1.chainConfigs[chainId];
     if (!chainConfig) {
-        parentTask.skip('Skipping Ichi build due to missing chain configuration.');
-        return [];
+        throw new Error('Missing chain configuration');
     }
     const projectConfig = projectConfigMap?.[chainId];
     if (!projectConfig) {
-        parentTask.skip('Skipping Ichi build due to missing project configuration.');
-        return [];
+        throw new Error('Missing project configuration');
     }
     const ichiConfig = projectConfig.ichiConfig;
     if (!ichiConfig) {
-        parentTask.skip('Skipping Ichi build due to missing Ichi configuration.');
-        return [];
+        throw new Error('Missing Ichi configuration');
     }
     const client = (0, client_1.getClient)(chainId);
-    let lpResults = [];
-    let tokenResults = [];
-    let uniqueTokenAddresses = [];
-    try {
-        // Fetch LP details (token0, token1, name, symbol, allowToken0, allowToken1)
-        const lpCalls = manualEntries.map((entry) => [
-            {
-                address: entry.address,
-                abi: ICHIVault_ABI_json_1.default,
-                functionName: 'allowToken0',
-            },
-            {
-                address: entry.address,
-                abi: ICHIVault_ABI_json_1.default,
-                functionName: 'allowToken1',
-            },
-            {
-                address: entry.address,
-                abi: ICHIVault_ABI_json_1.default,
-                functionName: 'token0',
-            },
-            {
-                address: entry.address,
-                abi: ICHIVault_ABI_json_1.default,
-                functionName: 'token1',
-            },
-            {
-                address: entry.address,
-                abi: ICHIVault_ABI_json_1.default,
-                functionName: 'name',
-            },
-            {
-                address: entry.address,
-                abi: ICHIVault_ABI_json_1.default,
-                functionName: 'symbol',
-            },
-        ]).flat();
-        // Execute multicalls
-        lpResults = await (0, actions_1.multicall)(client, { contracts: lpCalls, allowFailure: false });
-        // Collect unique token addresses
-        const tokenAddresses = new Set();
-        for (let i = 0; i < manualEntries.length; i++) {
-            // Indexing adjusted for 6 calls per entry: [allow0, allow1, token0, token1, name, symbol]
-            tokenAddresses.add(lpResults[i * 6 + 2]);
-            tokenAddresses.add(lpResults[i * 6 + 3]);
-        }
-        uniqueTokenAddresses = Array.from(tokenAddresses);
-        // Fetch token details (name, symbol, decimals)
-        if (uniqueTokenAddresses.length === 0) {
-            // No need to skip here, just proceed; the next call will handle the empty array
-        }
-        else {
-            const tokenCalls = uniqueTokenAddresses.map((tokenAddress) => [
-                {
-                    address: tokenAddress,
-                    abi: ERC20_ABI_json_1.default,
-                    functionName: 'name',
-                },
-                {
-                    address: tokenAddress,
-                    abi: ERC20_ABI_json_1.default,
-                    functionName: 'symbol',
-                },
-                {
-                    address: tokenAddress,
-                    abi: ERC20_ABI_json_1.default,
-                    functionName: 'decimals',
-                },
-            ]).flat();
-            tokenResults = await (0, actions_1.multicall)(client, { contracts: tokenCalls, allowFailure: true });
-        }
-    }
-    catch (error) {
-        // Rethrow the error to be caught by the main build process
-        throw new Error(`Failed during data fetching in buildGamma: ${error instanceof Error ? error.message : String(error)}`);
-    }
-    // 4. Map token details for easy lookup
+    // Fetch LP details
+    const lpCalls = [
+        {
+            address: entry.address,
+            abi: ICHIVault_ABI_json_1.default,
+            functionName: 'allowToken0',
+        },
+        {
+            address: entry.address,
+            abi: ICHIVault_ABI_json_1.default,
+            functionName: 'allowToken1',
+        },
+        {
+            address: entry.address,
+            abi: ICHIVault_ABI_json_1.default,
+            functionName: 'token0',
+        },
+        {
+            address: entry.address,
+            abi: ICHIVault_ABI_json_1.default,
+            functionName: 'token1',
+        },
+        {
+            address: entry.address,
+            abi: ICHIVault_ABI_json_1.default,
+            functionName: 'name',
+        },
+        {
+            address: entry.address,
+            abi: ICHIVault_ABI_json_1.default,
+            functionName: 'symbol',
+        },
+    ];
+    const lpResults = await (0, actions_1.multicall)(client, { contracts: lpCalls, allowFailure: false });
+    // Get token addresses
+    const token0Address = lpResults[2];
+    const token1Address = lpResults[3];
+    const uniqueTokenAddresses = [token0Address, token1Address];
+    // Fetch token details
+    const tokenCalls = uniqueTokenAddresses.map((tokenAddress) => [
+        {
+            address: tokenAddress,
+            abi: ERC20_ABI_json_1.default,
+            functionName: 'name',
+        },
+        {
+            address: tokenAddress,
+            abi: ERC20_ABI_json_1.default,
+            functionName: 'symbol',
+        },
+        {
+            address: tokenAddress,
+            abi: ERC20_ABI_json_1.default,
+            functionName: 'decimals',
+        },
+    ]).flat();
+    const tokenResults = await (0, actions_1.multicall)(client, { contracts: tokenCalls, allowFailure: true });
+    // Map token details
     const tokenDetailsMap = new Map();
     for (let i = 0; i < uniqueTokenAddresses.length; i++) {
         const address = uniqueTokenAddresses[i];
         const nameResult = tokenResults[i * 3];
         const symbolResult = tokenResults[i * 3 + 1];
         const decimalsResult = tokenResults[i * 3 + 2];
-        // Handle potential failures or unexpected types gracefully
         const name = nameResult.status === 'success' && typeof nameResult.result === 'string'
             ? nameResult.result
             : 'Unknown Name';
@@ -168,7 +140,7 @@ const buildIchi = async (manualEntries, chainId, project, parentTask) => {
             : '???';
         const decimals = decimalsResult.status === 'success' && (typeof decimalsResult.result === 'number' || typeof decimalsResult.result === 'bigint')
             ? Number(decimalsResult.result)
-            : 18; // Default to 18 if decimals call fails
+            : 18;
         tokenDetailsMap.set(address, { address, name, symbol, decimals });
     }
     // Helper to safely get token info
@@ -182,35 +154,45 @@ const buildIchi = async (manualEntries, chainId, project, parentTask) => {
             logoURI: chainConfig.trustwalletLogoURI(address),
         };
     };
-    // 5. Combine manual data with fetched on-chain data
-    const processedData = manualEntries.map((entry, index) => {
-        // Adjust indexing based on the lpCalls structure: [allowToken0, allowToken1, token0, token1, name, symbol] per entry
-        const allowToken0Result = lpResults[index * 6];
-        const allowToken1Result = lpResults[index * 6 + 1];
-        const token0Address = lpResults[index * 6 + 2];
-        const token1Address = lpResults[index * 6 + 3];
-        const lpName = lpResults[index * 6 + 4];
-        const lpSymbol = lpResults[index * 6 + 5];
-        // Type assertion for boolean results from multicall
-        const allowToken0 = allowToken0Result;
-        const allowToken1 = allowToken1Result;
-        return {
-            name: entry.name,
-            logoURI: projectConfig.logoURI,
-            chainId: chainId,
-            lpData: {
-                lpType: types_1.LPType.ICHI,
-                name: lpName,
-                symbol: lpSymbol,
-                toToken0: getERC20TokenInfo(token0Address),
-                toToken1: getERC20TokenInfo(token1Address),
-                allowToken0: allowToken0,
-                allowToken1: allowToken1,
-                vault: entry.address,
-                ichiConfig: ichiConfig,
-            },
-        };
-    });
-    return processedData;
+    return {
+        name: entry.name,
+        logoURI: projectConfig.logoURI,
+        chainId: chainId,
+        lpData: {
+            lpType: types_1.LPType.ICHI,
+            name: lpResults[4],
+            symbol: lpResults[5],
+            toToken0: getERC20TokenInfo(token0Address),
+            toToken1: getERC20TokenInfo(token1Address),
+            allowToken0: lpResults[0],
+            allowToken1: lpResults[1],
+            vault: entry.address,
+            ichiConfig: ichiConfig,
+        },
+    };
+};
+exports.buildSingleIchiEntry = buildSingleIchiEntry;
+/**
+ * Fetches on-chain data for Ichi LPs and combines it with manual entries.
+ *
+ * @param manualEntries Array of manual Ichi entries.
+ * @param chainId The chain ID.
+ * @param project The project identifier.
+ * @param parentTask The parent Listr task wrapper for reporting progress.
+ * @returns Promise resolving to an array of ZapInfo.
+ */
+const buildIchi = async (manualEntries, chainId, project, parentTask) => {
+    if (manualEntries.length === 0) {
+        parentTask.skip('No manual entries provided.');
+        return [];
+    }
+    try {
+        // Process each entry using the new buildSingleIchiEntry function
+        const processedData = await Promise.all(manualEntries.map(entry => (0, exports.buildSingleIchiEntry)(entry, chainId, project)));
+        return processedData;
+    }
+    catch (error) {
+        throw new Error(`Failed during data fetching in buildIchi: ${error instanceof Error ? error.message : String(error)}`);
+    }
 };
 exports.buildIchi = buildIchi;

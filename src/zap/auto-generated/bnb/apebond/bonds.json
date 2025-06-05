@@ -1,0 +1,101 @@
+{
+  "0x39D56B60964aB6f3f886968b5A6DdE3e5434A873": {
+    "name": "ApeBond (BNB => PLT)",
+    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap.png?raw=true",
+    "chainId": 56,
+    "inputToken": {
+      "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+      "name": "Wrapped BNB",
+      "symbol": "WBNB",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/assets/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c/logo.png"
+    },
+    "lpData": {
+      "lpType": "single",
+      "toToken": {
+        "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+        "name": "Wrapped BNB",
+        "symbol": "WBNB",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/assets/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c/logo.png"
+      }
+    },
+    "protocolData": {
+      "protocol": "ApeBond",
+      "bond": "0x39d56b60964ab6f3f886968b5a6dde3e5434a873"
+    }
+  },
+  "0x5aeb9f8e8b132B9b74c74F8a20a75F29e4E3bA78": {
+    "name": "ApeBond (USDT => SCPT)",
+    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap.png?raw=true",
+    "chainId": 56,
+    "inputToken": {
+      "address": "0x55d398326f99059fF775485246999027B3197955",
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/assets/0x55d398326f99059fF775485246999027B3197955/logo.png"
+    },
+    "lpData": {
+      "lpType": "single",
+      "toToken": {
+        "address": "0x55d398326f99059fF775485246999027B3197955",
+        "name": "Tether USD",
+        "symbol": "USDT",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/assets/0x55d398326f99059fF775485246999027B3197955/logo.png"
+      }
+    },
+    "protocolData": {
+      "protocol": "ApeBond",
+      "bond": "0x5aeb9f8e8b132b9b74c74f8a20a75f29e4e3ba78"
+    }
+  },
+  "0xe9F79078a97fE410945dc626c07442a016A6BA14": {
+    "name": "ApeBond (GLD/BNB => GLD)",
+    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap.png?raw=true",
+    "chainId": 56,
+    "inputToken": {
+      "address": "0xe4dF44742b834f738e0561D8BA6fF41aEa66EB04",
+      "name": "ICHI Vault Liquidity",
+      "symbol": "IV-39-THE",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/assets/0xe4dF44742b834f738e0561D8BA6fF41aEa66EB04/logo.png"
+    },
+    "lpData": {
+      "lpType": "ichi",
+      "name": "ICHI Vault Liquidity",
+      "symbol": "IV-39-THE",
+      "toToken0": {
+        "address": "0x362B47BD0AA70Ed8826e96686F293C57ba462555",
+        "name": "GOLD",
+        "symbol": "GLD",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/assets/0x362B47BD0AA70Ed8826e96686F293C57ba462555/logo.png"
+      },
+      "toToken1": {
+        "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+        "name": "Wrapped BNB",
+        "symbol": "WBNB",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/smartchain/assets/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c/logo.png"
+      },
+      "allowToken0": false,
+      "allowToken1": true,
+      "vault": "0xe4dF44742b834f738e0561D8BA6fF41aEa66EB04",
+      "ichiConfig": {
+        "factoryAddress": "0xAc93148e93d1C49D89b1166BFd74942E80F5D501",
+        "depositGuard": {
+          "address": "0xd9272a45BbF488816C6A5351894bCE7b04a66eE1",
+          "version": 2
+        },
+        "vaultDeployerAddress": "0x05cC3CA6E768a68A7f86b09e3ceE754437bd5f12",
+        "isAlgebra": false
+      }
+    },
+    "protocolData": {
+      "protocol": "ApeBond",
+      "bond": "0xe9f79078a97fe410945dc626c07442a016a6ba14"
+    }
+  }
+}

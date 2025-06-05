@@ -3,6 +3,15 @@ import { Project, ZapInfo } from '../types';
 import { ListrTaskWrapper } from 'listr2';
 import { ChainId } from '../../types/enums';
 /**
+ * Builds data for a single UniV2 pair entry
+ *
+ * @param pairAddress The UniV2 pair address to build data for
+ * @param chainId The chain ID
+ * @param project The project identifier
+ * @returns Promise resolving to ZapInfo
+ */
+export declare const buildSingleUniV2Entry: (pairAddress: Address, chainId: ChainId, project: Project) => Promise<ZapInfo>;
+/**
  * Fetches Uniswap V2 style LP information directly from the factory contract.
  *
  * @param chainId The chain ID.

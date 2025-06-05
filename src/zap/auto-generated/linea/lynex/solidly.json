@@ -8202,5 +8202,33 @@
       "factory": "0xBc7695Fd00E3b32D08124b7a4287493aEE99f9ee",
       "router": "0x610D2f07b7EdC67565160F587F37636194C34E74"
     }
+  },
+  "0xA8FFA9dDDBc8a1E457ac427C966ca554227B0d0a": {
+    "name": "Lynex Solidly (LYNX/bveLYNX)",
+    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/projects/Lynex.jpg",
+    "chainId": 59144,
+    "lpData": {
+      "lpType": "solidly",
+      "name": "StableV1 AMM - LYNX/bveLYNX",
+      "symbol": "sAMM-LYNX/bveLYNX",
+      "lpAddress": "0xA8FFA9dDDBc8a1E457ac427C966ca554227B0d0a",
+      "toToken0": {
+        "address": "0x1a51b19CE03dbE0Cb44C1528E34a7EDD7771E9Af",
+        "name": "Lynex",
+        "symbol": "LYNX",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/linea/assets/0x1a51b19CE03dbE0Cb44C1528E34a7EDD7771E9Af/logo.png"
+      },
+      "toToken1": {
+        "address": "0xe8a4c9B6a2b79Fd844c9e3AdBc8Dc841eEce557B",
+        "name": "Bribe veLYNX",
+        "symbol": "bveLYNX",
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/linea/assets/0xe8a4c9B6a2b79Fd844c9e3AdBc8Dc841eEce557B/logo.png"
+      },
+      "stable": true,
+      "factory": "0xBc7695Fd00E3b32D08124b7a4287493aEE99f9ee",
+      "router": "0x610D2f07b7EdC67565160F587F37636194C34E74"
+    }
   }
 }

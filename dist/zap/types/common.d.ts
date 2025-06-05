@@ -3,6 +3,16 @@
  */
 import { ChainId } from "../../types/enums";
 /**
+ * Represents the possible result structure from a multicall when allowFailure is true.
+ */
+export type MulticallResult<TResult = unknown> = {
+    result: TResult;
+    status: 'success';
+} | {
+    error: Error;
+    status: 'failure';
+};
+/**
  * Chain names mapping
  */
 export declare const ChainNames: Record<ChainId, string>;
@@ -24,7 +34,9 @@ export declare enum Project {
     Lynex = "Lynex",
     SynthSwap = "SynthSwap",
     BaseX = "BaseX",
-    SwapBased = "SwapBased"
+    SwapBased = "SwapBased",
+    Aerodrome = "Aerodrome",
+    Nile = "Nile"
 }
 export declare enum ProjectProtocol {
     ApeBond = "ApeBond",
@@ -55,6 +67,11 @@ export interface SteerEntry extends BaseEntry {
 }
 export interface CurveEntry extends BaseEntry {
 }
+export type ProtocolEntry = BaseEntry & {
+    type: LPType;
+    inputTokenProject?: Project;
+    inputToken: GammaEntry | IchiEntry | SteerEntry | CurveEntry | BaseEntry;
+};
 export interface ERC20TokenInfo {
     address: `0x${string}`;
     name: string;

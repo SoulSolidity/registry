@@ -3,6 +3,14 @@
  */
 
 import { ChainId } from "../../types/enums";
+import { LPData, ZapInfo } from "./output";
+
+/**
+ * Represents the possible result structure from a multicall when allowFailure is true.
+ */
+export type MulticallResult<TResult = unknown> =
+  | { result: TResult; status: 'success' }
+  | { error: Error; status: 'failure' };
 
 /**
  * Chain names mapping
@@ -40,6 +48,8 @@ export enum Project {
   SynthSwap = 'SynthSwap',
   BaseX = 'BaseX',
   SwapBased = 'SwapBased',
+  Aerodrome = 'Aerodrome',
+  Nile = 'Nile',
 }
 
 export enum ProjectProtocol {
@@ -74,10 +84,18 @@ export interface IchiEntry extends BaseEntry {
 
 export interface SteerEntry extends BaseEntry {
   periphery?: `0x${string}`;
-}
+} 
+
 
 
 export interface CurveEntry extends BaseEntry {
+}
+
+//This is used for protocol specific entries (e.g. ApeBond)
+export type ProtocolEntry = BaseEntry & {
+  type: LPType,
+  inputTokenProject?: Project,
+  inputToken: GammaEntry | IchiEntry | SteerEntry | CurveEntry | BaseEntry
 }
 
 export interface ERC20TokenInfo {
