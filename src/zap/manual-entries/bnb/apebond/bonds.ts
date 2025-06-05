@@ -4,7 +4,7 @@
 import { ProtocolEntry, LPType, Project } from '../../../types';
 
 /**
- * Lynex Ichi entries on Linea
+ * ApeBond entries on BNB
  * 
  * Add or remove entries here manually
  */

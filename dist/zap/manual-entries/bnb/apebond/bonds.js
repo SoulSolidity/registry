@@ -6,7 +6,7 @@ exports.apeBondBonds = void 0;
  */
 const types_1 = require("../../../types");
 /**
- * Lynex Ichi entries on Linea
+ * ApeBond entries on BNB
  *
  * Add or remove entries here manually
  */

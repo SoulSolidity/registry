@@ -9,3 +9,4 @@ fi
 
 # Stage the built files
 git add dist/
+git add data/

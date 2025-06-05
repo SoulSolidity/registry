@@ -1,6 +1,6 @@
 "use strict";
 /**
- * Export all Linea chain entries
+ * Export all Lynex entries on Linea
  */
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -17,5 +17,4 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(require("./lynex/index"), exports);
-__exportStar(require("./apebond/index"), exports);
+__exportStar(require("./bonds"), exports);

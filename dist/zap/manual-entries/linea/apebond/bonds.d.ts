@@ -3,7 +3,7 @@
  */
 import { ProtocolEntry } from '../../../types';
 /**
- * ApeBond entries on BNB
+ * ApeBond entries on Linea
  *
  * Add or remove entries here manually
  */
