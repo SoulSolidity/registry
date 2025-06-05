@@ -151,8 +151,6 @@ export const buildApeBond = async (
           protocolData,
         };
 
-        console.log(zapInfo);
-
         return zapInfo;
       })
     );

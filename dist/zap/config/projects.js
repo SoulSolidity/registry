@@ -202,7 +202,7 @@ exports.PANCAKESWAP_CONFIG = {
 exports.APEBOND_CONFIG = {
     [enums_1.ChainId.BNB]: {
         project: types_1.Project.ApeBond,
-        logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap.png?raw=true',
+        logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap%20V2.jpg',
         uniV2Config: {
             factoryAddress: '0x0841BD0B734E4F5853f0dD8d7Ea041c241fb0Da6',
             routerAddress: '0xcF0feBd3f17CEf5b47b0cD257aCf6025c5BFf3b7',
@@ -210,7 +210,7 @@ exports.APEBOND_CONFIG = {
     },
     [enums_1.ChainId.LINEA]: {
         project: types_1.Project.ApeBond,
-        logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap.png?raw=true',
+        logoURI: 'https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap%20V2.jpg',
     },
 };
 exports.THENA_CONFIG = {

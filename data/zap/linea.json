@@ -1,7 +1,7 @@
 {
   "0x383DCc61af360b73c24CaaeD805Ca0fd4cadEB52": {
     "name": "ApeBond (USDC => HOTDOG)",
-    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap.png?raw=true",
+    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap%20V2.jpg",
     "chainId": 59144,
     "lpData": {
       "lpType": "single",
@@ -20,7 +20,7 @@
   },
   "0x00aB24b9d36B4a4368775A1c523dFc457148EC62": {
     "name": "ApeBond (USDT => LINUS)",
-    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap.png?raw=true",
+    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/ApeSwap%20V2.jpg",
     "chainId": 59144,
     "lpData": {
       "lpType": "single",
