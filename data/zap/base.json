@@ -114,5 +114,24 @@
       "protocol": "ApeBond",
       "bond": "0x313a15a47b7d9862ad5266b9ea2d5a5117014f88"
     }
+  },
+  "0x1A859941D9c2380d0d5578DEF60F8C4BB96D751F": {
+    "name": "GooMoney GOO Bond",
+    "logoURI": "https://raw.githubusercontent.com/SoulSolidity/registry/refs/heads/main/src/assets/dexes/GooMoney.jpg",
+    "chainId": 8453,
+    "lpData": {
+      "lpType": "single",
+      "toToken": {
+        "address": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+        "name": "Coinbase Wrapped BTC",
+        "symbol": "cbBTC",
+        "decimals": 8,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/base/assets/0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf/logo.png"
+      }
+    },
+    "protocolData": {
+      "protocol": "ApeBond",
+      "bond": "0x1A859941D9c2380d0d5578DEF60F8C4BB96D751F"
+    }
   }
 }
